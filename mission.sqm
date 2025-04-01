@@ -1,0 +1,2378 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
+	class ItemIDProvider
+	{
+		nextID=139;
+	};
+	class LayerIndexProvider
+	{
+		nextID=13;
+	};
+	class Camera
+	{
+		pos[]={4491.0879,15.406044,6801.0093};
+		dir[]={-0.68895096,-0.39444971,0.60811603};
+		up[]={-0.29573071,0.91890883,0.26103386};
+		aside[]={0.66177136,4.1389285e-07,0.74973589};
+	};
+};
+binarizationWanted=0;
+sourceName="JM_FrameworkV1";
+addons[]=
+{
+	"WBK_DyingAnimationsMod",
+	"A3_Structures_F_EPA_Mil_Scrapyard",
+	"A3_Weapons_F_Ammoboxes",
+	"A3_Aegis_Supplies_F_Aegis_Ammoboxes",
+	"A3_Armor_F_EPC_MBT_01",
+	"ace_realisticnames",
+	"ace_vehicle_damage",
+	"ace_viewports",
+	"A3_Ui_F",
+	"A3_Characters_F",
+	"A3_Aegis_Characters_F_Aegis",
+	"A3_Weapons_F",
+	"ace_medical_treatment",
+	"A3_Misc_F_Helpers",
+	"A3_Weapons_F_Enoch_Rifles_AK12",
+	"A3_Aegis_Weapons_F_Aegis_Rifles_AK12",
+	"A3_Weapons_F_Enoch",
+	"A3_Aegis_Weapons_F_Aegis",
+	"A3_Aegis_Characters_F_Aegis_Headgear",
+	"Characters_f_lxWS",
+	"EF_Marines",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Supplies_F_Heli_Slingload",
+	"A3_Aegis_Supplies_F_Aegis_Slingload",
+	"ace_cargo",
+	"A3_Props_F_Enoch_Military_Camps",
+	"A3_Structures_F_Mil_BagBunker",
+	"A3_Aegis_Structures_F_Aegis_Military_Fortifications",
+	"A3_Props_F_Decade_Objectives",
+	"A3_Props_F_Orange_Humanitarian_Camps",
+	"A3_Props_F_Enoch_Military_Equipment",
+	"ace_fastroping",
+	"A3_Atlas_Characters_F_Atlas",
+	"A3_Atlas_Weapons_F_Atlas",
+	"A3_Weapons_F_Acc",
+	"ace_scopes",
+	"ace_laserpointer",
+	"A3_Weapons_F_Exp",
+	"ace_ballistics",
+	"A3_Aegis_Weapons_F_Aegis_Pistols_G17",
+	"AJAX2035_Goggles",
+	"ace_nightvision",
+	"Characters_f_lxWS_headgear",
+	"A3_Characters_F_Enoch",
+	"A3_Weapons_F_Items",
+	"A3_Atlas_Characters_F_Atlas_Vests",
+	"A3_Supplies_F_Enoch_Ammoboxes"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=35;
+		class Item0
+		{
+			className="WBK_DyingAnimationsMod";
+			name="WBK_DyingAnimationsMod";
+		};
+		class Item1
+		{
+			className="A3_Structures_F_EPA";
+			name="Arma 3 Survive Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Aegis_Supplies_F_Aegis";
+			name="Arma 3 Aegis - Ammoboxes and Supplies";
+			author="Avery Kaiserin";
+			url="https://steamcommunity.com/sharedfiles/filedetails/?id=949252631";
+		};
+		class Item4
+		{
+			className="A3_Armor_F_EPC";
+			name="Arma 3 Win Episode - Armored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="ace_vehicle_damage";
+			name="ACE3 - Vehicle Damage";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item7
+		{
+			className="ace_viewports";
+			name="ACE3 - Viewports";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item8
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="A3_Aegis_Characters_F_Aegis";
+			name="Arma 3 Aegis - Characters and Clothing";
+			author="Avery Kaiserin";
+			url="https://steamcommunity.com/sharedfiles/filedetails/?id=949252631";
+		};
+		class Item10
+		{
+			className="ace_medical_treatment";
+			name="ACE3 - Medical Treatment";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item11
+		{
+			className="A3_Misc_F";
+			name="Arma 3 - 3D Aids and Helpers";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item12
+		{
+			className="A3_Weapons_F_Enoch";
+			name="Arma 3 Contact Platform - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item13
+		{
+			className="A3_Aegis_Weapons_F_Aegis";
+			name="Arma 3 Aegis - Weapons and Accessories";
+			author="Avery Kaiserin";
+			url="https://steamcommunity.com/sharedfiles/filedetails/?id=949252631";
+		};
+		class Item14
+		{
+			className="Characters_f_lxWS";
+			name="Arma 3 Creator DLC: Western Sahara - Characters and Clothing";
+			author="Rotators Collective";
+			url="https://sahara.rotators.net/";
+		};
+		class Item15
+		{
+			className="EF_Marines";
+			name="Expeditionary Forces - Marines";
+			author="Tiny Gecko Studios";
+			url="https://www.arma3.com";
+		};
+		class Item16
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item17
+		{
+			className="A3_Supplies_F_Heli";
+			name="Arma 3 Helicopters - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item18
+		{
+			className="ace_cargo";
+			name="ACE3 - Cargo";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item19
+		{
+			className="A3_Props_F_Enoch";
+			name="Arma 3 Contact Platform - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item20
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item21
+		{
+			className="A3_Aegis_Structures_F_Aegis";
+			name="Arma 3 Aegis - Buildings and Structures";
+			author="Avery Kaiserin";
+			url="https://steamcommunity.com/sharedfiles/filedetails/?id=949252631";
+		};
+		class Item22
+		{
+			className="A3_Props_F_Decade_Objectives";
+			name="A3_Props_F_Decade_Objectives";
+		};
+		class Item23
+		{
+			className="A3_Props_F_Orange";
+			name="Arma 3 Orange - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item24
+		{
+			className="ace_fastroping";
+			name="ACE3 - Fastroping";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item25
+		{
+			className="A3_Atlas_Characters_F_Atlas";
+			name="Arma 3 Atlas - Characters and Clothing";
+			author="Avery Kaiserin";
+			url="https://steamcommunity.com/sharedfiles/filedetails/?id=2225873516";
+		};
+		class Item26
+		{
+			className="A3_Atlas_Weapons_F_Atlas";
+			name="Arma 3 Atlas - Weapons and Accessories";
+			author="Avery Kaiserin";
+			url="https://steamcommunity.com/sharedfiles/filedetails/?id=2225873516";
+		};
+		class Item27
+		{
+			className="ace_scopes";
+			name="ACE3 - Scopes";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item28
+		{
+			className="ace_laserpointer";
+			name="ACE3 - Laser Pointer";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item29
+		{
+			className="A3_Weapons_F_Exp";
+			name="Arma 3 Apex - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item30
+		{
+			className="ace_ballistics";
+			name="ACE3 - Ballistics";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item31
+		{
+			className="AJAX2035_Goggles";
+			name="AJAX2035_Goggles";
+			author="CommanderCharms";
+		};
+		class Item32
+		{
+			className="ace_nightvision";
+			name="ACE3 - Night Vision";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item33
+		{
+			className="A3_Characters_F_Enoch";
+			name="Arma 3 Contact Platform - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item34
+		{
+			className="A3_Supplies_F_Enoch";
+			name="Arma 3 Contact Platform - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+dlcs[]=
+{
+	"Enoch",
+	"ws",
+	"ef",
+	"Heli",
+	"Contact",
+	"Argo",
+	"Orange"
+};
+randomSeed=9549655;
+class ScenarioData
+{
+	author="Jamio";
+};
+class CustomAttributes
+{
+	class Category1
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=1;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		rainForced=1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		day=28;
+		hour=19;
+		minute=-15;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=7;
+		class Item0
+		{
+			dataType="Layer";
+			name="[JM] Framework Composition";
+			class Entities
+			{
+				items=43;
+				class Item0
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4477.1929,5.0000005,6809.9805};
+					};
+					title="RESUPPLY";
+					description="MEDICAL BOX: [this, 50, 10, 5, 10, 20, 15, 25, 10, 10] execVM ""JM_Framework\Supply\medCrate.sqf"";" \n "" \n "Parameters: [X, Bandage, 1L Blood, 500mL Blood, 250mL Blood, Splint, Torniquet,  Painkiller, Epinephrine, Morphine]" \n "" \n "" \n "AMMO BOX:  [this, 50, 20, 5, 10] execVM ""JM_Framework\Supply\ammoCrate.sqf"";" \n "" \n "Parameters: [X, Primary Mags, Secondary Mags, Launcher, Grenades]";
+					id=24;
+					atlOffset=4.7683716e-07;
+				};
+				class Item1
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4478.5771,5.0000005,6809.9805};
+					};
+					description="The resupply will pull equipment from all PLAYABLE units - including slots not taken by players. The results are stored in arrays that can be accessed by a global variable.";
+					id=25;
+					atlOffset=4.7683716e-07;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4483.394,5.6079984,6814.5654};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="[this] execVM ""JM_Framework\Supply\boxspawner.sqf"";" \n "" \n "if (hasInterface) then { " \n "    missionNamespace setVariable [""FOB_Resupply"", this]; " \n " " \n "    addMissionEventHandler [""Draw3D"", { " \n "        private _resupply = missionNamespace getVariable [""FOB_Resupply"", objNull]; " \n "        if (isNull _resupply) exitWith {}; " \n " " \n "        private _playerPos = getPosASL player; " \n "        private _resupplyPos = getPosASL _resupply; " \n "        private _distance = _playerPos distance _resupplyPos; " \n "        private _maxDistance = 25; " \n " " \n "        if (_distance > _maxDistance) exitWith {}; " \n " " \n "        private _pos = _resupplyPos; " \n "        _pos set [2, (_pos select 2) - 3]; " \n " " \n "        drawIcon3D [ " \n "            """",  " \n "            [1, 1, 1, 1],  " \n "            _pos,  " \n "            0, 0,  " \n "            0,  " \n "            ""RESUPPLY"",  " \n "            2,  " \n "            0.05,  " \n "            ""PuristaMedium"" " \n "        ]; " \n "    }]; " \n "}; " \n "";
+						disableSimulation=1;
+					};
+					id=26;
+					type="Land_PaperBox_open_full_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4478.603,5.2840548,6813.5928};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="[this, 50, 20, 5, 10] execVM ""JM_Framework\Supply\ammoCrate.sqf"";";
+					};
+					id=27;
+					type="Box_NATO_Ammo_F";
+				};
+				class Item4
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4483.5093,5.0000005,6812.5771};
+					};
+					title="RESUPPLY - Box Spawner";
+					description="The box spawner allows players to spawn predefined crates containing custom items. There are currently options for medical and ammo crates that pull from the same array as the normal crates." \n "" \n "There is also an option for an empty crate, a crate containing CSW ammo, and one custom crate for you to fill with whatever items you wish.";
+					id=28;
+					atlOffset=4.7683716e-07;
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4506.73,7.7264757,6814.7822};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=29;
+					type="B_MBT_01_TUSK_F";
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={4511.5024,5,6814.8032};
+					name="VAM_service_area_1";
+					markerType="RECTANGLE";
+					type="";
+					colorName="ColorRed";
+					fillName="SolidBorder";
+					a=20;
+					b=20;
+					drawBorder=1;
+					id=30;
+				};
+				class Item7
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4506.8862,5.0000005,6808.5752};
+					};
+					title="VAM";
+					description="VAM will be available when in a marker area named ""VAM_service_area_1"" etc. OR when next to a repair container or depot." \n "" \n "Objects that enable VAM can be added in VAM_GUI_init.sqf array." \n "" \n "Custom textures CAN be added, somehow...";
+					id=31;
+					atlOffset=4.7683716e-07;
+				};
+				class Item8
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4461.7681,5.0000005,6828.6821};
+					};
+					title="PLATOON RALLY ";
+					id=32;
+					atlOffset=4.7683716e-07;
+				};
+				class Item9
+				{
+					dataType="Trigger";
+					position[]={4474.2969,5,6792.376};
+					class Attributes
+					{
+						condition="call{{_x iskindof ""landvehicle"" && speed _x < 1} count thislist > 0  };";
+						onActivation="call{_handle = [(thisList select 0)] execVM ""JM_Framework\VehicleService\ServiceGround.sqf"";}";
+						sizeA=5;
+						sizeB=5;
+						sizeC=5;
+						repeatable=1;
+						activationBy="ANYPLAYER";
+						isRectangle=1;
+					};
+					id=33;
+					type="EmptyDetectorArea10x10";
+				};
+				class Item10
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4474.1367,5.0000005,6786.959};
+					};
+					title="VEHICLE SERVICE - Ground";
+					description="Land vehicles that stop within this trigger area will be rearmed, repaired and refueled.";
+					id=34;
+					atlOffset=4.7683716e-07;
+				};
+				class Item11
+				{
+					dataType="Trigger";
+					position[]={4486.9849,5,6792.4619};
+					class Attributes
+					{
+						condition="call{{_x iskindof ""air"" && speed _x < 1} count thislist > 0  };";
+						onActivation="call{_handle = [(thisList select 0)] execVM ""JM_Framework\VehicleService\ServiceAir.sqf"";}";
+						sizeA=5;
+						sizeB=5;
+						sizeC=5;
+						repeatable=1;
+						activationBy="ANYPLAYER";
+						isRectangle=1;
+					};
+					id=35;
+					type="EmptyDetectorArea10x10";
+				};
+				class Item12
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4486.8247,5.0000005,6787.0439};
+					};
+					title="VEHICLE SERVICE - Air";
+					description="Land vehicles that stop within this trigger area will be rearmed, repaired and refueled.";
+					id=36;
+					atlOffset=4.7683716e-07;
+				};
+				class Item13
+				{
+					dataType="Marker";
+					position[]={4444.5596,5,6827.7939};
+					name="respawn_west";
+					type="Empty";
+					id=37;
+				};
+				class Item14
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4444.7271,5.0000005,6824.5029};
+					};
+					title="RESPAWN";
+					id=38;
+					atlOffset=4.7683716e-07;
+				};
+				class Item15
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4462.7148,5.0014391,6837.7402};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp1.sqf"";" \n "" \n "";
+								isPlayable=1;
+								class Inventory
+								{
+									compass="ItemCompass";
+									watch="ItemWatch";
+								};
+							};
+							id=1;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=0;
+				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4476.6719,5,6813.5264};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="[this, 50, 10, 5, 10, 20, 15, 25, 10, 10] execVM ""JM_Framework\Supply\medCrate.sqf"";";
+					};
+					id=2;
+					type="ACE_medicalSupplyCrate";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ammoBox";
+							expression="[_this,_value] call bis_fnc_initAmmoBox;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item17
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4455.5742,5.7502322,6829.042};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="HQ_Retreat_01";
+					};
+					id=39;
+					type="Sign_Arrow_Large_Cyan_F";
+				};
+				class Item18
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4427.3013,5.0014391,6822.5293};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								name="zeus1";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="arifle_AK12_arid_F";
+										firemode="arifle_AK12_arid_F:FullAuto";
+										class primaryMuzzleMag
+										{
+											name="30rnd_762x39_AK12_Arid_Mag_F";
+											ammoLeft=30;
+										};
+									};
+									class uniform
+									{
+										typeName="U_lxWS_SFIA_deserter";
+										isBackpack=0;
+									};
+									class vest
+									{
+										typeName="EF_V_CCR_Scout_Olive";
+										isBackpack=0;
+									};
+									compass="ItemCompass";
+									watch="ItemWatch";
+									headgear="Aegis_H_turban_bmask_camo02_lxWS";
+								};
+							};
+							id=41;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isEngineer";
+									expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ace_isEOD";
+									expression="_this setVariable ['ACE_isEOD', _value, true]";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="ace_advanced_fatigue_performanceFactor";
+									expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=10;
+										};
+									};
+								};
+								class Attribute6
+								{
+									property="ace_isMedic";
+									expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=2;
+										};
+									};
+								};
+								class Attribute7
+								{
+									property="enableStamina";
+									expression="_this enablestamina _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=8;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=40;
+				};
+				class Item19
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4427.271,5.0000005,6819.75};
+					};
+					title="ZEUS";
+					id=42;
+					atlOffset=4.7683716e-07;
+				};
+				class Item20
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={4423.7378,5,6821.542};
+					};
+					id=43;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus1";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item21
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4462.5439,6.3620372,6813.584};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="refillCrate1";
+					};
+					id=3;
+					type="B_Slingload_01_Cargo_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_cargo_customName";
+							expression="_this setVariable [""ace_cargo_customName"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ammoBox";
+							expression="[_this,_value] call bis_fnc_initAmmoBox;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[2,4,2]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[48,12,12,12,12,12,4,4,12,6,4,12,12,4,4,4,4]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight""],[2,20,4]],[[""B_Kitbag_mcamo""],[4]]],false]";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_cookoff_enableAmmoCookoff";
+							expression="if (!_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ace_cargo_size";
+							expression="[_this, _value] call ace_cargo_fnc_setSize";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=50;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item22
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4426.188,5.0000005,6807.436};
+					};
+					title="CUSTOM END MISSION";
+					description="There is a zeus module to trigger this custom end mission sequence." \n "" \n "cam_1 is where the camera will be position, cam_focus1 will be the object of focus." \n "" \n "The text and other bits can be edited within the endMission.sqf in Misc";
+					id=45;
+					atlOffset=4.7683716e-07;
+				};
+				class Item23
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4456.0146,5.1333637,6836.4834};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="MF_Srp1";
+						disableSimulation=1;
+					};
+					id=4;
+					type="Land_TentSolar_01_folded_olive_F";
+					atlOffset=-4.7683716e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item24
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4433.3652,5.965631,6818.166};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=46;
+					type="Land_BagBunker_Small_F";
+				};
+				class Item25
+				{
+					dataType="Marker";
+					position[]={4442.397,5,6809.4761};
+					name="safezone1";
+					text="SAFEZONE";
+					type="mil_warning";
+					colorName="ColorGreen";
+					a=0.69999999;
+					b=0.69999999;
+					id=47;
+				};
+				class Item26
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4442.2822,5.0000005,6807.124};
+					};
+					title="SAFEZONE";
+					description="Safezone markers can be defined in JM_init.sqf along with a radius, and will prevent any shooting or unwanted grenade-throwing.";
+					id=48;
+					atlOffset=4.7683716e-07;
+				};
+				class Item27
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4452.3579,7.867044,6835.751};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="this addAction [""<t color='#e03a4e'>Retreat</t>"",""JM_Framework\RallyPoint\retreat.sqf"",[HQ_Retreat_01],1,false,true,"""",""side player == WEST"",4];" \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP1</t>"",""RallyPoint\teleport.sqf"",[MF_Srp1],1.5,false,true,"""",""groupId(group wsl1) == groupId(group player)"",4]; " \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP2</t>"",""RallyPoint\teleport.sqf"",[MF_Srp2],1.5,false,true,"""",""groupId(group wsl2) == groupId(group player)"",4];" \n " " \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP3</t>"",""RallyPoint\teleport.sqf"",[MF_Srp3],1.5,false,true,"""",""groupId(group wsl3) == groupId(group player)"",4];" \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP4</t>"",""RallyPoint\teleport.sqf"",[MF_Srp4],1.5,false,true,"""",""groupId(group wsl4) == groupId(group player)"",4];" \n "" \n "RP_HealTrigger attachTo [MF_Prp, [0,0,0]];" \n "" \n "" \n """RPMARK_1"" setmarkerpos MF_Prp;";
+						name="MF_Prp";
+					};
+					id=5;
+					type="PortableFlagPole_01_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Flag_Custom_Property";
+							expression="if(_value != '')then{_this setFlagTexture _value;_this setVariable ['bis_flagPole_custom',true]}else{_this setVariable ['bis_flagPole_custom',false]};";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="JM_Framework\RallyPoint\rallyflag.paa";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Flag_Property";
+							expression="if(!(_this getVariable ['bis_flagPole_custom',false]) )then{_this setFlagTexture _value};";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Flag_Position_Property";
+							expression="_this animateSource ['Flag_source',_value,true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item28
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4468.6138,5.0000005,6829.0122};
+					};
+					title="PLATOON RALLY - Squad Leaders";
+					description="[this] execVM ""JM_Framework\RallyPoint\MF_Srp1.sqf"";" \n "" \n "1. Place above in unit init" \n "2. Replace RPx with number 1-4 depending on Squad Leader number";
+					id=6;
+					atlOffset=4.7683716e-07;
+				};
+				class Item29
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4455.416,5.4052014,6831.2441};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="if (hasInterface) then { " \n "    missionNamespace setVariable [""FOB_Radio"", this]; " \n " " \n "    addMissionEventHandler [""Draw3D"", { " \n "        private _radio = missionNamespace getVariable [""FOB_Radio"", objNull]; " \n "        if (isNull _radio) exitWith {}; " \n " " \n "        private _playerPos = getPosASL player; " \n "        private _radioPos = getPosASL _radio; " \n "        private _distance = _playerPos distance _radioPos; " \n "        private _maxDistance = 25; " \n " " \n "        if (_distance > _maxDistance) exitWith {}; " \n " " \n "        private _pos = _radioPos; " \n "        _pos set [2, (_pos select 2) - 3]; " \n " " \n "        drawIcon3D [ " \n "            """",  " \n "            [1, 1, 1, 1],  " \n "            _pos,  " \n "            0, 0,  " \n "            0,  " \n "            ""RADIO"",  " \n "            2,  " \n "            0.05,  " \n "            ""PuristaMedium"" " \n "        ]; " \n "    }]; " \n "}; " \n "";
+						disableSimulation=1;
+					};
+					id=7;
+					type="Land_CampingTable_small_white_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item30
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4455.4448,5.8577452,6831.1992};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="this addAction [""<t color='#70ed5c'>Move to Platoon RP</t>"",""JM_Framework\RallyPoint\teleport.sqf"",[MF_Prp],1,false,true,"""","""",4];" \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP1</t>"",""JM_Framework\RallyPoint\teleport.sqf"",[MF_Srp1],1.5,false,true,"""","""",4];" \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP2</t>"",""JM_Framework\RallyPoint\teleport.sqf"",[MF_Srp2],1.5,false,true,"""","""",4];" \n " " \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP3</t>"",""JM_Framework\RallyPoint\teleport.sqf"",[MF_Srp3],1.5,false,true,"""","""",4];" \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP4</t>"",""JM_Framework\RallyPoint\teleport.sqf"",[MF_Srp4],1.5,false,true,"""","""",4];" \n "" \n "this addAction [""<t color='#37e307'>Move to Squad</t>"",""JM_Framework\RallyPoint\teleportToSquad.sqf"",[],1.5,false,true,"""","""",4];";
+					};
+					id=8;
+					type="Land_Computer_01_black_F";
+				};
+				class Item31
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4457.3154,5.1333642,6836.4692};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="MF_Srp2";
+						disableSimulation=1;
+					};
+					id=9;
+					type="Land_TentSolar_01_folded_olive_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item32
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4455.9819,5.1333642,6835.4951};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="MF_Srp3";
+						disableSimulation=1;
+					};
+					id=10;
+					type="Land_TentSolar_01_folded_olive_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item33
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4457.3599,5.1333642,6835.4844};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="MF_Srp4";
+						disableSimulation=1;
+					};
+					id=11;
+					type="Land_TentSolar_01_folded_olive_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item34
+				{
+					dataType="Marker";
+					position[]={4452.3828,5,6833.6885};
+					name="RPMARK_1";
+					text="Platoon Rally";
+					type="mil_triangle";
+					colorName="ColorPink";
+					a=0.69999999;
+					b=0.69999999;
+					id=12;
+				};
+				class Item35
+				{
+					dataType="Marker";
+					position[]={4455.769,5,6833.8198};
+					name="marker_rp1";
+					text="Squad Rally 1";
+					type="mil_box";
+					colorName="ColorPink";
+					a=0.5;
+					b=0.5;
+					id=13;
+				};
+				class Item36
+				{
+					dataType="Marker";
+					position[]={4458.1543,5,6833.7808};
+					name="marker_rp2";
+					text="Squad Rally 2";
+					type="mil_box";
+					colorName="ColorPink";
+					a=0.5;
+					b=0.5;
+					id=14;
+				};
+				class Item37
+				{
+					dataType="Marker";
+					position[]={4455.7417,5,6833.043};
+					name="marker_rp3";
+					text="Squad Rally 3";
+					type="mil_box";
+					colorName="ColorPink";
+					a=0.5;
+					b=0.5;
+					id=15;
+				};
+				class Item38
+				{
+					dataType="Marker";
+					position[]={4458.168,5,6833.0166};
+					name="marker_rp4";
+					text="Squad Rally 4";
+					type="mil_box";
+					colorName="ColorPink";
+					a=0.5;
+					b=0.5;
+					id=16;
+				};
+				class Item39
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={4459.6274,5.0000005,6808.3999};
+					};
+					title="FORTIFY";
+					description="- Construction Crate is the object that enables building within 100m." \n "" \n "- Refill Crate is designed to be static at base, and used to restore fortify budget at a main base.";
+					id=17;
+					atlOffset=4.7683716e-07;
+				};
+				class Item40
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4465.6021,5.0014391,6837.7383};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp2.sqf"";" \n "";
+								isPlayable=1;
+								class Inventory
+								{
+									compass="ItemCompass";
+									watch="ItemWatch";
+								};
+							};
+							id=19;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=18;
+				};
+				class Item41
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4468.5181,5.0014391,6837.6934};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp3.sqf"";" \n "";
+								isPlayable=1;
+								class Inventory
+								{
+									compass="ItemCompass";
+									watch="ItemWatch";
+								};
+							};
+							id=21;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=20;
+				};
+				class Item42
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4471.2827,5.0014391,6837.7471};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp4.sqf"";" \n "";
+								isPlayable=1;
+								class Inventory
+								{
+									compass="ItemCompass";
+									watch="ItemWatch";
+								};
+							};
+							id=23;
+							type="B_Soldier_SL_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male07ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=22;
+				};
+			};
+			id=49;
+			atlOffset=9.9182129e-05;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4423.9971,9.434,6805.9722};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="cam1";
+			};
+			id=51;
+			type="Sign_Pointer_Blue_F";
+			atlOffset=4.3839998;
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4425.981,9.434,6805.9541};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="cam_focus1";
+			};
+			id=52;
+			type="Sign_Pointer_Blue_F";
+			atlOffset=4.3839998;
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4456.9854,5.7898083,6813.7002};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="constructionCrate1";
+			};
+			id=53;
+			type="ACE_fastropingSupplyCrate";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_cargo_customName";
+					expression="_this setVariable [""ace_cargo_customName"", _value, true]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Construction Crate";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_cookoff_enableAmmoCookoff";
+					expression="if (!_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item4
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4406.3325,5.0014391,6908.3003};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="SERGEANT";
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=63;
+					type="Atlas_B_M_TL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male03PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=3;
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4411.3325,5.0014391,6903.3003};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						isPlayable=1;
+					};
+					id=64;
+					type="Atlas_B_M_AR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male03PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=3;
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4401.3325,5.0014391,6903.3003};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=65;
+					type="Atlas_B_M_GL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male03PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=3;
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4416.3325,5.0014391,6898.3003};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=66;
+					type="Atlas_B_M_Soldier_LAT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male03PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=3;
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4473.2773,5.0014391,6818.6421};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						init="this setVariable [""JM_role"", ""Medic""];";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="lmg_03_snd_holo";
+								optics="optic_Holosight";
+								flashlight="acc_pointer_IR";
+								firemode="lmg_03_snd_holo:FullAutoFast";
+								class primaryMuzzleMag
+								{
+									name="200Rnd_556x45_Box_Red_F";
+									ammoLeft=200;
+								};
+							};
+							class handgun
+							{
+								name="hgun_G17_black_F";
+								class primaryMuzzleMag
+								{
+									name="17Rnd_9x21_Mag";
+									ammoLeft=17;
+								};
+							};
+							class uniform
+							{
+								typeName="U_O_R_Gorka_01_F";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=3;
+									class Item0
+									{
+										name="17Rnd_9x21_Mag";
+										count=1;
+										ammoLeft=17;
+									};
+									class Item1
+									{
+										name="HandGrenade";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="SmokeShell";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="V_PlateCarrier2_snd";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="200Rnd_556x45_Box_Red_F";
+										count=2;
+										ammoLeft=200;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							goggles="AJAX_ShemaghM_Coy";
+							hmd="NVGoggles";
+							headgear="lxWS_H_turban_03_blue";
+						};
+					};
+					id=68;
+					type="Atlas_B_M_AR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male03PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=3;
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=62;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4483.0688,5.8924227,6818.9448};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this] call JM_Loadouts_fnc_addRestrictedArsenal;" \n "";
+			};
+			id=136;
+			type="I_EAF_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item6
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4477.0879,5.0014391,6818.7549};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						init="this setVariable [""JM_role"", ""Medic""];";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=138;
+					type="Atlas_B_M_AR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male03PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=3;
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=137;
+		};
+	};
+};

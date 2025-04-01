@@ -1,0 +1,11 @@
+this addAction ["Move to Platoon RallyPoint","RallyPoint\teleport.sqf",[RP_west],1,false,true,"","side player == WEST",4];
+
+[MainBuilding,3] call BIS_fnc_dataTerminalAnimate;
+
+[MainBuilding,"blue","blue","blue"] call BIS_fnc_DataTerminalColor;
+
+this addAction ["Move to Squad RP","RallyPoint\teleport.sqf",[WsquadRP1],1.5,false,true,"","groupId(group wsl1) == groupId(group player)",4];
+
+this addAction ["Move to Squad RP","RallyPoint\teleport.sqf",[WsquadRP2],1.5,false,true,"","groupId(group wsl2) == groupId(group player)",4];
+ 
+this addAction ["Move to Squad RP","RallyPoint\teleport.sqf",[WsquadRP3],1.5,false,true,"","groupId(group wsl3) == groupId(group player)",4];

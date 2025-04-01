@@ -1,0 +1,138 @@
+author			= "Jamio";
+onLoadName		= "Template Mission";
+onLoadMission	= "This is the loading screen text.";
+loadScreen		= "JM_Framework\loading.paa";
+
+class Header
+{
+	gameType = "Coop";	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 20;	// maximum number of players the mission supports
+};
+
+onLoadIntro = "This is a loading message that displays while the mission is loading";
+onLoadMissionTime = 0;
+briefingName = "MSFT Mission Template v1.01";
+overviewPicture = "JM_Framework\loading.paa";
+overviewText = "This is the overview template";
+
+respawn = 3;
+respawnTemplates[] = {};
+respawnVehicle = 3;
+respawnButton = 1;
+respawnDelay = 15;
+respawnVehicleDelay = 120;
+respawnDialog = 0;
+respawnOnStart = -1;
+
+reviveMode = 0;
+reviveModeUnconsciousStateMode = 0;
+reviveRequiredTrait = 1;
+reviveRequiredItems = 1;
+reviveRequiredItemsFakConsumed = 0;
+reviveMedicSpeedMultiplier = 2;
+reviveDelay = 10;
+reviveForceRespawnDelay = 5;
+reviveBleedOutDelay = 300;
+
+corpseManagerMode = 1;
+corpseLimit = 30;
+corpseRemovalMinTime = 300;
+corpseRemovalMaxTime = 600;
+minPlayerDistance[] = {50, 60, 70, 300, 120, 60};
+
+weaponholderManagerMode = 1;
+weaponholderLimit = 50;
+weaponholderRemovalMinTime = 60;
+weaponhodlerRemovalMaxTime = 1200;
+
+
+wreckManagerMode = 1;
+wreckLimit = 15;
+wreckRemovalMinTime = 600;
+wreckRemovalMaxTime = 900;
+
+aiKills = 0;
+briefing = 1;
+debriefing = 1;
+class DifficultyOverride
+{
+	tacticalPing = 0; // disables tactical ping in this mission, even if selected difficulty preset has it enabled
+}
+disableChannels[] = {2,3,4 };
+disabledAI = 1;
+enableDebugConsole[] = {1, "76561198026778430"};
+zeusCompositionScriptLevel = 2;
+
+// SOUNDS
+
+class CfgSounds
+{
+	sounds[] = {}; // OFP required it filled, now it can be empty or absent depending on the game's version
+
+	class Template1
+	{
+		name = "TemplateSound";						// display name
+		sound[] = { "", 1, 1, 100 };	// file, volume, pitch, maxDistance
+		titles[] = {};			// subtitles
+
+	};
+
+		#include "JM_Framework\customSounds.hpp"
+		#include "JM_Framework\UnconSpectator\UnconSounds.hpp"
+};
+
+// MUSIC
+
+class CfgMusic
+{
+	tracks[] = {};
+	class MyIntro
+	{
+		// display name
+		name	= "TemplateMusic";
+
+		// filename, volume, pitch
+		sound[]	= { "", db + 0, 1.0 };
+	};
+
+	#include "JM_Framework\customMusic.hpp"
+};
+
+////// ** DONT EDIT **//////////////////////////////////////////////////////
+
+class CfgFunctions
+{
+    	createShortcuts = 1;
+    	#include "JM_Framework\UnknownWep\cfgFunctions.hpp"
+		#include "JM_Framework\Permadeath\cfgFunctions.hpp"
+	#include "JM_Framework\ZeusModules\cfgFunctions.hpp"
+	#include "JM_Framework\Loadouts\cfgFunctions.hpp"
+
+class JM_Master
+    {
+        tag = "JM";
+
+        class GUIMessage
+        {
+            file = "JM_Framework\Misc\GUIMessage";
+            class guiMessage {};
+        };
+
+    };
+
+};
+
+class Extended_PreInit_EventHandlers {
+		#include "JM_Framework\UnknownWep\Extended_PreInit_EventHandlers.hpp"
+};
+
+
+class Extended_PostInit_EventHandlers {
+    	#include "JM_Framework\UnknownWep\Extended_PostInit_EventHandlers.hpp"
+};
+
+
+#include "JM_Framework\VAM_GUI\defines.hpp"
+#include "JM_Framework\VAM_GUI\VAM_GUI_controls.hpp"
+#include "JM_Framework\VAM_GUI\VAM_GUI_classes.hpp"
