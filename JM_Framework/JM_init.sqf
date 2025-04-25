@@ -43,12 +43,12 @@ JM_fortList2 = [
 
 JM_allowedArsenalItems = [
     ["General", [
-        "ItemMap", "ItemCompass", "ItemWatch", "ACE_EarPlugs", "ACE_fieldDressing",
-        "rhsusf_mre", "rhsusf_ANPVS_14", "rhsusf_shemagh_od", "CUP_U_O_RUS_BeigeDigital_MSV", "CUP_U_O_RUS_BeigeDigital_MSV_gloves_pads"
+        "ItemMap", "ItemCompass", "ItemWatch", "ACE_EarPlugs", "ACE_fieldDressing"
+ 
     ]],
     
     ["Medic", [
-        "ACE_surgicalKit", "ACE_bloodIV", "ACE_morphine", "Aegis_arifle_AK103_F", "Aegis_optic_1p87", "30Rnd_762x39_polymer_Plum_Mag_F", "CUP_U_O_RUS_Soldier_VKPO_Rolled_Desert_3"
+        "ACE_surgicalKit", "ACE_bloodIV", "ACE_morphine", "SMG_02_F", "30Rnd_9x21_Mag_SMG_02", "U_B_PilotCoveralls"
     ]],
     
     ["Engineer", [

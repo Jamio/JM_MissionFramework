@@ -12,56 +12,48 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=405;
+		nextID=77;
 	};
 	class LayerIndexProvider
 	{
-		nextID=74;
+		nextID=2;
 	};
 	class Camera
 	{
-		pos[]={4465.4214,45.538685,6741.7573};
-		dir[]={0.032978367,-0.61161762,0.79062217};
-		up[]={0.02549189,0.79113245,0.61107093};
-		aside[]={0.99926907,-1.4674952e-06,-0.041692078};
+		pos[]={6127.9414,47.803776,4903.1987};
+		dir[]={-0.063189313,-0.66590333,0.74335724};
+		up[]={-0.056401912,0.74603808,0.66351044};
+		aside[]={0.99640667,3.7252903e-09,0.084699854};
 	};
 };
 binarizationWanted=0;
-sourceName="JM_FrameworkV1";
+sourceName="JM_Framework1_Base";
 addons[]=
 {
-	"WBK_DyingAnimationsMod",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
 	"A3_Weapons_F_Ammoboxes",
-	"A3_Aegis_Supplies_F_Aegis_Ammoboxes",
 	"A3_Armor_F_EPC_MBT_01",
 	"ace_realisticnames",
 	"ace_vehicle_damage",
 	"ace_viewports",
 	"A3_Ui_F",
 	"A3_Characters_F",
-	"A3_Aegis_Characters_F_Aegis",
 	"A3_Weapons_F",
 	"ace_medical_treatment",
 	"A3_Misc_F_Helpers",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Supplies_F_Heli_Slingload",
-	"A3_Aegis_Supplies_F_Aegis_Slingload",
 	"ace_cargo",
 	"A3_Props_F_Enoch_Military_Camps",
 	"A3_Structures_F_Mil_BagBunker",
-	"A3_Aegis_Structures_F_Aegis_Military_Fortifications",
 	"A3_Props_F_Decade_Objectives",
 	"A3_Props_F_Orange_Humanitarian_Camps",
 	"A3_Props_F_Enoch_Military_Equipment",
 	"A3_Weapons_F_Rifles_MX",
-	"A3_Aegis_Weapons_F_Aegis",
 	"ace_scopes",
 	"ace_ballistics",
 	"ace_smallarms",
 	"ace_optics",
-	"A3_Aegis_Characters_F_Aegis_Headgear",
-	"A3_Aegis_Characters_F_Aegis_Vests",
 	"A3_Weapons_F_Enoch_Rifles_MSBS",
 	"A3_Weapons_F_Enoch",
 	"A3_Weapons_F_Exp_Rifles_SPAR_03",
@@ -76,228 +68,195 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=33;
+		items=28;
 		class Item0
-		{
-			className="WBK_DyingAnimationsMod";
-			name="WBK_DyingAnimationsMod";
-		};
-		class Item1
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item2
+		class Item1
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item3
-		{
-			className="A3_Aegis_Supplies_F_Aegis";
-			name="Arma 3 Aegis - Ammoboxes and Supplies";
-			author="Avery Kaiserin";
-			url="https://steamcommunity.com/sharedfiles/filedetails/?id=949252631";
-		};
-		class Item4
+		class Item2
 		{
 			className="A3_Armor_F_EPC";
 			name="Arma 3 Win Episode - Armored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item3
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item4
 		{
 			className="ace_vehicle_damage";
 			name="ACE3 - Vehicle Damage";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item7
+		class Item5
 		{
 			className="ace_viewports";
 			name="ACE3 - Viewports";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item8
+		class Item6
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
-		{
-			className="A3_Aegis_Characters_F_Aegis";
-			name="Arma 3 Aegis - Characters and Clothing";
-			author="Avery Kaiserin";
-			url="https://steamcommunity.com/sharedfiles/filedetails/?id=949252631";
-		};
-		class Item10
+		class Item7
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item11
+		class Item8
 		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item9
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item10
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item11
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item15
+		class Item12
 		{
 			className="A3_Props_F_Enoch";
 			name="Arma 3 Contact Platform - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item16
+		class Item13
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
-		{
-			className="A3_Aegis_Structures_F_Aegis";
-			name="Arma 3 Aegis - Buildings and Structures";
-			author="Avery Kaiserin";
-			url="https://steamcommunity.com/sharedfiles/filedetails/?id=949252631";
-		};
-		class Item18
+		class Item14
 		{
 			className="A3_Props_F_Decade_Objectives";
 			name="A3_Props_F_Decade_Objectives";
 		};
-		class Item19
+		class Item15
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item20
-		{
-			className="A3_Aegis_Weapons_F_Aegis";
-			name="Arma 3 Aegis - Weapons and Accessories";
-			author="Avery Kaiserin";
-			url="https://steamcommunity.com/sharedfiles/filedetails/?id=949252631";
-		};
-		class Item21
+		class Item16
 		{
 			className="ace_scopes";
 			name="ACE3 - Scopes";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item22
+		class Item17
 		{
 			className="ace_ballistics";
 			name="ACE3 - Ballistics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item23
+		class Item18
 		{
 			className="ace_smallarms";
 			name="ACE3 - Small Arms";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item24
+		class Item19
 		{
 			className="ace_optics";
 			name="ACE3 - Optics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item25
+		class Item20
 		{
 			className="A3_Weapons_F_Enoch";
 			name="Arma 3 Contact Platform - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
+		class Item21
 		{
 			className="A3_Weapons_F_Exp";
 			name="Arma 3 Apex - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item27
+		class Item22
 		{
 			className="ace_fastroping";
 			name="ACE3 - Fastroping";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item28
+		class Item23
 		{
 			className="A3_Supplies_F_Enoch";
 			name="Arma 3 Contact Platform - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item24
 		{
 			className="A3_Structures_F_Tank";
 			name="Arma 3 Tank - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item30
+		class Item25
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item31
+		class Item26
 		{
 			className="ace_interaction";
 			name="ACE3 - Interaction";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item32
+		class Item27
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
@@ -314,463 +273,91 @@ dlcs[]=
 	"Orange",
 	"Enoch"
 };
-randomSeed=9549655;
+randomSeed=11364584;
 class ScenarioData
 {
 	author="Jamio";
-};
-class CustomAttributes
-{
-	class Category2
-	{
-		name="Multiplayer";
-		class Attribute0
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="ARRAY";
-					class value
-					{
-						items=1;
-						class Item0
-						{
-							class data
-							{
-								singleType="STRING";
-								value="None";
-							};
-						};
-					};
-				};
-			};
-		};
-		nAttributes=1;
-	};
 };
 class Mission
 {
 	class Intel
 	{
 		timeOfChanges=1800.0002;
-		startWeather=1;
+		startWeather=0;
 		startWind=0.1;
 		startWaves=0.1;
 		forecastWeather=0;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		rainForced=1;
 		wavesForced=1;
 		windForced=1;
 		year=2035;
 		day=28;
-		hour=19;
-		minute=-15;
+		hour=13;
+		minute=37;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
 	class Entities
 	{
-		items=18;
+		items=1;
 		class Item0
 		{
 			dataType="Layer";
 			name="[JM] Framework Composition";
 			class Entities
 			{
-				items=49;
+				items=16;
 				class Item0
 				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={4477.1929,5.0000005,6809.9805};
-					};
-					title="RESUPPLY";
-					description="MEDICAL BOX: [this, 50, 10, 5, 10, 20, 15, 25, 10, 10] execVM ""JM_Framework\Supply\medCrate.sqf"";" \n "" \n "Parameters: [X, Bandage, 1L Blood, 500mL Blood, 250mL Blood, Splint, Torniquet,  Painkiller, Epinephrine, Morphine]" \n "" \n "" \n "AMMO BOX:  [this, 50, 20, 5, 10] execVM ""JM_Framework\Supply\ammoCrate.sqf"";" \n "" \n "Parameters: [X, Primary Mags, Secondary Mags, Launcher, Grenades]";
-					id=24;
-					atlOffset=4.7683716e-07;
-				};
-				class Item1
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={4478.5771,5.0000005,6809.9805};
-					};
-					description="The resupply will pull equipment from all PLAYABLE units - including slots not taken by players. The results are stored in arrays that can be accessed by a global variable.";
-					id=25;
-					atlOffset=4.7683716e-07;
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4483.394,5.6079984,6814.5649};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						init="[this] execVM ""JM_Framework\Supply\boxspawner.sqf"";" \n "" \n "if (hasInterface) then { " \n "    missionNamespace setVariable [""FOB_Resupply"", this]; " \n " " \n "    addMissionEventHandler [""Draw3D"", { " \n "        private _resupply = missionNamespace getVariable [""FOB_Resupply"", objNull]; " \n "        if (isNull _resupply) exitWith {}; " \n " " \n "        private _playerPos = getPosASL player; " \n "        private _resupplyPos = getPosASL _resupply; " \n "        private _distance = _playerPos distance _resupplyPos; " \n "        private _maxDistance = 25; " \n " " \n "        if (_distance > _maxDistance) exitWith {}; " \n " " \n "        private _pos = _resupplyPos; " \n "        _pos set [2, (_pos select 2) - 3]; " \n " " \n "        drawIcon3D [ " \n "            """",  " \n "            [1, 1, 1, 1],  " \n "            _pos,  " \n "            0, 0,  " \n "            0,  " \n "            ""RESUPPLY"",  " \n "            2,  " \n "            0.04,  " \n "            ""PuristaMedium"" " \n "        ]; " \n "    }]; " \n "}; " \n "";
-						disableSimulation=1;
-					};
-					id=26;
-					type="Land_PaperBox_open_full_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4478.603,5.2840548,6813.5928};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						init="[this, 50, 20, 5, 10] execVM ""JM_Framework\Supply\ammoCrate.sqf"";";
-					};
-					id=27;
-					type="Box_NATO_Ammo_F";
-				};
-				class Item4
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={4483.5093,5.0000005,6812.5771};
-					};
-					title="RESUPPLY - Box Spawner";
-					description="The box spawner allows players to spawn predefined crates containing custom items. There are currently options for medical and ammo crates that pull from the same array as the normal crates." \n "" \n "There is also an option for an empty crate, a crate containing CSW ammo, and one custom crate for you to fill with whatever items you wish.";
-					id=28;
-					atlOffset=4.7683716e-07;
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4506.73,7.7264757,6814.7822};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=29;
-					type="B_MBT_01_TUSK_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="iedd_vbied_edit";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item6
-				{
-					dataType="Marker";
-					position[]={4511.5024,5,6814.8032};
-					name="VAM_service_area_1";
-					markerType="RECTANGLE";
-					type="";
-					colorName="ColorRed";
-					fillName="SolidBorder";
-					a=20;
-					b=20;
-					drawBorder=1;
-					id=30;
-				};
-				class Item7
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={4506.8862,5.0000005,6808.5752};
-					};
-					title="VAM";
-					description="VAM will be available when in a marker area named ""VAM_service_area_1"" etc. OR when next to a repair container or depot." \n "" \n "Objects that enable VAM can be added in VAM_GUI_init.sqf array." \n "" \n "Custom textures CAN be added, somehow...";
-					id=31;
-					atlOffset=4.7683716e-07;
-				};
-				class Item8
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={4448.0933,5,6835.4517};
-					};
-					title="PLATOON RALLY ";
-					description="The big rally and the 4 smaller rallies are the physical objects that are used to teleport to via the redeployment menu.";
-					id=32;
-				};
-				class Item9
-				{
-					dataType="Trigger";
-					position[]={4474.2969,5,6792.376};
-					class Attributes
-					{
-						condition="call{{_x iskindof ""landvehicle"" && speed _x < 1} count thislist > 0  };";
-						onActivation="call{_handle = [(thisList select 0)] execVM ""JM_Framework\VehicleService\ServiceGround.sqf"";}";
-						sizeA=5;
-						sizeB=5;
-						sizeC=5;
-						repeatable=1;
-						activationBy="ANYPLAYER";
-						isRectangle=1;
-					};
-					id=33;
-					type="EmptyDetectorArea10x10";
-				};
-				class Item10
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={4474.1367,5.0000005,6786.959};
-					};
-					title="VEHICLE SERVICE - Ground";
-					description="Land vehicles that stop within this trigger area will be rearmed, repaired and refueled.";
-					id=34;
-					atlOffset=4.7683716e-07;
-				};
-				class Item11
-				{
-					dataType="Trigger";
-					position[]={4486.9849,5,6792.4619};
-					class Attributes
-					{
-						condition="call{{_x iskindof ""air"" && speed _x < 1} count thislist > 0  };";
-						onActivation="call{_handle = [(thisList select 0)] execVM ""JM_Framework\VehicleService\ServiceAir.sqf"";}";
-						sizeA=5;
-						sizeB=5;
-						sizeC=5;
-						repeatable=1;
-						activationBy="ANYPLAYER";
-						isRectangle=1;
-					};
-					id=35;
-					type="EmptyDetectorArea10x10";
-				};
-				class Item12
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={4486.8247,5.0000005,6787.0439};
-					};
-					title="VEHICLE SERVICE - Air";
-					description="Land vehicles that stop within this trigger area will be rearmed, repaired and refueled.";
-					id=36;
-					atlOffset=4.7683716e-07;
-				};
-				class Item13
-				{
-					dataType="Marker";
-					position[]={4444.5596,5,6827.7939};
-					name="respawn_west";
-					type="Empty";
-					id=37;
-				};
-				class Item14
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={4444.7271,5,6824.5029};
-					};
-					title="RESPAWN";
-					id=38;
-				};
-				class Item15
-				{
-					dataType="Group";
-					side="West";
+					dataType="Layer";
+					name="[JM] Framework Composition";
 					class Entities
 					{
-						items=1;
+						items=49;
 						class Item0
 						{
-							dataType="Object";
+							dataType="Comment";
 							class PositionInfo
 							{
-								position[]={4462.7148,5.0014391,6837.7402};
+								position[]={6146.9756,5.000001,4961.5259};
 							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp1.sqf"";" \n "" \n "";
-								isPlayable=1;
-								class Inventory
-								{
-									compass="ItemCompass";
-									watch="ItemWatch";
-								};
-							};
+							title="RESUPPLY";
+							description="MEDICAL BOX: [this, 50, 10, 5, 10, 20, 15, 25, 10, 10] execVM ""JM_Framework\Supply\medCrate.sqf"";" \n "" \n "Parameters: [X, Bandage, 1L Blood, 500mL Blood, 250mL Blood, Splint, Torniquet,  Painkiller, Epinephrine, Morphine]" \n "" \n "" \n "AMMO BOX:  [this, 50, 20, 5, 10] execVM ""JM_Framework\Supply\ammoCrate.sqf"";" \n "" \n "Parameters: [X, Primary Mags, Secondary Mags, Launcher, Grenades]";
 							id=1;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.03;
-										};
-									};
-								};
-								nAttributes=2;
-							};
+							atlOffset=9.5367432e-07;
 						};
-					};
-					class Attributes
-					{
-					};
-					id=0;
-				};
-				class Item16
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4476.6719,5,6813.5264};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						init="[this, 50, 10, 5, 10, 20, 15, 25, 10, 10] execVM ""JM_Framework\Supply\medCrate.sqf"";";
-					};
-					id=2;
-					type="ACE_medicalSupplyCrate";
-					class CustomAttributes
-					{
-						class Attribute0
+						class Item1
 						{
-							property="ammoBox";
-							expression="[_this,_value] call bis_fnc_initAmmoBox;";
-							class Value
+							dataType="Comment";
+							class PositionInfo
 							{
-								class data
-								{
-									singleType="STRING";
-									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-								};
+								position[]={6148.3599,5.000001,4961.5259};
 							};
+							description="The resupply will pull equipment from all PLAYABLE units - including slots not taken by players. The results are stored in arrays that can be accessed by a global variable.";
+							id=2;
+							atlOffset=9.5367432e-07;
 						};
-						nAttributes=1;
-					};
-				};
-				class Item17
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4455.5742,5.7502322,6829.042};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						name="HQ_Retreat_01";
-					};
-					id=39;
-					type="Sign_Arrow_Large_Cyan_F";
-				};
-				class Item18
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=1;
-						class Item0
+						class Item2
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={4427.3013,5.0014391,6822.5293};
+								position[]={6153.1768,5.6079984,4966.1104};
 							};
-							side="West";
-							flags=7;
+							side="Empty";
+							flags=4;
 							class Attributes
 							{
-								name="zeus1";
-								isPlayable=1;
-								class Inventory
-								{
-								};
+								init="[this] execVM ""JM_Framework\Supply\boxspawner.sqf"";" \n "" \n "if (hasInterface) then { " \n "    missionNamespace setVariable [""FOB_Resupply"", this]; " \n " " \n "    addMissionEventHandler [""Draw3D"", { " \n "        private _resupply = missionNamespace getVariable [""FOB_Resupply"", objNull]; " \n "        if (isNull _resupply) exitWith {}; " \n " " \n "        private _playerPos = getPosASL player; " \n "        private _resupplyPos = getPosASL _resupply; " \n "        private _distance = _playerPos distance _resupplyPos; " \n "        private _maxDistance = 25; " \n " " \n "        if (_distance > _maxDistance) exitWith {}; " \n " " \n "        private _pos = _resupplyPos; " \n "        _pos set [2, (_pos select 2) - 3]; " \n " " \n "        drawIcon3D [ " \n "            """",  " \n "            [1, 1, 1, 1],  " \n "            _pos,  " \n "            0, 0,  " \n "            0,  " \n "            ""RESUPPLY"",  " \n "            2,  " \n "            0.04,  " \n "            ""PuristaMedium"" " \n "        ]; " \n "    }]; " \n "}; " \n "";
+								disableSimulation=1;
 							};
-							id=41;
-							type="B_Soldier_SL_F";
+							id=3;
+							type="Land_PaperBox_open_full_F";
 							class CustomAttributes
 							{
 								class Attribute0
-								{
-									property="ace_isEngineer";
-									expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=2;
-										};
-									};
-								};
-								class Attribute1
 								{
 									property="allowDamage";
 									expression="_this allowdamage _value;";
@@ -783,75 +370,548 @@ class Mission
 										};
 									};
 								};
-								class Attribute2
+								nAttributes=1;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6148.3857,5.2840548,4965.1382};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="[this, 50, 20, 5, 10] execVM ""JM_Framework\Supply\ammoCrate.sqf"";";
+							};
+							id=4;
+							type="Box_NATO_Ammo_F";
+						};
+						class Item4
+						{
+							dataType="Comment";
+							class PositionInfo
+							{
+								position[]={6153.292,5.000001,4964.1226};
+							};
+							title="RESUPPLY - Box Spawner";
+							description="The box spawner allows players to spawn predefined crates containing custom items. There are currently options for medical and ammo crates that pull from the same array as the normal crates." \n "" \n "There is also an option for an empty crate, a crate containing CSW ammo, and one custom crate for you to fill with whatever items you wish.";
+							id=5;
+							atlOffset=9.5367432e-07;
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6176.5127,7.7264757,4966.3276};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=6;
+							type="B_MBT_01_TUSK_F";
+						};
+						class Item6
+						{
+							dataType="Marker";
+							position[]={6181.2852,5,4966.3486};
+							name="VAM_service_area_1";
+							markerType="RECTANGLE";
+							type="";
+							colorName="ColorRed";
+							fillName="SolidBorder";
+							a=20;
+							b=20;
+							drawBorder=1;
+							id=7;
+						};
+						class Item7
+						{
+							dataType="Comment";
+							class PositionInfo
+							{
+								position[]={6176.6689,5.000001,4960.1206};
+							};
+							title="VAM";
+							description="VAM will be available when in a marker area named ""VAM_service_area_1"" etc. OR when next to a repair container or depot." \n "" \n "Objects that enable VAM can be added in VAM_GUI_init.sqf array." \n "" \n "Custom textures CAN be added, somehow...";
+							id=8;
+							atlOffset=9.5367432e-07;
+						};
+						class Item8
+						{
+							dataType="Comment";
+							class PositionInfo
+							{
+								position[]={6117.876,5.0000005,4986.9971};
+							};
+							title="PLATOON RALLY ";
+							description="The big rally and the 4 smaller rallies are the physical objects that are used to teleport to via the redeployment menu.";
+							id=9;
+							atlOffset=4.7683716e-07;
+						};
+						class Item9
+						{
+							dataType="Trigger";
+							position[]={6144.0796,5,4943.9214};
+							class Attributes
+							{
+								condition="call{{_x iskindof ""landvehicle"" && speed _x < 1} count thislist > 0  };";
+								onActivation="call{_handle = [(thisList select 0)] execVM ""JM_Framework\VehicleService\ServiceGround.sqf"";}";
+								sizeA=5;
+								sizeB=5;
+								sizeC=5;
+								repeatable=1;
+								activationBy="ANYPLAYER";
+								isRectangle=1;
+							};
+							id=10;
+							type="EmptyDetectorArea10x10";
+						};
+						class Item10
+						{
+							dataType="Comment";
+							class PositionInfo
+							{
+								position[]={6143.9194,5.000001,4938.5044};
+							};
+							title="VEHICLE SERVICE - Ground";
+							description="Land vehicles that stop within this trigger area will be rearmed, repaired and refueled.";
+							id=11;
+							atlOffset=9.5367432e-07;
+						};
+						class Item11
+						{
+							dataType="Trigger";
+							position[]={6156.7676,5,4944.0073};
+							class Attributes
+							{
+								condition="call{{_x iskindof ""air"" && speed _x < 1} count thislist > 0  };";
+								onActivation="call{_handle = [(thisList select 0)] execVM ""JM_Framework\VehicleService\ServiceAir.sqf"";}";
+								sizeA=5;
+								sizeB=5;
+								sizeC=5;
+								repeatable=1;
+								activationBy="ANYPLAYER";
+								isRectangle=1;
+							};
+							id=12;
+							type="EmptyDetectorArea10x10";
+						};
+						class Item12
+						{
+							dataType="Comment";
+							class PositionInfo
+							{
+								position[]={6156.6074,5.000001,4938.5894};
+							};
+							title="VEHICLE SERVICE - Air";
+							description="Land vehicles that stop within this trigger area will be rearmed, repaired and refueled.";
+							id=13;
+							atlOffset=9.5367432e-07;
+						};
+						class Item13
+						{
+							dataType="Marker";
+							position[]={6114.3423,5,4979.3394};
+							name="respawn_west";
+							type="Empty";
+							id=14;
+						};
+						class Item14
+						{
+							dataType="Comment";
+							class PositionInfo
+							{
+								position[]={6114.5098,5.0000005,4976.0483};
+							};
+							title="RESPAWN";
+							id=15;
+							atlOffset=4.7683716e-07;
+						};
+						class Item15
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
 								{
-									property="ace_isEOD";
-									expression="_this setVariable ['ACE_isEOD', _value, true]";
-									class Value
+									dataType="Object";
+									class PositionInfo
 									{
-										class data
+										position[]={6132.4976,5.0014391,4989.2856};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp1.sqf"";" \n "" \n "";
+										isPlayable=1;
+										class Inventory
 										{
-											singleType="BOOL";
-											value=1;
+											compass="ItemCompass";
+											watch="ItemWatch";
 										};
 									};
-								};
-								class Attribute3
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
+									id=17;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
 									{
-										class data
+										class Attribute0
 										{
-											singleType="SCALAR";
-											value=1.03;
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
 										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
 									};
 								};
-								class Attribute4
+							};
+							class Attributes
+							{
+							};
+							id=16;
+						};
+						class Item16
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6146.4546,5,4965.0718};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="[this, 50, 10, 5, 10, 20, 15, 25, 10, 10] execVM ""JM_Framework\Supply\medCrate.sqf"";";
+							};
+							id=18;
+							type="ACE_medicalSupplyCrate";
+							class CustomAttributes
+							{
+								class Attribute0
 								{
-									property="speaker";
-									expression="_this setspeaker _value;";
+									property="ammoBox";
+									expression="[_this,_value] call bis_fnc_initAmmoBox;";
 									class Value
 									{
 										class data
 										{
 											singleType="STRING";
-											value="Male07ENG";
+											value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 										};
 									};
 								};
-								class Attribute5
+								nAttributes=1;
+							};
+						};
+						class Item17
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6125.3569,5.7502322,4980.5874};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="HQ_Retreat_01";
+							};
+							id=19;
+							type="Sign_Arrow_Large_Cyan_F";
+						};
+						class Item18
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
 								{
-									property="ace_advanced_fatigue_performanceFactor";
-									expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6097.084,5.0014391,4974.0747};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										name="zeus1";
+										isPlayable=1;
+										class Inventory
+										{
+										};
+									};
+									id=21;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="ace_isEngineer";
+											expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=2;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=0;
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="ace_isEOD";
+											expression="_this setVariable ['ACE_isEOD', _value, true]";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										class Attribute4
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="ace_advanced_fatigue_performanceFactor";
+											expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=10;
+												};
+											};
+										};
+										class Attribute6
+										{
+											property="ace_isMedic";
+											expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=2;
+												};
+											};
+										};
+										class Attribute7
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=0;
+												};
+											};
+										};
+										nAttributes=8;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=20;
+						};
+						class Item19
+						{
+							dataType="Comment";
+							class PositionInfo
+							{
+								position[]={6097.0537,5.000001,4971.2954};
+							};
+							title="ZEUS";
+							id=22;
+							atlOffset=9.5367432e-07;
+						};
+						class Item20
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={6093.5205,5,4973.0874};
+							};
+							id=23;
+							type="ModuleCurator_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleCurator_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="zeus1";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleCurator_F_Forced";
+									expression="_this setVariable ['Forced',_value,true];";
 									class Value
 									{
 										class data
 										{
 											singleType="SCALAR";
-											value=10;
+											value=0;
 										};
 									};
 								};
-								class Attribute6
+								class Attribute2
 								{
-									property="ace_isMedic";
-									expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+									property="ModuleCurator_F_Name";
+									expression="_this setVariable ['Name',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleCurator_F_Addons";
+									expression="_this setVariable ['Addons',_value,true];";
 									class Value
 									{
 										class data
 										{
 											singleType="SCALAR";
-											value=2;
+											value=3;
 										};
 									};
 								};
-								class Attribute7
+								nAttributes=4;
+							};
+						};
+						class Item21
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6132.3267,6.3620372,4965.1294};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="refillCrate1";
+							};
+							id=24;
+							type="B_Slingload_01_Cargo_F";
+							class CustomAttributes
+							{
+								class Attribute0
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="ace_cargo_customName";
+									expression="_this setVariable [""ace_cargo_customName"", _value, true]";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ammoBox";
+									expression="[_this,_value] call bis_fnc_initAmmoBox;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ace_cookoff_enableAmmoCookoff";
+									expression="if (!_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true]}";
 									class Value
 									{
 										class data
@@ -861,107 +921,1216 @@ class Mission
 										};
 									};
 								};
-								nAttributes=8;
+								class Attribute3
+								{
+									property="ace_cargo_size";
+									expression="[_this, _value] call ace_cargo_fnc_setSize";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=50;
+										};
+									};
+								};
+								nAttributes=4;
 							};
 						};
+						class Item22
+						{
+							dataType="Comment";
+							class PositionInfo
+							{
+								position[]={6095.9707,5.000001,4958.9814};
+							};
+							title="CUSTOM END MISSION";
+							description="There is a zeus module to trigger this custom end mission sequence." \n "" \n "cam_1 is where the camera will be position, cam_focus1 will be the object of focus." \n "" \n "The text and other bits can be edited within the endMission.sqf in Misc";
+							id=25;
+							atlOffset=9.5367432e-07;
+						};
+						class Item23
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6125.7974,5.1333637,4988.0288};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="MF_Srp1";
+								disableSimulation=1;
+							};
+							id=26;
+							type="Land_TentSolar_01_folded_olive_F";
+							atlOffset=-4.7683716e-07;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item24
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6129.4795,5.965631,4956.1089};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=27;
+							type="Land_BagBunker_Small_F";
+						};
+						class Item25
+						{
+							dataType="Marker";
+							position[]={6112.1797,5,4961.0215};
+							name="safezone1";
+							text="SAFEZONE";
+							type="mil_warning";
+							colorName="ColorGreen";
+							a=0.69999999;
+							b=0.69999999;
+							id=28;
+						};
+						class Item26
+						{
+							dataType="Comment";
+							class PositionInfo
+							{
+								position[]={6112.0649,5.000001,4958.6694};
+							};
+							title="SAFEZONE";
+							description="Safezone markers can be defined in JM_init.sqf along with a radius, and will prevent any shooting or unwanted grenade-throwing.";
+							id=29;
+							atlOffset=9.5367432e-07;
+						};
+						class Item27
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6122.1406,7.867044,4987.2964};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								init="this addAction [""<t color='#e03a4e'>Retreat</t>"",""JM_Framework\RallyPoint\retreat.sqf"",[HQ_Retreat_01],1,false,true,"""",""side player == WEST"",4];" \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP1</t>"",""RallyPoint\teleport.sqf"",[MF_Srp1],1.5,false,true,"""",""groupId(group wsl1) == groupId(group player)"",4]; " \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP2</t>"",""RallyPoint\teleport.sqf"",[MF_Srp2],1.5,false,true,"""",""groupId(group wsl2) == groupId(group player)"",4];" \n " " \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP3</t>"",""RallyPoint\teleport.sqf"",[MF_Srp3],1.5,false,true,"""",""groupId(group wsl3) == groupId(group player)"",4];" \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP4</t>"",""RallyPoint\teleport.sqf"",[MF_Srp4],1.5,false,true,"""",""groupId(group wsl4) == groupId(group player)"",4];" \n "" \n "RP_HealTrigger attachTo [MF_Prp, [0,0,0]];" \n "" \n "" \n """RPMARK_1"" setmarkerpos MF_Prp;";
+								name="MF_Prp";
+							};
+							id=30;
+							type="PortableFlagPole_01_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="Flag_Custom_Property";
+									expression="if(_value != '')then{_this setFlagTexture _value;_this setVariable ['bis_flagPole_custom',true]}else{_this setVariable ['bis_flagPole_custom',false]};";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="JM_Framework\RallyPoint\rallyflag.paa";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="Flag_Property";
+									expression="if(!(_this getVariable ['bis_flagPole_custom',false]) )then{_this setFlagTexture _value};";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="Flag_Position_Property";
+									expression="_this animateSource ['Flag_source',_value,true]";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=3;
+							};
+						};
+						class Item28
+						{
+							dataType="Comment";
+							class PositionInfo
+							{
+								position[]={6136.2695,5.0000005,4986.1226};
+							};
+							title="SQUAD LEADERS";
+							description="Infantry squad leaders have the ability to place the smaller rallies (Maximum: 4), but they need to be designated in the editor:" \n "" \n "[this] execVM ""JM_Framework\RallyPoint\MF_Srp1.sqf"";" \n "" \n "1. Place above in unit init" \n "2. Replace RPx with number 1-4 depending on Squad Leader number";
+							id=31;
+							atlOffset=4.7683716e-07;
+						};
+						class Item29
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6125.1987,5.4052014,4982.7896};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								disableSimulation=1;
+							};
+							id=32;
+							type="Land_CampingTable_small_white_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item30
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6125.2275,6.6707454,4982.7446};
+							};
+							side="Empty";
+							class Attributes
+							{
+								init="this addAction [ " \n "    ""<img image='\A3\ui_f\data\IGUI\Cfg\simpleTasks\types\move_ca.paa' size='1.2' shadow='0'/> <t color='#ffdb33'>Open Redeployment Menu</t>"", " \n "    { [] call JM_RallyPoint_fnc_showRedeployDialog }, " \n "    [], " \n "    1.5, " \n "    true, " \n "    true, " \n "    """", " \n "    ""_target distance _this < 4"", " \n "    5 " \n "]; " \n "" \n "" \n "if (hasInterface) then { " \n "    missionNamespace setVariable [""FOB_Radio"", this]; " \n " " \n "    addMissionEventHandler [""Draw3D"", { " \n "        private _radio = missionNamespace getVariable [""FOB_Radio"", objNull]; " \n "        if (isNull _radio) exitWith {}; " \n " " \n "        private _playerPos = getPosASL player; " \n "        private _radioPos = getPosASL _radio; " \n "        private _distance = _playerPos distance _radioPos; " \n "        private _maxDistance = 25; " \n " " \n "        if (_distance > _maxDistance) exitWith {}; " \n " " \n "        private _pos = _radioPos; " \n "        _pos set [2, (_pos select 2) - 4]; " \n " " \n "        drawIcon3D [ " \n "            """",  " \n "            [1, 1, 1, 1],  " \n "            _pos,  " \n "            0, 0,  " \n "            0,  " \n "            ""REDEPLOY"",  " \n "            2,  " \n "            0.04,  " \n "            ""PuristaMedium"" " \n "        ]; " \n "    }]; " \n "};";
+							};
+							id=33;
+							type="Land_Computer_01_black_F";
+							atlOffset=0.8130002;
+						};
+						class Item31
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6127.0981,5.1333642,4988.0146};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="MF_Srp2";
+								disableSimulation=1;
+							};
+							id=34;
+							type="Land_TentSolar_01_folded_olive_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item32
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6125.7646,5.1333642,4987.0405};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="MF_Srp3";
+								disableSimulation=1;
+							};
+							id=35;
+							type="Land_TentSolar_01_folded_olive_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item33
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6127.1426,5.1333642,4987.0298};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="MF_Srp4";
+								disableSimulation=1;
+							};
+							id=36;
+							type="Land_TentSolar_01_folded_olive_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item34
+						{
+							dataType="Marker";
+							position[]={6122.1655,5,4985.2339};
+							name="RPMARK_1";
+							text="Platoon Rally";
+							type="mil_triangle";
+							colorName="ColorPink";
+							a=0.69999999;
+							b=0.69999999;
+							id=37;
+						};
+						class Item35
+						{
+							dataType="Marker";
+							position[]={6125.5518,5,4985.3652};
+							name="marker_rp1";
+							text="Squad Rally 1";
+							type="mil_box";
+							colorName="ColorPink";
+							a=0.5;
+							b=0.5;
+							id=38;
+						};
+						class Item36
+						{
+							dataType="Marker";
+							position[]={6127.937,5,4985.3262};
+							name="marker_rp2";
+							text="Squad Rally 2";
+							type="mil_box";
+							colorName="ColorPink";
+							a=0.5;
+							b=0.5;
+							id=39;
+						};
+						class Item37
+						{
+							dataType="Marker";
+							position[]={6125.5244,5,4984.5884};
+							name="marker_rp3";
+							text="Squad Rally 3";
+							type="mil_box";
+							colorName="ColorPink";
+							a=0.5;
+							b=0.5;
+							id=40;
+						};
+						class Item38
+						{
+							dataType="Marker";
+							position[]={6127.9507,5,4984.562};
+							name="marker_rp4";
+							text="Squad Rally 4";
+							type="mil_box";
+							colorName="ColorPink";
+							a=0.5;
+							b=0.5;
+							id=41;
+						};
+						class Item39
+						{
+							dataType="Comment";
+							class PositionInfo
+							{
+								position[]={6129.4102,5.000001,4959.9453};
+							};
+							title="FORTIFY";
+							description="- Construction Crate is the object that enables building within 100m." \n "" \n "- Refill Crate is designed to be static at base, and used to restore fortify budget at a main base.";
+							id=42;
+							atlOffset=9.5367432e-07;
+						};
+						class Item40
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6135.3848,5.0014391,4989.2832};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp2.sqf"";" \n "";
+										isPlayable=1;
+										class Inventory
+										{
+											compass="ItemCompass";
+											watch="ItemWatch";
+										};
+									};
+									id=44;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=43;
+						};
+						class Item41
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6138.3008,5.0014391,4989.2388};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp3.sqf"";" \n "";
+										isPlayable=1;
+										class Inventory
+										{
+											compass="ItemCompass";
+											watch="ItemWatch";
+										};
+									};
+									id=46;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=45;
+						};
+						class Item42
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6141.0654,5.0014391,4989.2925};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp4.sqf"";" \n "";
+										isPlayable=1;
+										class Inventory
+										{
+											compass="ItemCompass";
+											watch="ItemWatch";
+										};
+									};
+									id=48;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=47;
+						};
+						class Item43
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6146.6357,5.0014391,4970.4233};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										init="this setVariable [""JM_role"", ""Medic""];";
+										description="Dude with medic role";
+										isPlayable=1;
+										class Inventory
+										{
+											compass="ItemCompass";
+											watch="ItemWatch";
+										};
+									};
+									id=50;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=49;
+						};
+						class Item44
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6154.6538,5.0014391,4989.519};
+										angles[]={0,4.2295265,0};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										init="this setVariable [""JM_role"", ""Medic""];";
+										description="Misfit Loadout";
+										isPlayable=1;
+										class Inventory
+										{
+											class primaryWeapon
+											{
+												name="arifle_MX_F";
+												firemode="arifle_MX_F:Single";
+												class primaryMuzzleMag
+												{
+													name="30Rnd_65x39_caseless_mag";
+													ammoLeft=30;
+												};
+											};
+											class binocular
+											{
+												name="Binocular";
+											};
+											class uniform
+											{
+												typeName="U_B_CombatUniform_mcam";
+												isBackpack=0;
+											};
+											class vest
+											{
+												typeName="V_PlateCarrier2_rgr";
+												isBackpack=0;
+											};
+											map="ItemMap";
+											compass="ItemCompass";
+											watch="ItemWatch";
+											headgear="H_HelmetSpecB_paint2";
+										};
+									};
+									id=52;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=51;
+						};
+						class Item45
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6155.2378,5.0014391,4987.9824};
+										angles[]={0,4.2295265,0};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										init="this setVariable [""JM_role"", ""Medic""];";
+										description="Misfit Loadout";
+										isPlayable=1;
+										class Inventory
+										{
+											class primaryWeapon
+											{
+												name="arifle_MX_F";
+												firemode="arifle_MX_F:Single";
+												class primaryMuzzleMag
+												{
+													name="30Rnd_65x39_caseless_mag";
+													ammoLeft=30;
+												};
+											};
+											class binocular
+											{
+												name="Binocular";
+											};
+											class uniform
+											{
+												typeName="U_B_CombatUniform_mcam";
+												isBackpack=0;
+											};
+											class vest
+											{
+												typeName="V_PlateCarrier2_rgr";
+												isBackpack=0;
+											};
+											map="ItemMap";
+											compass="ItemCompass";
+											watch="ItemWatch";
+											headgear="H_HelmetSpecB_paint2";
+										};
+									};
+									id=54;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=53;
+						};
+						class Item46
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6155.7769,5.0014391,4986.6665};
+										angles[]={0,4.2295265,0};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										init="this setVariable [""JM_role"", ""Medic""];";
+										description="Misfit Loadout";
+										isPlayable=1;
+										class Inventory
+										{
+											class primaryWeapon
+											{
+												name="arifle_MX_F";
+												firemode="arifle_MX_F:Single";
+												class primaryMuzzleMag
+												{
+													name="30Rnd_65x39_caseless_mag";
+													ammoLeft=30;
+												};
+											};
+											class binocular
+											{
+												name="Binocular";
+											};
+											class uniform
+											{
+												typeName="U_B_CombatUniform_mcam";
+												isBackpack=0;
+											};
+											class vest
+											{
+												typeName="V_PlateCarrier2_rgr";
+												isBackpack=0;
+											};
+											map="ItemMap";
+											compass="ItemCompass";
+											watch="ItemWatch";
+											headgear="H_HelmetSpecB_paint2";
+										};
+									};
+									id=56;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=55;
+						};
+						class Item47
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6157.9907,5.0014391,4987.4673};
+										angles[]={0,4.2295265,0};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										init="this setVariable [""JM_role"", ""Medic""];";
+										description="Misfit Loadout (contact DLC)";
+										isPlayable=1;
+										class Inventory
+										{
+											class primaryWeapon
+											{
+												name="arifle_MSBS65_sand_F";
+												firemode="arifle_MSBS65_sand_F:Single";
+												class primaryMuzzleMag
+												{
+													name="30Rnd_65x39_caseless_msbs_mag";
+													ammoLeft=30;
+												};
+											};
+											class binocular
+											{
+												name="Binocular";
+											};
+											class uniform
+											{
+												typeName="U_B_CombatUniform_mcam";
+												isBackpack=0;
+											};
+											class vest
+											{
+												typeName="V_PlateCarrier2_rgr";
+												isBackpack=0;
+											};
+											map="ItemMap";
+											compass="ItemCompass";
+											watch="ItemWatch";
+											headgear="H_HelmetSpecB_paint2";
+										};
+									};
+									id=58;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=57;
+						};
+						class Item48
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6157.4355,5.0014391,4988.7153};
+										angles[]={0,4.2295265,0};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										init="this setVariable [""JM_role"", ""Medic""];";
+										description="Misfit Loadout (apex DLC)";
+										isPlayable=1;
+										class Inventory
+										{
+											class primaryWeapon
+											{
+												name="arifle_SPAR_03_snd_F";
+												firemode="arifle_SPAR_03_snd_F:Single";
+												class primaryMuzzleMag
+												{
+													name="20Rnd_762x51_Mag";
+													ammoLeft=20;
+												};
+											};
+											class binocular
+											{
+												name="Binocular";
+											};
+											class uniform
+											{
+												typeName="U_B_CombatUniform_mcam";
+												isBackpack=0;
+											};
+											class vest
+											{
+												typeName="V_PlateCarrier2_rgr";
+												isBackpack=0;
+											};
+											map="ItemMap";
+											compass="ItemCompass";
+											watch="ItemWatch";
+											headgear="H_HelmetSpecB_paint2";
+										};
+									};
+									id=60;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=59;
+						};
 					};
-					class Attributes
-					{
-					};
-					id=40;
+					id=0;
+					atlOffset=2.8610229e-06;
 				};
-				class Item19
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={4427.271,5.0000005,6819.75};
-					};
-					title="ZEUS";
-					id=42;
-					atlOffset=4.7683716e-07;
-				};
-				class Item20
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={4423.7378,5,6821.542};
-					};
-					id=43;
-					type="ModuleCurator_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="zeus1";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=3;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item21
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4462.5439,6.3620372,6813.584};
+						position[]={6093.7798,9.434,4957.5176};
+					};
+					side="Empty";
+					class Attributes
+					{
+						name="cam1";
+						disableSimulation=1;
+					};
+					id=61;
+					type="Sign_Pointer_Blue_F";
+					atlOffset=4.3839998;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6095.7637,9.434,4957.4995};
+					};
+					side="Empty";
+					class Attributes
+					{
+						name="cam_focus1";
+						disableSimulation=1;
+					};
+					id=62;
+					type="Sign_Pointer_Blue_F";
+					atlOffset=4.3839998;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6126.7676,5.7898083,4965.2456};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
-						name="refillCrate1";
+						name="constructionCrate1";
 					};
-					id=3;
-					type="B_Slingload_01_Cargo_F";
+					id=63;
+					type="ACE_fastropingSupplyCrate";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -973,24 +2142,11 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="";
+									value="Construction Crate";
 								};
 							};
 						};
 						class Attribute1
-						{
-							property="ammoBox";
-							expression="[_this,_value] call bis_fnc_initAmmoBox;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-								};
-							};
-						};
-						class Attribute2
 						{
 							property="ace_cookoff_enableAmmoCookoff";
 							expression="if (!_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true]}";
@@ -1003,185 +2159,87 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="ace_cargo_size";
-							expression="[_this, _value] call ace_cargo_fnc_setSize";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=50;
-								};
-							};
-						};
-						nAttributes=4;
+						nAttributes=2;
 					};
 				};
-				class Item22
+				class Item4
 				{
 					dataType="Comment";
 					class PositionInfo
 					{
-						position[]={4426.188,5.0000005,6807.436};
+						position[]={6154.4087,5.0000005,4971.3164};
 					};
-					title="CUSTOM END MISSION";
-					description="There is a zeus module to trigger this custom end mission sequence." \n "" \n "cam_1 is where the camera will be position, cam_focus1 will be the object of focus." \n "" \n "The text and other bits can be edited within the endMission.sqf in Misc";
-					id=45;
+					title="ARSENAL";
+					description="The init contains code to make this a role-restricted arsenal if that is enabled." \n "" \n "Otherwise, remove that code and use this as a normal arsenal or something - it has 3D text on it like the other pieces.";
+					id=74;
 					atlOffset=4.7683716e-07;
 				};
-				class Item23
+				class Item5
+				{
+					dataType="Comment";
+					class PositionInfo
+					{
+						position[]={6127.333,5.0000005,4982.7988};
+					};
+					title="REDEPLOYMENT";
+					description="The object on the table acts as a means of opening the redeployment menu. This will give players the options to teleport to wherever they are allowed to.";
+					id=75;
+					atlOffset=4.7683716e-07;
+				};
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4456.0146,5.1333637,6836.4834};
+						position[]={6152.8516,5.8924227,4970.4902};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
-						name="MF_Srp1";
-						disableSimulation=1;
+						init="[this] call JM_Loadouts_fnc_addRestrictedArsenal;" \n "" \n "if (hasInterface) then { " \n "    missionNamespace setVariable [""FOB_Arsenal"", this]; " \n " " \n "    addMissionEventHandler [""Draw3D"", { " \n "        private _resupply = missionNamespace getVariable [""FOB_Arsenal"", objNull]; " \n "        if (isNull _resupply) exitWith {}; " \n " " \n "        private _playerPos = getPosASL player; " \n "        private _resupplyPos = getPosASL _resupply; " \n "        private _distance = _playerPos distance _resupplyPos; " \n "        private _maxDistance = 25; " \n " " \n "        if (_distance > _maxDistance) exitWith {}; " \n " " \n "        private _pos = _resupplyPos; " \n "        _pos set [2, (_pos select 2) - 3]; " \n " " \n "        drawIcon3D [ " \n "            """",  " \n "            [1, 1, 1, 1],  " \n "            _pos,  " \n "            0, 0,  " \n "            0,  " \n "            ""ARSENAL"",  " \n "            2,  " \n "            0.04,  " \n "            ""PuristaMedium"" " \n "        ]; " \n "    }]; " \n "};" \n "";
 					};
-					id=4;
-					type="Land_TentSolar_01_folded_olive_F";
-					atlOffset=-4.7683716e-07;
+					id=64;
+					type="I_EAF_supplyCrate_F";
 					class CustomAttributes
 					{
 						class Attribute0
 						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item24
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4459.6968,5.965631,6804.5635};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=46;
-					type="Land_BagBunker_Small_F";
-				};
-				class Item25
-				{
-					dataType="Marker";
-					position[]={4442.397,5,6809.4761};
-					name="safezone1";
-					text="SAFEZONE";
-					type="mil_warning";
-					colorName="ColorGreen";
-					a=0.69999999;
-					b=0.69999999;
-					id=47;
-				};
-				class Item26
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={4442.2822,5.0000005,6807.124};
-					};
-					title="SAFEZONE";
-					description="Safezone markers can be defined in JM_init.sqf along with a radius, and will prevent any shooting or unwanted grenade-throwing.";
-					id=48;
-					atlOffset=4.7683716e-07;
-				};
-				class Item27
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4452.3579,7.867044,6835.751};
-					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						init="this addAction [""<t color='#e03a4e'>Retreat</t>"",""JM_Framework\RallyPoint\retreat.sqf"",[HQ_Retreat_01],1,false,true,"""",""side player == WEST"",4];" \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP1</t>"",""RallyPoint\teleport.sqf"",[MF_Srp1],1.5,false,true,"""",""groupId(group wsl1) == groupId(group player)"",4]; " \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP2</t>"",""RallyPoint\teleport.sqf"",[MF_Srp2],1.5,false,true,"""",""groupId(group wsl2) == groupId(group player)"",4];" \n " " \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP3</t>"",""RallyPoint\teleport.sqf"",[MF_Srp3],1.5,false,true,"""",""groupId(group wsl3) == groupId(group player)"",4];" \n "" \n "this addAction [""<t color='#3a6fe0'>Move to Squad RP4</t>"",""RallyPoint\teleport.sqf"",[MF_Srp4],1.5,false,true,"""",""groupId(group wsl4) == groupId(group player)"",4];" \n "" \n "RP_HealTrigger attachTo [MF_Prp, [0,0,0]];" \n "" \n "" \n """RPMARK_1"" setmarkerpos MF_Prp;";
-						name="MF_Prp";
-					};
-					id=5;
-					type="PortableFlagPole_01_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Flag_Custom_Property";
-							expression="if(_value != '')then{_this setFlagTexture _value;_this setVariable ['bis_flagPole_custom',true]}else{_this setVariable ['bis_flagPole_custom',false]};";
+							property="ammoBox";
+							expression="[_this,_value] call bis_fnc_initAmmoBox;";
 							class Value
 							{
 								class data
 								{
 									singleType="STRING";
-									value="JM_Framework\RallyPoint\rallyflag.paa";
+									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 								};
 							};
 						};
-						class Attribute1
-						{
-							property="Flag_Property";
-							expression="if(!(_this getVariable ['bis_flagPole_custom',false]) )then{_this setFlagTexture _value};";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Flag_Position_Property";
-							expression="_this animateSource ['Flag_source',_value,true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						nAttributes=3;
+						nAttributes=1;
 					};
 				};
-				class Item28
-				{
-					dataType="Comment";
-					class PositionInfo
-					{
-						position[]={4466.4868,5,6834.5771};
-					};
-					title="SQUAD LEADERS";
-					description="Infantry squad leaders have the ability to place the smaller rallies (Maximum: 4), but they need to be designated in the editor:" \n "" \n "[this] execVM ""JM_Framework\RallyPoint\MF_Srp1.sqf"";" \n "" \n "1. Place above in unit init" \n "2. Replace RPx with number 1-4 depending on Squad Leader number";
-					id=6;
-				};
-				class Item29
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4455.416,5.4052014,6831.2441};
+						position[]={6124.8975,5.8106999,4955.4951};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=65;
+					type="Land_CzechHedgehog_01_new_F";
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6139.1367,5.2680001,4938.6299};
 					};
 					side="Empty";
 					flags=4;
@@ -1189,8 +2247,8 @@ class Mission
 					{
 						disableSimulation=1;
 					};
-					id=7;
-					type="Land_CampingTable_small_white_F";
+					id=66;
+					type="RoadCone_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1209,38 +2267,21 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item30
+				class Item9
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4455.4448,5.8577394,6831.1992};
-					};
-					side="Empty";
-					class Attributes
-					{
-						init="this addAction [ " \n "    ""<img image='\A3\ui_f\data\IGUI\Cfg\simpleTasks\types\move_ca.paa' size='1.2' shadow='0'/> <t color='#ffdb33'>Open Redeployment Menu</t>"", " \n "    { [] call JM_RallyPoint_fnc_showRedeployDialog }, " \n "    [], " \n "    1.5, " \n "    true, " \n "    true, " \n "    """", " \n "    ""_target distance _this < 4"", " \n "    5 " \n "]; " \n "" \n "" \n "if (hasInterface) then { " \n "    missionNamespace setVariable [""FOB_Radio"", this]; " \n " " \n "    addMissionEventHandler [""Draw3D"", { " \n "        private _radio = missionNamespace getVariable [""FOB_Radio"", objNull]; " \n "        if (isNull _radio) exitWith {}; " \n " " \n "        private _playerPos = getPosASL player; " \n "        private _radioPos = getPosASL _radio; " \n "        private _distance = _playerPos distance _radioPos; " \n "        private _maxDistance = 25; " \n " " \n "        if (_distance > _maxDistance) exitWith {}; " \n " " \n "        private _pos = _radioPos; " \n "        _pos set [2, (_pos select 2) - 4]; " \n " " \n "        drawIcon3D [ " \n "            """",  " \n "            [1, 1, 1, 1],  " \n "            _pos,  " \n "            0, 0,  " \n "            0,  " \n "            ""REDEPLOY"",  " \n "            2,  " \n "            0.04,  " \n "            ""PuristaMedium"" " \n "        ]; " \n "    }]; " \n "};";
-					};
-					id=8;
-					type="Land_Computer_01_black_F";
-					atlOffset=0.8130002;
-				};
-				class Item31
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4457.3154,5.1333642,6836.4692};
+						position[]={6148.9849,5.2680001,4938.6289};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
-						name="MF_Srp2";
 						disableSimulation=1;
 					};
-					id=9;
-					type="Land_TentSolar_01_folded_olive_F";
+					id=67;
+					type="RoadCone_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1259,22 +2300,21 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item32
+				class Item10
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4455.9819,5.1333642,6835.4951};
+						position[]={6138.9937,5.2680001,4949.0273};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
-						name="MF_Srp3";
 						disableSimulation=1;
 					};
-					id=10;
-					type="Land_TentSolar_01_folded_olive_F";
+					id=68;
+					type="RoadCone_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1293,22 +2333,21 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item33
+				class Item11
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4457.3599,5.1333642,6835.4844};
+						position[]={6149.0474,5.2680001,4949.0962};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
-						name="MF_Srp4";
 						disableSimulation=1;
 					};
-					id=11;
-					type="Land_TentSolar_01_folded_olive_F";
+					id=69;
+					type="RoadCone_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1327,1660 +2366,141 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item34
+				class Item12
 				{
-					dataType="Marker";
-					position[]={4452.3828,5,6833.6885};
-					name="RPMARK_1";
-					text="Platoon Rally";
-					type="mil_triangle";
-					colorName="ColorPink";
-					a=0.69999999;
-					b=0.69999999;
-					id=12;
-				};
-				class Item35
-				{
-					dataType="Marker";
-					position[]={4455.769,5,6833.8198};
-					name="marker_rp1";
-					text="Squad Rally 1";
-					type="mil_box";
-					colorName="ColorPink";
-					a=0.5;
-					b=0.5;
-					id=13;
-				};
-				class Item36
-				{
-					dataType="Marker";
-					position[]={4458.1543,5,6833.7808};
-					name="marker_rp2";
-					text="Squad Rally 2";
-					type="mil_box";
-					colorName="ColorPink";
-					a=0.5;
-					b=0.5;
-					id=14;
-				};
-				class Item37
-				{
-					dataType="Marker";
-					position[]={4455.7417,5,6833.043};
-					name="marker_rp3";
-					text="Squad Rally 3";
-					type="mil_box";
-					colorName="ColorPink";
-					a=0.5;
-					b=0.5;
-					id=15;
-				};
-				class Item38
-				{
-					dataType="Marker";
-					position[]={4458.168,5,6833.0166};
-					name="marker_rp4";
-					text="Squad Rally 4";
-					type="mil_box";
-					colorName="ColorPink";
-					a=0.5;
-					b=0.5;
-					id=16;
-				};
-				class Item39
-				{
-					dataType="Comment";
+					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4459.6274,5.0000005,6808.3999};
+						position[]={6152.0098,5.2680001,4949.2739};
 					};
-					title="FORTIFY";
-					description="- Construction Crate is the object that enables building within 100m." \n "" \n "- Refill Crate is designed to be static at base, and used to restore fortify budget at a main base.";
-					id=17;
-					atlOffset=4.7683716e-07;
-				};
-				class Item40
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4465.6021,5.0014391,6837.7378};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp2.sqf"";" \n "";
-								isPlayable=1;
-								class Inventory
-								{
-									compass="ItemCompass";
-									watch="ItemWatch";
-								};
-							};
-							id=19;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.03;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="iedd_ied_sides";
-									expression="_this setVariable ['iedd_ied_sides',_value];";
-									class Value
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=4;
-												class Item0
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=-1;
-													};
-												};
-												class Item2
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=2;
-													};
-												};
-												class Item3
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=3;
-													};
-												};
-											};
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-					};
+					side="Empty";
+					flags=4;
 					class Attributes
 					{
+						disableSimulation=1;
 					};
-					id=18;
-				};
-				class Item41
-				{
-					dataType="Group";
-					side="West";
-					class Entities
+					id=70;
+					type="RoadCone_F";
+					class CustomAttributes
 					{
-						items=1;
-						class Item0
+						class Attribute0
 						{
-							dataType="Object";
-							class PositionInfo
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
 							{
-								position[]={4468.5181,5.0014391,6837.6934};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp3.sqf"";" \n "";
-								isPlayable=1;
-								class Inventory
+								class data
 								{
-									compass="ItemCompass";
-									watch="ItemWatch";
+									singleType="BOOL";
+									value=0;
 								};
-							};
-							id=21;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.03;
-										};
-									};
-								};
-								nAttributes=2;
 							};
 						};
+						nAttributes=1;
 					};
+				};
+				class Item13
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6151.7988,5.2680001,4938.7954};
+					};
+					side="Empty";
+					flags=4;
 					class Attributes
 					{
+						disableSimulation=1;
 					};
-					id=20;
-				};
-				class Item42
-				{
-					dataType="Group";
-					side="West";
-					class Entities
+					id=71;
+					type="RoadCone_F";
+					class CustomAttributes
 					{
-						items=1;
-						class Item0
+						class Attribute0
 						{
-							dataType="Object";
-							class PositionInfo
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
 							{
-								position[]={4471.2827,5.0014391,6837.7471};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								init="[this] execVM ""JM_Framework\RallyPoint\MF_Srp4.sqf"";" \n "";
-								isPlayable=1;
-								class Inventory
+								class data
 								{
-									compass="ItemCompass";
-									watch="ItemWatch";
+									singleType="BOOL";
+									value=0;
 								};
-							};
-							id=23;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.03;
-										};
-									};
-								};
-								nAttributes=2;
 							};
 						};
+						nAttributes=1;
 					};
+				};
+				class Item14
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6161.6504,5.2680001,4938.7734};
+					};
+					side="Empty";
+					flags=4;
 					class Attributes
 					{
+						disableSimulation=1;
 					};
-					id=22;
-				};
-				class Item43
-				{
-					dataType="Group";
-					side="West";
-					class Entities
+					id=72;
+					type="RoadCone_F";
+					class CustomAttributes
 					{
-						items=1;
-						class Item0
+						class Attribute0
 						{
-							dataType="Object";
-							class PositionInfo
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
 							{
-								position[]={4476.853,5.0014391,6818.8779};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								init="this setVariable [""JM_role"", ""Medic""];";
-								description="Dude with medic role";
-								isPlayable=1;
-								class Inventory
+								class data
 								{
-									compass="ItemCompass";
-									watch="ItemWatch";
+									singleType="BOOL";
+									value=0;
 								};
-							};
-							id=392;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.03;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="iedd_ied_sides";
-									expression="_this setVariable ['iedd_ied_sides',_value];";
-									class Value
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=4;
-												class Item0
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=-1;
-													};
-												};
-												class Item2
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=2;
-													};
-												};
-												class Item3
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=3;
-													};
-												};
-											};
-										};
-									};
-								};
-								nAttributes=3;
 							};
 						};
+						nAttributes=1;
 					};
+				};
+				class Item15
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6161.7251,5.2680001,4949.1421};
+					};
+					side="Empty";
+					flags=4;
 					class Attributes
 					{
+						disableSimulation=1;
 					};
-					id=391;
-				};
-				class Item44
-				{
-					dataType="Group";
-					side="West";
-					class Entities
+					id=73;
+					type="RoadCone_F";
+					class CustomAttributes
 					{
-						items=1;
-						class Item0
+						class Attribute0
 						{
-							dataType="Object";
-							class PositionInfo
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
 							{
-								position[]={4484.8711,5.0014391,6837.9736};
-								angles[]={0,4.2295265,-0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								init="this setVariable [""JM_role"", ""Medic""];";
-								description="Misfit Loadout";
-								isPlayable=1;
-								class Inventory
+								class data
 								{
-									class primaryWeapon
-									{
-										name="arifle_MX_F";
-										firemode="arifle_MX_F:Single";
-										class primaryMuzzleMag
-										{
-											name="30Rnd_65x39_caseless_mag";
-											ammoLeft=30;
-										};
-									};
-									class binocular
-									{
-										name="Binocular";
-									};
-									class uniform
-									{
-										typeName="U_B_CombatUniform_mcam";
-										isBackpack=0;
-									};
-									class vest
-									{
-										typeName="V_PlateCarrier2_rgr";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									headgear="H_HelmetSpecB_paint2";
+									singleType="BOOL";
+									value=0;
 								};
 							};
-							id=394;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.03;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="iedd_ied_sides";
-									expression="_this setVariable ['iedd_ied_sides',_value];";
-									class Value
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=4;
-												class Item0
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=-1;
-													};
-												};
-												class Item2
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=2;
-													};
-												};
-												class Item3
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=3;
-													};
-												};
-											};
-										};
-									};
-								};
-								nAttributes=3;
-							};
 						};
+						nAttributes=1;
 					};
-					class Attributes
-					{
-					};
-					id=393;
-				};
-				class Item45
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4485.4551,5.0014391,6836.437};
-								angles[]={0,4.2295265,-0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								init="this setVariable [""JM_role"", ""Medic""];";
-								description="Misfit Loadout";
-								isPlayable=1;
-								class Inventory
-								{
-									class primaryWeapon
-									{
-										name="arifle_MX_F";
-										firemode="arifle_MX_F:Single";
-										class primaryMuzzleMag
-										{
-											name="30Rnd_65x39_caseless_mag";
-											ammoLeft=30;
-										};
-									};
-									class binocular
-									{
-										name="Binocular";
-									};
-									class uniform
-									{
-										typeName="U_B_CombatUniform_mcam";
-										isBackpack=0;
-									};
-									class vest
-									{
-										typeName="V_PlateCarrier2_rgr";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									headgear="H_HelmetSpecB_paint2";
-								};
-							};
-							id=396;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.03;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="iedd_ied_sides";
-									expression="_this setVariable ['iedd_ied_sides',_value];";
-									class Value
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=4;
-												class Item0
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=-1;
-													};
-												};
-												class Item2
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=2;
-													};
-												};
-												class Item3
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=3;
-													};
-												};
-											};
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=395;
-				};
-				class Item46
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4485.9941,5.0014391,6835.1211};
-								angles[]={0,4.2295265,-0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								init="this setVariable [""JM_role"", ""Medic""];";
-								description="Misfit Loadout";
-								isPlayable=1;
-								class Inventory
-								{
-									class primaryWeapon
-									{
-										name="arifle_MX_F";
-										firemode="arifle_MX_F:Single";
-										class primaryMuzzleMag
-										{
-											name="30Rnd_65x39_caseless_mag";
-											ammoLeft=30;
-										};
-									};
-									class binocular
-									{
-										name="Binocular";
-									};
-									class uniform
-									{
-										typeName="U_B_CombatUniform_mcam";
-										isBackpack=0;
-									};
-									class vest
-									{
-										typeName="V_PlateCarrier2_rgr";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									headgear="H_HelmetSpecB_paint2";
-								};
-							};
-							id=398;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.03;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="iedd_ied_sides";
-									expression="_this setVariable ['iedd_ied_sides',_value];";
-									class Value
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=4;
-												class Item0
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=-1;
-													};
-												};
-												class Item2
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=2;
-													};
-												};
-												class Item3
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=3;
-													};
-												};
-											};
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=397;
-				};
-				class Item47
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4488.208,5.0014391,6835.9219};
-								angles[]={0,4.2295265,-0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								init="this setVariable [""JM_role"", ""Medic""];";
-								description="Misfit Loadout (contact DLC)";
-								isPlayable=1;
-								class Inventory
-								{
-									class primaryWeapon
-									{
-										name="arifle_MSBS65_sand_F";
-										firemode="arifle_MSBS65_sand_F:Single";
-										class primaryMuzzleMag
-										{
-											name="30Rnd_65x39_caseless_msbs_mag";
-											ammoLeft=30;
-										};
-									};
-									class binocular
-									{
-										name="Binocular";
-									};
-									class uniform
-									{
-										typeName="U_B_CombatUniform_mcam";
-										isBackpack=0;
-									};
-									class vest
-									{
-										typeName="V_PlateCarrier2_rgr";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									headgear="H_HelmetSpecB_paint2";
-								};
-							};
-							id=400;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.03;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="iedd_ied_sides";
-									expression="_this setVariable ['iedd_ied_sides',_value];";
-									class Value
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=4;
-												class Item0
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=-1;
-													};
-												};
-												class Item2
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=2;
-													};
-												};
-												class Item3
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=3;
-													};
-												};
-											};
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=399;
-				};
-				class Item48
-				{
-					dataType="Group";
-					side="West";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4487.6528,5.0014391,6837.1699};
-								angles[]={0,4.2295265,-0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								init="this setVariable [""JM_role"", ""Medic""];";
-								description="Misfit Loadout (apex DLC)";
-								isPlayable=1;
-								class Inventory
-								{
-									class primaryWeapon
-									{
-										name="arifle_SPAR_03_snd_F";
-										firemode="arifle_SPAR_03_snd_F:Single";
-										class primaryMuzzleMag
-										{
-											name="20Rnd_762x51_Mag";
-											ammoLeft=20;
-										};
-									};
-									class binocular
-									{
-										name="Binocular";
-									};
-									class uniform
-									{
-										typeName="U_B_CombatUniform_mcam";
-										isBackpack=0;
-									};
-									class vest
-									{
-										typeName="V_PlateCarrier2_rgr";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									headgear="H_HelmetSpecB_paint2";
-								};
-							};
-							id=404;
-							type="B_Soldier_SL_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.03;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="iedd_ied_sides";
-									expression="_this setVariable ['iedd_ied_sides',_value];";
-									class Value
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=4;
-												class Item0
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=-1;
-													};
-												};
-												class Item2
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=2;
-													};
-												};
-												class Item3
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=3;
-													};
-												};
-											};
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=403;
 				};
 			};
-			id=49;
-			atlOffset=9.5367432e-07;
-		};
-		class Item1
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4423.9971,9.434,6805.9722};
-			};
-			side="Empty";
-			class Attributes
-			{
-				name="cam1";
-				disableSimulation=1;
-			};
-			id=51;
-			type="Sign_Pointer_Blue_F";
-			atlOffset=4.3839998;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item2
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4425.981,9.434,6805.9541};
-			};
-			side="Empty";
-			class Attributes
-			{
-				name="cam_focus1";
-				disableSimulation=1;
-			};
-			id=52;
-			type="Sign_Pointer_Blue_F";
-			atlOffset=4.3839998;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="hideObject";
-					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item3
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4456.9849,5.7898083,6813.7002};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="constructionCrate1";
-			};
-			id=53;
-			type="ACE_fastropingSupplyCrate";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_cargo_customName";
-					expression="_this setVariable [""ace_cargo_customName"", _value, true]";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="Construction Crate";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_cookoff_enableAmmoCookoff";
-					expression="if (!_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true]}";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item4
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4483.0688,5.8924227,6818.9448};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="[this] call JM_Loadouts_fnc_addRestrictedArsenal;" \n "" \n "if (hasInterface) then { " \n "    missionNamespace setVariable [""FOB_Arsenal"", this]; " \n " " \n "    addMissionEventHandler [""Draw3D"", { " \n "        private _resupply = missionNamespace getVariable [""FOB_Arsenal"", objNull]; " \n "        if (isNull _resupply) exitWith {}; " \n " " \n "        private _playerPos = getPosASL player; " \n "        private _resupplyPos = getPosASL _resupply; " \n "        private _distance = _playerPos distance _resupplyPos; " \n "        private _maxDistance = 25; " \n " " \n "        if (_distance > _maxDistance) exitWith {}; " \n " " \n "        private _pos = _resupplyPos; " \n "        _pos set [2, (_pos select 2) - 3]; " \n " " \n "        drawIcon3D [ " \n "            """",  " \n "            [1, 1, 1, 1],  " \n "            _pos,  " \n "            0, 0,  " \n "            0,  " \n "            ""ARSENAL"",  " \n "            2,  " \n "            0.04,  " \n "            ""PuristaMedium"" " \n "        ]; " \n "    }]; " \n "};" \n "";
-			};
-			id=136;
-			type="I_EAF_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item5
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4455.1147,5.8106999,6803.9497};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=139;
-			type="Land_CzechHedgehog_01_new_F";
-		};
-		class Item6
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4469.354,5.2680001,6787.0845};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				disableSimulation=1;
-			};
-			id=146;
-			type="RoadCone_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item7
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4479.2021,5.2680001,6787.0835};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				disableSimulation=1;
-			};
-			id=147;
-			type="RoadCone_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item8
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4469.2109,5.2680001,6797.4819};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				disableSimulation=1;
-			};
-			id=148;
-			type="RoadCone_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item9
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4479.2646,5.2680001,6797.5508};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				disableSimulation=1;
-			};
-			id=149;
-			type="RoadCone_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item10
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4482.2271,5.2680001,6797.7285};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				disableSimulation=1;
-			};
-			id=150;
-			type="RoadCone_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item11
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4482.0161,5.2680001,6787.25};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				disableSimulation=1;
-			};
-			id=151;
-			type="RoadCone_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item12
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4491.8677,5.2680001,6787.228};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				disableSimulation=1;
-			};
-			id=152;
-			type="RoadCone_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item13
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4491.9424,5.2680001,6797.5967};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				disableSimulation=1;
-			};
-			id=153;
-			type="RoadCone_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item14
-		{
-			dataType="Layer";
-			name="[KES] Offrhino (120mm) VANILLA Zeus Comp";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Layer";
-					name="[KES] Offrhino (120mm)";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Layer";
-							name="[KES] Offrhino (120mm)_1";
-							id=155;
-							atlOffset=-5;
-						};
-					};
-					id=154;
-					atlOffset=-5;
-				};
-			};
-			id=349;
-			atlOffset=-5;
-		};
-		class Item15
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={4484.626,5,6819.771};
-			};
-			title="ARSENAL";
-			description="The init contains code to make this a role-restricted arsenal if that is enabled." \n "" \n "Otherwise, remove that code and use this as a normal arsenal or something - it has 3D text on it like the other pieces.";
-			id=352;
-		};
-		class Item16
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={4457.5503,5,6831.2534};
-			};
-			title="REDEPLOYMENT";
-			description="The object on the table acts as a means of opening the redeployment menu. This will give players the options to teleport to wherever they are allowed to.";
-			id=353;
-		};
-		class Item17
-		{
-			dataType="Layer";
-			name="[JM] 2041 Loadouts";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Layer";
-					name="[JM] 2041 Loadouts";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Layer";
-							name="[JM] 2041 Loadouts_1";
-							class Entities
-							{
-								items=1;
-								class Item0
-								{
-									dataType="Layer";
-									name="[JM] 2041 Loadouts_2";
-									id=358;
-									atlOffset=-2.0027161e-05;
-								};
-							};
-							id=357;
-							atlOffset=-4.7683716e-06;
-						};
-					};
-					id=356;
-					atlOffset=-4.7683716e-06;
-				};
-			};
-			id=384;
-			atlOffset=-4.7683716e-06;
+			id=76;
+			atlOffset=0.00040149689;
 		};
 	};
 };
