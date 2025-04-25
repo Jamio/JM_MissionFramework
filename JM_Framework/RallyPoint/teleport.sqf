@@ -1,19 +1,18 @@
-//this addAction ["TeleportText","teleport.sqf",[objectName]];
+// JM_Framework\RallyPoint\teleport.sqf
 
 // Check if teleporting to squad is enabled
 if !(JM_Rally) exitWith {
     hint "Rally Points are currently disabled.";
 };
 
-// Get the destination.
-_dest = (_this select 3) select 0;
+// Get the destination marker from arguments
+params ["_dest"];
 
 // Get a random direction
-_dir = random 359;
+private _dir = random 359;
 
-// Move the person about 2 meters away from the destination (in the direction of _dir)
-
+// Teleport the player ~2 meters offset from the destination
 "test" cutText ["", "BLACK", 0.5, true];
 sleep 1;
-player setVehiclePosition [(_dest modelToWorld[0,2,0]), [],1, "CAN_COLLIDE"];
+player setVehiclePosition [(_dest modelToWorld [0, 2, 0]), [], 1, "CAN_COLLIDE"];
 "test" cutFadeout 2;

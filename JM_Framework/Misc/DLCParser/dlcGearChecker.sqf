@@ -1,6 +1,7 @@
-if (isMultiplayer) exitWith {};
 
-// Convert your DLC gear array to a hashmap for fast lookup
+waitUntil {time >= 5};
+
+// Convert DLC gear array to a hashmap for fast lookup
 private _dlcGearMap = createHashMap;
 {
     _x params ["_classname", "_dlc"];

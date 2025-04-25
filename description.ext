@@ -54,7 +54,7 @@ wreckRemovalMaxTime = 900;
 
 aiKills = 0;
 briefing = 1;
-debriefing = 1;
+debriefing = 0;
 class DifficultyOverride
 {
 	tacticalPing = 0; // disables tactical ping in this mission, even if selected difficulty preset has it enabled
@@ -62,7 +62,7 @@ class DifficultyOverride
 disableChannels[] = {2,3,4 };
 disabledAI = 1;
 enableDebugConsole[] = {1, "76561198026778430"};
-zeusCompositionScriptLevel = 2;
+zeusCompositionScriptLevel = 0;
 
 // SOUNDS
 
@@ -101,13 +101,23 @@ class CfgMusic
 
 ////// ** DONT EDIT **//////////////////////////////////////////////////////
 
+#include "JM_Framework\Misc\gui_baseDefines.hpp"
+#include "JM_Framework\Misc\Debriefing\debriefDialog.hpp"
+#include "JM_Framework\RallyPoint\redeployDialog.hpp"
+#include "JM_Framework\Supply\supplyDialog.hpp"
+
+
+
 class CfgFunctions
 {
     	createShortcuts = 1;
     	#include "JM_Framework\UnknownWep\cfgFunctions.hpp"
 		#include "JM_Framework\Permadeath\cfgFunctions.hpp"
-	#include "JM_Framework\ZeusModules\cfgFunctions.hpp"
-	#include "JM_Framework\Loadouts\cfgFunctions.hpp"
+		#include "JM_Framework\ZeusModules\cfgFunctions.hpp"
+		#include "JM_Framework\Loadouts\cfgFunctions.hpp"
+		#include "JM_Framework\Misc\Debriefing\CfgFunctions.hpp"
+		#include "JM_Framework\RallyPoint\CfgFunctions.hpp"
+		#include "JM_Framework\Supply\cfgFunctions.hpp"
 
 class JM_Master
     {
@@ -133,6 +143,10 @@ class Extended_PostInit_EventHandlers {
 };
 
 
+
+
 #include "JM_Framework\VAM_GUI\defines.hpp"
 #include "JM_Framework\VAM_GUI\VAM_GUI_controls.hpp"
 #include "JM_Framework\VAM_GUI\VAM_GUI_classes.hpp"
+
+#include "JM_Framework\Misc\customPatches\JMinsignia.sqf"

@@ -4,6 +4,7 @@ class JM_Loadouts {
 
         class addRestrictedArsenal {};
         class initRestrictedArsenalObjects {};
+	class whitelistArsenalWeapons {};
     };
 };
 

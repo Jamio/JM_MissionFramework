@@ -32,8 +32,5 @@ execVM "JM_Framework\Safezone\grenadeStop.sqf";
 // Permadeath BIS_fnc_moduleSaveGame
 [] execVM "JM_Framework\Permadeath\permadeath_init.sqf";
 
-// briefing
-[] execVM "JM_Framework\Misc\briefing.sqf";
-
 // check for DLC gear
 [] execVM "JM_Framework\Misc\DLCParser\dlcGearChecker.sqf";

@@ -5,101 +5,11 @@
 
 // ["Custom Modules", "Cool Hint", {hint str _this}] call zen_custom_modules_fnc_register
 
-
-
-
 // +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ HALLUCINATION - IMAGINARY SOMETHING NOT SURE YET BUT OH WELL
-// +++++++++++++++++++++++++++++++++++++++++++
-
-["Jamio", 
- "Hallucinate Player", 
- {
-     private _position = _this select 0; // Module Position, not used here
-     private _target = _this select 1;   // Attached object, the target player
-
-     // Check if the target is a player and execute the function on their client
-     if (!isNull _target && {_target isKindOf "CAManBase"}) then {
-         [_target] remoteExec ["JM_ZeusModules_fnc_hallucinate", _target]; // Correct function name with prefix
-         diag_log format ["Attempting to execute hallucinate on: %1", name _target]; // Debug log
-     } else {
-         hint "Module must be placed on a player!";
-         diag_log "Error: Module was not placed on a player.";
-     };
- }, 
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
-
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ POSSESSION - UNIT GORE, SCREAMS, OVERLAY THEN TELEPORT TO NEARBY LOCATION
-// +++++++++++++++++++++++++++++++++++++++++++
-["Jamio", 
- "Possess Player", 
- {
-     private _position = _this select 0; // Module Position, not used here
-     private _target = _this select 1;   // Attached object, should be the target unit
-
-     // Check if the target is a valid unit and execute the possess function
-     // ["Not a valid target!"] call zen_common_fnc_showMessage
-     if (isNull _target || !(_target isKindOf "CAManBase")) exitWith {systemChat "Invalid Target"};
-
-
-     if (isPlayer _target) then {
-         [_target] remoteExec ["JM_ZeusModules_fnc_possessed", _target]; // Execute on all clients for visual consistency
-          systemChat format ["Attempting to execute possession on: %1", name _target]; // Debug log
-     } else {
-        [_target] remoteExec ["JM_ZeusModules_fnc_possessedAI", _target]; // Execute on all clients for visual consistency
-        systemChat format ["Attempting to execute AI possession on: %1", name _target];
-     };
- }, 
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
-
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ TOMBSTONES - LOCAL TOMBSTONE FACING PLAYER, SOUNDS AND PP EFFECTS
-// +++++++++++++++++++++++++++++++++++++++++++
-
-["Jamio", 
- "Spawn Tombstones", 
- {
-     private _position = _this select 0; // Module Position, not used here
-     private _target = _this select 1;   // Attached object, should be the target unit
-
-     // Check if the target is a valid unit and execute the possess function
-     if (!isNull _target && {_target isKindOf "CAManBase"}) then {
-         [_target] remoteExec ["JM_ZeusModules_fnc_crosses", owner _target]; // Execute on all clients for visual consistency
-         diag_log format ["Attempting to execute possess on: %1", name _target]; // Debug log
-     } else {
-         hint "Module must be placed on a unit!";
-         diag_log "Error: Module was not placed on a valid unit.";
-     };
- }, 
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
-
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ COLDHAUNT - FROST OVERLAY, BREATHING AND BREATH EFFECT
-// +++++++++++++++++++++++++++++++++++++++++++
-
-["Jamio", 
- "Coldhaunt", 
- {
-     private _position = _this select 0; // Module Position, not used here
-     private _target = _this select 1;   // Attached object, should be the target unit
-
-     // Check if the target is a valid unit and execute the coldhaunt function
-     if (!isNull _target && {_target isKindOf "CAManBase"}) then {
-         [_target] remoteExec ["JM_ZeusModules_fnc_coldhaunt", owner _target]; // Execute on all clients for visual consistency
-         systemChat format ["Attempting to execute coldhaunt on: %1", name _target]; // Debug log
-     } else {
-         hint "Module must be placed on a unit!";
-         diag_log "Error: Module was not placed on a valid unit.";
-     };
- }, 
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
-
- // +++++++++++++++++++++++++++++++++++++++++++
 // +++++++ FLING - RAGDOLL AND SCREAM
 // +++++++++++++++++++++++++++++++++++++++++++
 
-["Jamio", 
+["[JM] Fun", 
  "Fling", 
  {
      private _position = _this select 0; // Module Position, not used here
@@ -116,76 +26,11 @@
  }, 
  "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
 
-  // +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ CULT _ TELEPORT TO CULT POSITION
+// +++++++++++++++++++++++++++++++++++++++++++
+// +++++++ BLIND UNIT - TAKE AND GIVE SIGHT
 // +++++++++++++++++++++++++++++++++++++++++++
 
-["Jamio", 
- "Cult", 
- {
-     private _position = _this select 0; // Module Position (used to find nearby players)
-     private _radius = 50; // Define the search radius
-
-     // Predefine 5 specific positions and directions (position in ASL format, direction in degrees)
-     private _positionsAndDirections = [
-         [[6485.26, 3608.67, 0], 28],   // Position 1, Facing 28 degrees
-         [[6485.26, 3608.67, 0], 28],   // Position 2, Facing 28 degrees
-         [[6485.26, 3608.67, 0], 28],   // Position 3, Facing 28 degrees
-         [[6485.26, 3608.67, 0], 28],   // Position 4, Facing 28 degrees
-         [[6485.26, 3608.67, 0], 28]    // Position 5, Facing 28 degrees
-     ];
-
-     // Filter players within the specified radius of the module's position
-     private _nearestPlayers = allPlayers select {_x distance _position < _radius};
-
-     // Count the number of nearest players
-     private _nearestPlayerCount = count _nearestPlayers;
-
-     // Ensure the number of players selected is no more than 4
-     private _selectCount = _nearestPlayerCount min 4;  // Keep it capped at 4
-
-     // Select up to 4 nearest players
-     private _nearestPlayersSubset = _nearestPlayers select [0, _selectCount];
-
-     // Check if we found any players
-     if (_selectCount == 0) exitWith {
-         hint "No players found within range!";
-         diag_log "Error: No players found.";
-     };
-
-     // Execute the cult function on the nearest players, passing the positions and directions
-     [_nearestPlayersSubset, _positionsAndDirections] remoteExec ["JM_ZeusModules_fnc_cult", _nearestPlayersSubset, false];
-     systemChat "Attempting to execute cult on the nearest players."; // Debug log
-     
- }, 
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
-
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ HORROR ACTIONS
-// +++++++++++++++++++++++++++++++++++++++++++
-
-["Jamio", 
- "Add Horror Actions", 
- {
-     private _position = _this select 0; // Module Position, not used here
-     private _target = _this select 1;   // Attached object, should be the target unit
-
-     // Check if the target is a valid unit and execute the coldhaunt function
-     if (!isNull _target && {_target isKindOf "CAManBase"}) then {
-         [_target] remoteExec ["JM_ZeusModules_fnc_horroractions", _target, false]; // Execute on all clients for visual consistency
-         systemChat format ["Attempting to execute HA on: %1", name _target]; // Debug log
-     } else {
-         hint "Module must be placed on a unit!";
-         diag_log "Error: Module was not placed on a valid unit.";
-     };
- }, 
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
-
- // +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ BLIND UNIT
-// +++++++++++++++++++++++++++++++++++++++++++
-
-["Jamio", 
+["[JM] Fun", 
  "[Sight] Remove Sight", 
  {
      private _position = _this select 0; // Module Position, not used here
@@ -204,7 +49,7 @@
  }, 
  "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
 
- ["Jamio", 
+ ["[JM] Fun", 
  "[Sight] Give Sight", 
  {
      private _position = _this select 0; // Module Position, not used here
@@ -224,70 +69,12 @@
  "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
 
 
- // ************************************************** WACKYS MODULES ***************************************************
-
- ["Wacky Modules", "[Blind] Remove Sight", {
-	params ["", "_player"];
-	_player setVariable ["wack_blind", true, true];
-	["wack_blind", [], _player] call CBA_fnc_targetEvent;
-}] call zen_custom_modules_fnc_register;
-
-["Wacky Modules", "[Blind] Grant Sight", {
-	params ["", "_player"];
-	_player setVariable ["wack_blind", false, true];
-    ["Your eyes feel heavy...", "PLAIN", 3, true, false] remoteExec ["titleText", _player];
-    // ["Your eyes feel heavy...", 1, 5, [1,0,0,0.6], false] remoteExec ["BIS_fnc_WLSmoothText", _player];
-	["wack_not_blind", [], _player] call CBA_fnc_targetEvent;
-}] call zen_custom_modules_fnc_register;
-
-["wack_blind", {
-	private _priority = 150;
-	while {
-		wack_blind = ppEffectCreate ["DynamicBlur", _priority];
-		wack_blind < 0
-	} do {
-		_priority = _priority + 1;
-	};
-	wack_blind ppEffectEnable true;
-	wack_blind ppEffectAdjust [10];
-	wack_blind ppEffectCommit 5;
-}] call CBA_fnc_addEventHandler;
-
-["wack_not_blind", {
-	0 spawn {
-		wack_blind ppEffectEnable true;
-		wack_blind ppEffectAdjust [0];
-		wack_blind ppEffectCommit 5;
-		waitUntil {ppEffectCommitted wack_blind};
-		wack_blind ppEffectEnable false;
-		ppEffectDestroy wack_blind;
-	};
-}] call CBA_fnc_addEventHandler;
-
-["Wacky Modules", "[ACRE] No Talking", {
-	params ["", "_object"];
-	_object setVariable ["acre_sys_core_isDisabled", true, true];
-}] call zen_custom_modules_fnc_register;
-["Wacky Modules", "[ACRE] Can Talk", {
-	params ["", "_object"];
-	_object setVariable ["acre_sys_core_isDisabled", false, true];
-}] call zen_custom_modules_fnc_register;
+// +++++++++++++++++++++++++++++++++++++++++++
+// +++++++ DESTROY ON LOOK
+// +++++++++++++++++++++++++++++++++++++++++++
 
 
-
-
-
-// *********************************************************************************************************
-// *********************************************************************************************************
-// ************************* NON-HORROR MODULES ************************************************************
-// *********************************************************************************************************
-// *********************************************************************************************************
-// *********************************************************************************************************
-
-
-
-
-["[JM] Tools", 
+ ["[JM] Fun", 
  "Destroy On Look [WIP]", 
  {
      private _position = _this select 0; // Module Position, not used here
@@ -305,64 +92,12 @@
  "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
 
 
- // ************************** SILENT NIGHT ***********************************************************
-
-  ["[JM] Tools", 
- "[Sound] Silent Night", 
- {
-     private _position = _this select 0; // Module Position, not used here
-     private _target = _this select 1;   // Attached object, should be the target unit
-
-     playSound3D [getMissionPath "sounds\silentnight.ogg", "", false, _position, 5, 1, 300, 0, false];
- }, 
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
-
-
-  // ************************** RANDOM VOICE GERMAN ***********************************************************
-
-  ["[JM] Tools", 
- "[Sound] Random Sound", 
- {
-     private _position = _this select 0; // Module Position, not used here
-     private _target = _this select 1;   // Attached object, should be the target unit
-
-     // Define the array of sound files
-     private _soundFiles = [
-
-     ];
-
-          // Select a random sound file
-     private _selectedSound = selectRandom _soundFiles;
-
-
-     playSound3D [getMissionPath _selectedSound, "", false, _position, 1, 1, 300, 0, false];
- }, 
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
-
-   // ************************** GATHER REINFORCEMENTS ***********************************************************
-
-  ["[JM] Tools", 
- "Gather Reinforcements", 
- {
-    [] spawn {
-
-    if !(isServer) exitWith {};
-
-    // Toggle the public variable
-    missionNamespace setVariable ["gathReinf", true, true];
-
-    // Wait briefly to allow all players to process the change
-    sleep 5;
-
-    // Reset the variable to prevent unintended behavior
-    missionNamespace setVariable ["gathReinf", false, true];
-
-    ["Reinforcements have been gathered and are returning to the fight."] remoteExec ["systemChat", 0, true];
-
-                }
- }, 
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
-
+// *********************************************************************************************************
+// *********************************************************************************************************
+// ************************* TOOLS MODULES ************************************************************
+// *********************************************************************************************************
+// *********************************************************************************************************
+// *********************************************************************************************************
 
    // ************************** TIMER ***********************************************************
 
@@ -432,7 +167,7 @@
 ["[JM] Tools", 
  "Custom End Mission", 
  {
-    ["JM_Framework\Misc\endMission.sqf"] remoteExec ["execVM", 0, true];
+    ["JM_Framework\Misc\endMissionSequence.sqf"] remoteExec ["execVM", 0, true];
  }, 
  "a3\modules_f_curator\data\iconpostprocess_ca.paa"] call zen_custom_modules_fnc_register;
 
@@ -877,19 +612,18 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
 
 
 
- ["[JM] Tools",
- "[AWACS] Broadcast Threat Report",
+["[JM] Tools",
+"AWACS Report",
 {
     params ["_position", "_target"];
 
     if (!isServer) exitWith {};
 
-    // Reference point (e.g. airbase) — could be replaced with a module argument later
     private _reference = if (getMarkerPos "Bullseye_1" select 0 != 0 || getMarkerPos "Bullseye_1" select 1 != 0) then {
-            getMarkerPos "Bullseye_1"
-        } else {
-            getMarkerPos "respawn_west"
-        };
+        getMarkerPos "Bullseye_1"
+    } else {
+        getMarkerPos "respawn_west"
+    };
 
     [
         "AWACS Report Config",
@@ -906,29 +640,136 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
             private _extraInfo = _results select 1;
             private _altFt = _results select 2;
 
-            // Calculate bearing and distance
             private _dir = [_ref, _pos] call BIS_fnc_dirTo;
-            private _bearing = floor (_dir + 0.5); // round bearing
-            private _dist = round ((_ref distance2D _pos) / 1000); // in km
+            private _bearing = floor (_dir + 0.5);
+            private _dist = round ((_ref distance2D _pos) / 1000);
+            private _angels = round (_altFt / 1000);
 
-            // Format the message
+            private _infoLine = if (_extraInfo != "") then {
+                format ["<br/><t size='1.25' color='#00c3ff'>INFO:</t> <t size='1.25' color='#ffffff'>%1</t>", _extraInfo]
+            } else { "" };
+
             private _message = format [
-                "<t color='#00c3ff'><t size='1.2'><t align='left'>AWACS:</t><br/><t color='#ffffff'>%1 CONTACT %2 KM, BEARING %3, ANGELS %4%5</t>",
+                "<img size='3' image='a3\ui_f\data\igui\rsccustominfo\sensors\targets\enemyairremote_ca.paa'/><br/><br/>" +
+                "<t size='2' color='#00c3ff'>AWACS REPORT</t><br/><br/>" +
+                "<t size='1.5' color='#ffffff'>=======</t><br/><br/>" +
+                "<t size='1.25' color='#00c3ff'>CONTACT:</t> <t size='1.25' color='#ffffff'>%1</t><br/>" +
+                "<t size='1.25' color='#00c3ff'>DISTANCE:</t> <t size='1.25' color='#ffffff'>%2 KM</t><br/>" +
+                "<t size='1.25' color='#00c3ff'>BEARING:</t> <t size='1.25' color='#ffffff'>%3°</t><br/>" +
+                "<t size='1.25' color='#00c3ff'>ANGELS:</t> <t size='1.25' color='#ffffff'>%4</t>%5",
                 _threatType,
                 _dist,
                 _bearing,
-                round (_altFt / 1000),
-                if (_extraInfo != "") then { format [", %1", _extraInfo] } else { "" }
+                _angels,
+                _infoLine
             ];
 
-            // Show the hint
-            hint parseText _message;
+            [parseText _message] remoteExec ["hint", 0];
+
+            // hint parseText _message;
         },
         {},
         [_position, _reference]
     ] call zen_dialog_fnc_create;
 },
 "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
+
+// +++++++++++++++++++++++++++++++++++++++++++
+// +++++++ SPAWN AMMO CRATE
+// +++++++++++++++++++++++++++++++++++++++++++
+
+[
+    "[JM] Supply",
+    "Ammo Crate",
+    {
+        params ["_pos", "_crate"];
+
+        if (isNull _crate) exitWith {
+            [objNull, "Object not valid"] call BIS_fnc_showCuratorFeedbackMessage;
+        };
+
+        // Zeus dialog to select how many of each mag to add
+        [
+            "Ammo Crate Contents",
+            [
+                ["SLIDER", "Primary Mags", [0, 50, 20, 0]],
+                ["SLIDER", "Sidearm Mags", [0, 50, 10, 0]],
+                ["SLIDER", "Launcher Mags", [0, 20, 5, 0]],
+                ["SLIDER", "Grenades", [0, 50, 15, 0]]
+            ],
+            {
+                params ["_results", "_args"];
+                _args params ["_crate"];
+                _results params ["_p", "_s", "_l", "_g"];
+
+                // Pass values to the ammoCrate.sqf script
+                [_crate, _p, _s, _l, _g] execVM "JM_Framework\Supply\ammoCrate.sqf";
+            },
+            {},
+            [_crate]
+        ] call zen_dialog_fnc_create;
+    },
+    "a3\weapons_f\ammoboxes\data\ui\icomap_ammo_ca.paa"
+] call zen_custom_modules_fnc_register;
+
+// +++++++++++++++++++++++++++++++++++++++++++
+// +++++++ SPAWN MEDICAL CRATE
+// +++++++++++++++++++++++++++++++++++++++++++
+
+[
+    "[JM] Supply",
+    "Medical Crate",
+    {
+        params ["_pos", "_crate"];
+
+        if (isNull _crate) exitWith {
+            [objNull, "Object not valid"] call BIS_fnc_showCuratorFeedbackMessage;
+        };
+
+        [
+            "Medical Crate Contents",
+            [
+                ["SLIDER", "Field Dressings", [0, 100, 40, 0]],
+                ["SLIDER", "Blood IV (1000ml)", [0, 20, 5, 0]],
+                ["SLIDER", "Blood IV (500ml)", [0, 20, 10, 0]],
+                ["SLIDER", "Blood IV (250ml)", [0, 20, 10, 0]],
+                ["SLIDER", "Splints", [0, 20, 6, 0]],
+                ["SLIDER", "Tourniquets", [0, 20, 6, 0]],
+                ["SLIDER", "Painkillers", [0, 20, 8, 0]],
+                ["SLIDER", "Epinephrine", [0, 20, 6, 0]],
+                ["SLIDER", "Morphine", [0, 20, 6, 0]]
+            ],
+            {
+                params ["_results", "_args"];
+                _args params ["_crate"];
+
+                _results params [
+                    "_dressings", "_iv1000", "_iv500", "_iv250",
+                    "_splints", "_tq", "_painkillers", "_epi", "_morph"
+                ];
+
+                [
+                    _crate,
+                    _dressings,
+                    _iv1000,
+                    _iv500,
+                    _iv250,
+                    _splints,
+                    _tq,
+                    _painkillers,
+                    _epi,
+                    _morph
+                ] execVM "JM_Framework\Supply\medCrate.sqf";
+            },
+            {},
+            [_crate]
+        ] call zen_dialog_fnc_create;
+    },
+    "a3\characters_f\data\ui\icon_medic_ca.paa"
+] call zen_custom_modules_fnc_register;
+
+
+
 
 
 

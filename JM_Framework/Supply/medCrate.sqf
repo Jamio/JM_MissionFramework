@@ -58,5 +58,3 @@ if (!isNull _crate) then {
     _crate addItemCargoGlobal ["ACE_morphine", _morphineCount];
 };
 
-
-

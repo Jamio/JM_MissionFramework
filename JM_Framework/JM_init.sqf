@@ -6,14 +6,15 @@ JM_unconSpectator = true; // ACE Unconscious Spectator
 JM_Permadeath = false; // Permadeath enabled/disabled
 JM_GrassCutter = true; // Player Grasscutter
 JM_Safezone = true; // Safezones
-JM_puinishWep = true; // Punish Enemy Weapons
+JM_punishWep = true; // Punish Enemy Weapons
 JM_MrkScaling = true; // Limit Marker Scaling
 JM_Earplugs = true; // Player Earplugs
 JM_Fortify = true; // Custom ACE Fortify
 JM_Rally = true; // Rally Points
 JM_tpToSL = true; // Teleport to Squad
-JM_loadoutPersist = true; // Save loadouts on death
+JM_loadoutPersist = false; // Save loadouts on death
 JM_arsenalRoleRestrict = true; // Restrict arsenal items based on roles
+JM_StaminaOff = true;
 
 /* ************************************** CUSTOMISABLE BITS BELOW ********************************************************** */
 
@@ -111,6 +112,28 @@ JM_BriefingContent = [
 		["FREQUENCIES", "Command Channel = LR CH 1<br/><br/>Squad Channels = SR 1/2/3/4/5"]
     ]]
 ];
+
+
+
+// CUSTOM END TITLES FOR CUTSCENE
+JM_EndTitles = [
+    "The fighting in this mission was intense.",
+    "The Misfits held the line, but at great cost.",
+    "Buccaneer tried to land on a goat, and Max detonated a C-130 somehow.",
+    "Maybe next time, they’ll succeed. Maybe."
+];
+
+
+
+// CUSTOM DEBRIEF text
+
+JM_CustomDebriefText = "After three long nights, the German offensive stalled.<br/><br/>
+Easy Company endured artillery, cold nights and severe shortages of supplies, but was ultimately able to defend the Bois Jacques.<br/><br/>
+Good work, soldier.";
+
+
+
+
 
 
 

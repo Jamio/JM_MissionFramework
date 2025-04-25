@@ -37,7 +37,7 @@ if (isNil "NreEarplugsActive") then {
 	NreEarplugsActive = 0;
 	1 fadeSound 1;
 	1 fadeRadio 1;
-	_id = player addAction [("<t color=""#00FF00"">Insert Earplugs</t>"),NreEarplugsPath+"fnc_initEarplugs.sqf","",5,false,true,"",""];
+	_id = player addAction [("<t color=""#4db350"">Insert Earplugs</t>"),NreEarplugsPath+"fnc_initEarplugs.sqf","",5,false,true,"",""];
 	player setVariable ["NreEarplugsAction", _id];
 	// Handle respawn
 	player addEventHandler ["Respawn", {
@@ -46,7 +46,7 @@ if (isNil "NreEarplugsActive") then {
 		1 fadeRadio 1;
 		_id = (_this select 1) getVariable "NreEarplugsAction";
 		(_this select 1) removeAction _id;
-		_id = (_this select 0) addAction [("<t color=""#00FF00"">Insert Earplugs</t>"),NreEarplugsPath+"fnc_initEarplugs.sqf","",5,false,true,"",""];
+		_id = (_this select 0) addAction [("<t color=""#4db350"">Insert Earplugs</t>"),NreEarplugsPath+"fnc_initEarplugs.sqf","",5,false,true,"",""];
 		(_this select 0) setVariable ["NreEarplugsAction", _id];
 	}];
 };
@@ -58,7 +58,7 @@ if ( NreEarplugsActive == 1 ) then {
 	hint "Earplugs Removed";
 	_id = player getVariable "NreEarplugsAction";
 	player removeAction _id;
-	_id = player addAction [("<t color=""#00FF00"">Insert Earplugs</t>"),NreEarplugsPath+"fnc_initEarplugs.sqf","",5,false,true,"",""];
+	_id = player addAction [("<t color=""#4db350"">Insert Earplugs</t>"),NreEarplugsPath+"fnc_initEarplugs.sqf","",5,false,true,"",""];
 	player setVariable ["NreEarplugsAction", _id];
 } else {
 	NreEarplugsActive = 1;
@@ -67,7 +67,7 @@ if ( NreEarplugsActive == 1 ) then {
 	hint "Earplugs Inserted";
 	_id = player getVariable "NreEarplugsAction";
 	player removeAction _id;
-	_id = player addAction [("<t color=""#FF0000"">Remove Earplugs</t>"),NreEarplugsPath+"fnc_initEarplugs.sqf","",5,false,true,"",""];
+	_id = player addAction [("<t color=""#f24141"">Remove Earplugs</t>"),NreEarplugsPath+"fnc_initEarplugs.sqf","",5,false,true,"",""];
 	player setVariable ["NreEarplugsAction", _id];
 };
 

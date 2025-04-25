@@ -12,7 +12,7 @@ if (isServer) then {
 };
 
 // **********************************************************
-// ************************ ENABLE PERMADEATH
+// ************************ PERMADEATH RESPAWN
 // **********************************************************
 
 
@@ -107,7 +107,14 @@ if (isServer) then {
 		_args params ["_arg1"];
 
         if (_param1) then {
-        systemChat "Reinforcements Unavailable - Permadeath has been enabled!";
+
+            private _message = 
+                "<img size='3' image='a3\ui_f\data\gui\cfg\hints\death_ca.paa'/><br/><br/>" +
+                "<t size='1.5' color='#ffffff'>PERMADEATH ENABLED</t><br/><br/>" +
+                "<t size='1.25' color='#f23535'>Warning:</t> <t size='1.25' color='#ffffff'>Reinforcements are unavailable.</t><br/><br/>";
+
+            [parseText _message] remoteExec ["hint", 0, false];
+
 };
 	},
 
@@ -132,6 +139,58 @@ if (isServer) then {
     JM_isPermadeathEnabled = false;
     publicVariable "JM_isPermadeathEnabled";
     ["PERMADEATH DISABLED"] call zen_common_fnc_showMessage;
+
+        // Create Dialog Function
+
+    _checkBoxPermadeath = [
+	// 0) Content Type
+	"CHECKBOX",
+
+	// 1) Display Name and Tooltip
+	["Notify Players?", "Display message for all players about Permadeath toggle"], // or  ["Title", "Tooltip"],
+
+	// 2) Control Specific Arguments - Default Control State
+	false, // or false,
+
+	// 3) Force Default, default: false
+	false
+];
+
+[
+	// 0) Title
+	"NOTIFY PLAYERS",
+
+	// 1) Content Array of Zen Dialogs
+	[_checkBoxPermadeath],
+
+	// 2) On Confirm, unscheduled
+	// Passed Arguments:
+	// 0) Dialog Values in order of Content
+	// 1) Arguments, the same ones passed in arg4 for zen_dialog_fnc_create
+	{
+		params ["_dialogValues","_args"];
+		_dialogValues params ["_param1"];
+		_args params ["_arg1"];
+
+        if (_param1) then {
+
+            private _message = 
+                "<img size='3' image='a3\ui_f\data\gui\cfg\hints\death_ca.paa'/><br/><br/>" +
+                "<t size='1.5' color='#ffffff'>PERMADEATH DISABLED</t><br/><br/>" +
+                "<t size='1.25' color='#4ded45'>Warning:</t> <t size='1.25' color='#ffffff'>Reinforcements are available.</t><br/><br/>";
+
+            [parseText _message] remoteExec ["hint", 0, false];
+
+};
+	},
+
+	// 3) On Cancel, default: {}, unscheduled
+	{}, 
+
+	// 4) Arguments, default: []
+	[]
+
+] call zen_dialog_fnc_create;
 }, "\a3\ui_f_aow\data\igui\cfg\holdactions\holdaction_charity_ca.paa"] call zen_custom_modules_fnc_register;
 
 

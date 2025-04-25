@@ -6,50 +6,27 @@ HOW TO USE:
 3. It will automatically apply the supply crate spawning actions to that object.
 */
 
-if (!hasInterface) exitWith {};  // Only needed for clients
+// JM_Framework\Supply\boxSpawner.sqf
+
+if (!hasInterface) exitWith {};  // Clients only
 
 params ["_box"];
-
-// Ensure the script is applied to a valid object
 if (isNull _box) exitWith { systemChat "ERROR: Box spawner object is null."; };
 
-// Add Medical Crate Action
-_box addAction
-[
-    "<t color='#e0a133'>Medical Supply Crate</t>",
-    { [_this select 0] execVM "JM_Framework\Supply\medCrate_spawn.sqf"; },
-    nil, 1.5, true, true, "", "true", 10, false, "", ""
+// Tag this object as a valid supply spawner
+_box setVariable ["JM_SupplySpawner", true, true];
+
+// Add one clean action to open the GUI
+_box addAction [ 
+    "<img image='\a3\ui_f\data\map\vehicleicons\iconcrateord_ca.paa' size='1.2' shadow='0'/> <t color='#ffdb33'>Open Supply Menu</t>", 
+    { [] call JM_Supply_fnc_showSupplyDialog}, 
+    [], 
+    1.5, 
+    true, 
+    true, 
+    "", 
+    "_target distance _this < 4", 
+    5 
 ];
 
-// Add Ammo Resupply Crate Action (Now uses global loadout data)
-_box addAction
-[
-    "<t color='#e0a133'>Ammo Supply Crate</t>",
-    { [_this select 0] execVM "JM_Framework\Supply\ammoCrate_spawn.sqf"; },
-    nil, 1.5, true, true, "", "true", 10, false, "", ""
-];
-
-// Add CSW (Crew-Served Weapons) Crate Action
-_box addAction
-[
-    "<t color='#e0a133'>CSW Supply Crate</t>",
-    { [_this select 0] execVM "JM_Framework\Supply\cswCrate_spawn.sqf"; },
-    nil, 1.5, true, true, "", "true", 10, false, "", ""
-];
-
-// Add Empty Box Action
-_box addAction
-[
-    "<t color='#e0a133'>Empty Supply Box</t>",
-    { [_this select 0] execVM "JM_Framework\Supply\emptyCrate_spawn.sqf"; },
-    nil, 1.5, true, true, "", "true", 10, false, "", ""
-];
-
-// Add Custom Crate Action
-_box addAction
-[
-    "<t color='#e0a133'>Custom Supply Crate</t>",
-    { [_this select 0] execVM "JM_Framework\Supply\customCrate_spawn.sqf"; },
-    nil, 1.5, true, true, "", "true", 10, false, "", ""
-];
 

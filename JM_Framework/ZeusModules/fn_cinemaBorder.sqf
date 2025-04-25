@@ -24,6 +24,7 @@ waitUntil {
     ctrlCommitted _borderBottom
 };
 
+private _text = format ["<t font='PuristaSemiBold' >%1</t>", _text];
 [_text, .95, 1.2, _duration, 0.2, 0, 789] spawn BIS_fnc_dynamicText;
 
 sleep (_duration - 1);

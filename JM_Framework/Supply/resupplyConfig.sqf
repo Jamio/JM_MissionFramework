@@ -1,7 +1,5 @@
 // JM_Framework\Supply\resupplyConfig.sqf
 
-
-
 if (JM_arsenalRoleRestrict) then {
     // Dynamically extract items from JM_allowedArsenalItems
 

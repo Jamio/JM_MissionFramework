@@ -23,6 +23,11 @@
 // Handle restricted arsenal
 #include "JM_Framework\Loadouts\arsenalPostInitClient.sqf"
 
+// Stamina handler
+#include "JM_Framework\Stamina\staminaInit.sqf"
+
+// Initialise Custom briefing   
+#include "JM_Framework\Misc\briefing.sqf";
 
 // ************************************** MISSION TITLE DISPLAY *******************************************************
 

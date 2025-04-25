@@ -31,18 +31,22 @@ _items = _items arrayIntersect _items; // Remove duplicates
 {
     private _box = _x;
 
-    // Add the scroll-wheel action
     _box addAction [
-        "<t color='#e0a133'>Access Role Arsenal</t>",
+        "<img image='\a3\ui_f\data\gui\rsc\rscdisplayarsenal\vest_ca.paa' size='1.2' shadow='0'/> <t color='#ffdb33'>Access Role Arsenal</t>",
         {
             params ["_target", "_caller"];
             
-            // Clear and re-add allowed items
             [_target, false] call ace_arsenal_fnc_removeVirtualItems;
             [_target, _this select 3] call ace_arsenal_fnc_addVirtualItems;
             [_target, _caller] call ace_arsenal_fnc_openBox;
         },
-        _items
+        _items,
+        1.5,                    // Priority
+        true,                   // ShowWindow
+        true,                   // HideOnUse
+        "",                     // Shortcut
+        "_this distance _target < 5", // Condition (player must be within 5m)
+        10                      // Radius (optional, visual detection range of action)
     ];
 } forEach JM_arsenalObjects;
 

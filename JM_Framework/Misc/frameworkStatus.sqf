@@ -8,7 +8,7 @@ if (hasInterface) then {
         ["Unconscious Spectator", JM_unconSpectator],
         ["Grass Cutter", JM_GrassCutter],
         ["Safe Zone", JM_Safezone],
-        ["Punish Weapon", JM_puinishWep],
+        ["Punish Weapon", JM_punishWep],
         ["Marker Scaling", JM_MrkScaling],
         ["Earplugs", JM_Earplugs],
         ["Fortify System", JM_Fortify],
