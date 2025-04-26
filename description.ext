@@ -10,6 +10,23 @@ class Header
 	maxPlayers = 20;	// maximum number of players the mission supports
 };
 
+class CfgWorlds
+{
+	class Any
+	{
+		author = "Jamio"; // Overrides 'author' above
+		description = "The Misfits rally at the training ground";
+		pictureMap = "JM_Framework\Misc\map1.paa"; // optional
+		pictureShot = "JM_Framework\loading.paa"; // highly recommended
+		loadingTexts[] = 
+		{
+			"Buccaneer once designated an LZ on top of 2 AA guns.",
+			"Remember that one time that Max flew a C-130 into a cliff.",
+			"Jamio has never accidentally dropped a grenade - and certainly not twice."
+		};
+	};
+};
+
 onLoadIntro = "This is a loading message that displays while the mission is loading";
 onLoadMissionTime = 0;
 briefingName = "MSFT Mission Template v1.01";
@@ -68,7 +85,7 @@ zeusCompositionScriptLevel = 0;
 
 class CfgSounds
 {
-	sounds[] = {}; // OFP required it filled, now it can be empty or absent depending on the game's version
+	sounds[] = {}; // OFP required it filled, now it can be empty or absent depending on the game version
 
 	class Template1
 	{

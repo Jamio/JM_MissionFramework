@@ -43,7 +43,7 @@ JM_fortList2 = [
 
 JM_allowedArsenalItems = [
     ["General", [
-        "ItemMap", "ItemCompass", "ItemWatch", "ACE_EarPlugs", "ACE_fieldDressing"
+        "ItemMap", "ItemCompass", "ItemWatch", "ACE_fieldDressing"
  
     ]],
     
@@ -119,17 +119,17 @@ JM_BriefingContent = [
 JM_EndTitles = [
     "The fighting in this mission was intense.",
     "The Misfits held the line, but at great cost.",
-    "Buccaneer tried to land on a goat, and Max detonated a C-130 somehow.",
-    "Maybe next time, they’ll succeed. Maybe."
+    "Buccaneer tried to use a squadmates head to defuse a mine, and Max flew a C-130 into a cliff.",
+    "Maybe next time, they’ll do better. Maybe."
 ];
 
 
 
 // CUSTOM DEBRIEF text
 
-JM_CustomDebriefText = "After three long nights, the German offensive stalled.<br/><br/>
-Easy Company endured artillery, cold nights and severe shortages of supplies, but was ultimately able to defend the Bois Jacques.<br/><br/>
-Good work, soldier.";
+JM_CustomDebriefText = "The Misfits enjoyed playing around at the training ground with their friends.<br/><br/>
+Everyone had a good time, and went to be with a newfound warmth in their hearts.<br/><br/>
+Well done, everyone.";
 
 
 

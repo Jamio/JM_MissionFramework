@@ -2,9 +2,6 @@
 
 // Initialize permadeath management and respawn modules
 
-JM_isPermadeathEnabled = false;
-publicVariable "JM_isPermadeathEnabled";
-
 
 // Retrieve the default respawn delay set in description.ext
 if (isServer) then {
@@ -18,36 +15,39 @@ if (isServer) then {
 
 
 ["[JM] Permadeath", "Permadeath Respawn", {
-    params ["_target"]; // Module position or vehicle
+    params ["_target", "_vehicle"];
 
-    // Gather dead players
     private _deadPlayers = allPlayers select {!alive _x};
-    _deadPlayers = allPlayers; // REMOVE THIS WHEN DEBUG IS NO LONGER NEEDED
-    if (_deadPlayers isEqualTo []) exitWith {
-        ["No dead players found."] call zen_common_fnc_showMessage;
-    };
 
-    // Player name list for dropdown
     private _names = _deadPlayers apply {name _x};
 
     ["Respawn Tool", [
-        ["OWNERS", "Select Players", [[], [], _deadPlayers, 2]], // Default tab: Players
-        ["CHECKBOX", "Teleport to Module Position?", true],
-        ["CHECKBOX", "Place in Cargo (if applicable)?", true]
+        ["OWNERS", "Select Players", [[], [], _deadPlayers, 2]],
+        ["CHECKBOX", "Teleport Here?", true]
     ], {
         params ["_dialogValues", "_args"];
-        _dialogValues params ["_selection", "_teleportToPos", "_placeInCargo"];
-        _args params ["_target"];
+        _dialogValues params ["_selection", "_teleportHere"];
+        _args params ["_target", "_vehicle"];
 
-        private _players = _selection select 2; // Extract the selected players array
+        private _players = _selection select 2;
 
         if (_players isEqualTo []) exitWith {
             ["No players selected."] call zen_common_fnc_showMessage;
         };
 
+        // === Determine proper destination ===
+        private _destination = if (
+            (!isNull _vehicle) && 
+            { _vehicle isKindOf "LandVehicle" || _vehicle isKindOf "Air" || _vehicle isKindOf "Ship" }
+        ) then {
+            _vehicle
+        } else {
+            _target
+        };
+
         {
             if (!alive _x) then {
-                [_target, _teleportToPos, _placeInCargo] remoteExec ["JM_Permadeath_fnc_forceRespawn", _x];
+                [_destination, _teleportHere] remoteExec ["JM_Permadeath_fnc_forceRespawn", _x];
             } else {
                 [format ["%1 is not dead, skipping.", name _x]] call zen_common_fnc_showMessage;
             };
@@ -55,9 +55,10 @@ if (isServer) then {
 
         [format ["Attempted respawn on %1 player(s).", count _players]] call zen_common_fnc_showMessage;
 
-    }, {}, [_target]] call zen_dialog_fnc_create;
+    }, {}, [_target, _vehicle]] call zen_dialog_fnc_create;
 
 }, "\a3\ui_f\data\igui\cfg\actions\take_ca.paa"] call zen_custom_modules_fnc_register;
+
 
 
 
@@ -70,8 +71,8 @@ if (isServer) then {
 // Enable Permadeath Module
 ["[JM] Permadeath", "Enable Permadeath", {
     // Enable permadeath
-    JM_isPermadeathEnabled = true;
-    publicVariable "JM_isPermadeathEnabled";
+    JM_Permadeath = true;
+    publicVariable "JM_Permadeath";
     ["PERMADEATH ENABLED"] call zen_common_fnc_showMessage;
 
     // Create Dialog Function
@@ -136,8 +137,8 @@ if (isServer) then {
 
 // Disable Permadeath Module
 ["[JM] Permadeath", "Disable Permadeath", {
-    JM_isPermadeathEnabled = false;
-    publicVariable "JM_isPermadeathEnabled";
+    JM_Permadeath = false;
+    publicVariable "JM_Permadeath";
     ["PERMADEATH DISABLED"] call zen_common_fnc_showMessage;
 
         // Create Dialog Function

@@ -1,10 +1,10 @@
 // JM_Framework\Supply\spawnSupplyCrate.sqf
 if !(isServer) exitWith {};
 
-params ["_crateType"];  // Passed from GUI — e.g., "ammo", "medical", etc.
+params ["_crateType", "_player"];  // Passed from GUI — e.g., "ammo", "medical", etc.
 
 // === Find nearest valid supply spawner to player ===
-private _spawner = nearestObjects [player, [], 10] select {
+private _spawner = nearestObjects [_player, [], 10] select {
     (_x getVariable ["JM_SupplySpawner", false])
 };
 

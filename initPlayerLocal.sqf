@@ -47,16 +47,6 @@ private _author = getText (missionConfigFile >> "author");
 0.7, 
 0] spawn BIS_fnc_textTiles;
 
-// ************************************** PLAYER DEATH TRACKING *******************************************************
-
-// Event handler for tracking player losses (deaths)
-player addEventHandler ["Killed", {
-    if (isServer) then {
-        totalLosses = totalLosses + 1;  // Increment global loss tally
-        publicVariable "totalLosses";   // Broadcast the updated value to all clients
-    };
-}];
-
 // ************************************** UNCONSCIOUS SPECTATOR ********************************************************
 
 #include "JM_Framework\UnconSpectator\initLocal.sqf"
@@ -66,6 +56,13 @@ player addEventHandler ["Killed", {
 // ************************************** DLC GEAR CHECK ON SPAWN ********************************************************
 
 #include "JM_Framework\Misc\DLCParser\ownDLCCheck.sqf"
+
+// ************************************** INIT STATS THAT TRACK LOCALLY ********************************************************
+#include "JM_Framework\Misc\Stats\initStatsLocal.sqf"
+
+// ************************************** TFAR SETIINGS (WIP MAY DELETE) ********************************************************
+
+#include "JM_Framework\TFAR\manageTFARRadios.sqf"
 
 // ************************************** JOIN IN PROGRESS *******************************************************
 

@@ -1,9 +1,16 @@
 
-// Handle adding starter weapons to Diwakos punish weapon whitelist
-if (JM_punishWep && !JM_arsenalRoleRestrict) then {
-    [] spawn {
-        waitUntil { time > 5 && player == player };  // Make sure the player is initialised
 
+// Handle adding starter weapons to Diwakos punish weapon whitelist
+[] spawn {
+    // Wait for settings to initialize
+    waitUntil {
+        !isNil "JM_punishWep" && 
+        !isNil "JM_arsenalRoleRestrict" && 
+        player == player // Player is local
+    };
+
+    // Now safe to check values
+    if (JM_punishWep && !JM_arsenalRoleRestrict) then {
         private _prim = primaryWeapon player;
         private _sec  = secondaryWeapon player;
         private _hg   = handgunWeapon player;

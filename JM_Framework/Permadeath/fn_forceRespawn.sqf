@@ -1,41 +1,41 @@
 /*
     JM_Permadeath_fnc_forceRespawn
     Params:
-        0: OBJECT - The target location or vehicle (module or vehicle placed by Zeus)
-        1: BOOL   - Whether to teleport the player to the target position
-        2: BOOL   - Whether to try and place the player into cargo (if applicable)
+        0: OBJECT - Target position or vehicle
+        1: BOOL   - Whether to teleport the player after respawn
 */
 
-params ["_target", "_teleportToPos", "_placeInCargo"];
+params ["_destination", "_teleportHere"];
 
 [] spawn {
     // 1. Exit ACE Spectator
     [false, false, false] call ace_spectator_fnc_setSpectator;
 
-    // 2. Reset the player's respawn delay to the default (for future deaths)
+    // 2. Reset the player's respawn delay to default
     private _defaultRespawnTime = missionNamespace getVariable ["JM_DefaultRespawnTime", 15];
     setPlayerRespawnTime _defaultRespawnTime;
 
     // 3. Wait until the player has respawned
     waitUntil {alive player};
 
-    // 4. Handle teleportation or cargo placement
-    if (_teleportToPos && {!isNull _target}) then {
-        if (_placeInCargo && {
-            _target isKindOf "LandVehicle" ||
-            _target isKindOf "Air" ||
-            _target isKindOf "Ship"
-        }) then {
-            private _cargoSeats = _target emptyPositions "cargo";
-            if (_cargoSeats > 0) then {
-                player moveInCargo _target;
+    sleep 1;
+
+    // 4. Handle teleportation if selected
+    if (_teleportHere && {!isNull _destination}) then {
+
+        if (_destination isKindOf "LandVehicle" || _destination isKindOf "Air" || _destination isKindOf "Ship") then {
+            private _emptySeats = _destination emptyPositions "cargo";
+
+            if (_emptySeats > 0) then {
+                player moveInCargo _destination;
             } else {
-                player setPos (getPos _target); // fallback if no space
+                systemChat "No cargo space available — teleport cancelled.";
             };
         } else {
-            player setPos (getPos _target);
+            // Not a vehicle, it's just a 3D position
+            player setPosATL _destination;
         };
     };
-
-
 };
+
+

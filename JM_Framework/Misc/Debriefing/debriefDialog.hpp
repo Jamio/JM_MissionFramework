@@ -12,7 +12,7 @@ class JM_DebriefDialog {
             y = -0.9 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
             w = 42.1 * GUI_GRID_CENTER_W;
             h = 27.4 * GUI_GRID_CENTER_H;
-            colorBackground[] = {0,0,0,0.8};
+            colorBackground[] = {0.2,0.2,0.2,1};
         };
         class JM_CardBackground2: RscText
         {

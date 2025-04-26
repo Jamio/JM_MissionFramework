@@ -16,7 +16,7 @@ class JM_RedeployDialog {
 			y = 0.2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
 			w = 16.7 * GUI_GRID_CENTER_W;
 			h = 24.6 * GUI_GRID_CENTER_H;
-			colorBackground[] = {-1,-1,-1,0.85};
+			colorBackground[] = {0.2,0.2,0.2,1};
 		};
 
 	};

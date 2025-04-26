@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=77;
+		nextID=79;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=14;
 	};
 	class Camera
 	{
-		pos[]={6127.9414,47.803776,4903.1987};
-		dir[]={-0.063189313,-0.66590333,0.74335724};
-		up[]={-0.056401912,0.74603808,0.66351044};
-		aside[]={0.99640667,3.7252903e-09,0.084699854};
+		pos[]={6145.0635,9.5292597,4962.0933};
+		dir[]={0.090960316,-0.34756815,0.93323243};
+		up[]={0.033717006,0.93765473,0.34592888};
+		aside[]={0.99528372,-3.7252903e-09,-0.097008333};
 	};
 };
 binarizationWanted=0;
@@ -54,6 +54,7 @@ addons[]=
 	"ace_ballistics",
 	"ace_smallarms",
 	"ace_optics",
+	"tfar_handhelds",
 	"A3_Weapons_F_Enoch_Rifles_MSBS",
 	"A3_Weapons_F_Enoch",
 	"A3_Weapons_F_Exp_Rifles_SPAR_03",
@@ -68,7 +69,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			className="A3_Structures_F_EPA";
@@ -209,54 +210,60 @@ class AddonsMetaData
 		};
 		class Item20
 		{
+			className="tfar_handhelds";
+			name="tfar_handhelds";
+			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
+		};
+		class Item21
+		{
 			className="A3_Weapons_F_Enoch";
 			name="Arma 3 Contact Platform - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item21
+		class Item22
 		{
 			className="A3_Weapons_F_Exp";
 			name="Arma 3 Apex - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item22
+		class Item23
 		{
 			className="ace_fastroping";
 			name="ACE3 - Fastroping";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item23
+		class Item24
 		{
 			className="A3_Supplies_F_Enoch";
 			name="Arma 3 Contact Platform - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item25
 		{
 			className="A3_Structures_F_Tank";
 			name="Arma 3 Tank - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item26
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
+		class Item27
 		{
 			className="ace_interaction";
 			name="ACE3 - Interaction";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item27
+		class Item28
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
@@ -308,14 +315,14 @@ class Mission
 			name="[JM] Framework Composition";
 			class Entities
 			{
-				items=16;
+				items=12;
 				class Item0
 				{
 					dataType="Layer";
 					name="[JM] Framework Composition";
 					class Entities
 					{
-						items=49;
+						items=47;
 						class Item0
 						{
 							dataType="Comment";
@@ -456,65 +463,16 @@ class Mission
 						};
 						class Item9
 						{
-							dataType="Trigger";
-							position[]={6144.0796,5,4943.9214};
-							class Attributes
+							dataType="Comment";
+							class PositionInfo
 							{
-								condition="call{{_x iskindof ""landvehicle"" && speed _x < 1} count thislist > 0  };";
-								onActivation="call{_handle = [(thisList select 0)] execVM ""JM_Framework\VehicleService\ServiceGround.sqf"";}";
-								sizeA=5;
-								sizeB=5;
-								sizeC=5;
-								repeatable=1;
-								activationBy="ANYPLAYER";
-								isRectangle=1;
+								position[]={6143.3198,5,4936.4331};
 							};
-							id=10;
-							type="EmptyDetectorArea10x10";
+							title="VEHICLE SERVICING";
+							description="Vehicles that stop within this trigger area will be rearmed, repaired and refueled. ACE compatible.";
+							id=11;
 						};
 						class Item10
-						{
-							dataType="Comment";
-							class PositionInfo
-							{
-								position[]={6143.9194,5.000001,4938.5044};
-							};
-							title="VEHICLE SERVICE - Ground";
-							description="Land vehicles that stop within this trigger area will be rearmed, repaired and refueled.";
-							id=11;
-							atlOffset=9.5367432e-07;
-						};
-						class Item11
-						{
-							dataType="Trigger";
-							position[]={6156.7676,5,4944.0073};
-							class Attributes
-							{
-								condition="call{{_x iskindof ""air"" && speed _x < 1} count thislist > 0  };";
-								onActivation="call{_handle = [(thisList select 0)] execVM ""JM_Framework\VehicleService\ServiceAir.sqf"";}";
-								sizeA=5;
-								sizeB=5;
-								sizeC=5;
-								repeatable=1;
-								activationBy="ANYPLAYER";
-								isRectangle=1;
-							};
-							id=12;
-							type="EmptyDetectorArea10x10";
-						};
-						class Item12
-						{
-							dataType="Comment";
-							class PositionInfo
-							{
-								position[]={6156.6074,5.000001,4938.5894};
-							};
-							title="VEHICLE SERVICE - Air";
-							description="Land vehicles that stop within this trigger area will be rearmed, repaired and refueled.";
-							id=13;
-							atlOffset=9.5367432e-07;
-						};
-						class Item13
 						{
 							dataType="Marker";
 							position[]={6114.3423,5,4979.3394};
@@ -522,7 +480,7 @@ class Mission
 							type="Empty";
 							id=14;
 						};
-						class Item14
+						class Item11
 						{
 							dataType="Comment";
 							class PositionInfo
@@ -533,7 +491,7 @@ class Mission
 							id=15;
 							atlOffset=4.7683716e-07;
 						};
-						class Item15
+						class Item12
 						{
 							dataType="Group";
 							side="West";
@@ -598,7 +556,7 @@ class Mission
 							};
 							id=16;
 						};
-						class Item16
+						class Item13
 						{
 							dataType="Object";
 							class PositionInfo
@@ -631,7 +589,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item17
+						class Item14
 						{
 							dataType="Object";
 							class PositionInfo
@@ -647,7 +605,7 @@ class Mission
 							id=19;
 							type="Sign_Arrow_Large_Cyan_F";
 						};
-						class Item18
+						class Item15
 						{
 							dataType="Group";
 							side="West";
@@ -788,7 +746,7 @@ class Mission
 							};
 							id=20;
 						};
-						class Item19
+						class Item16
 						{
 							dataType="Comment";
 							class PositionInfo
@@ -799,7 +757,7 @@ class Mission
 							id=22;
 							atlOffset=9.5367432e-07;
 						};
-						class Item20
+						class Item17
 						{
 							dataType="Logic";
 							class PositionInfo
@@ -865,7 +823,7 @@ class Mission
 								nAttributes=4;
 							};
 						};
-						class Item21
+						class Item18
 						{
 							dataType="Object";
 							class PositionInfo
@@ -937,19 +895,18 @@ class Mission
 								nAttributes=4;
 							};
 						};
-						class Item22
+						class Item19
 						{
 							dataType="Comment";
 							class PositionInfo
 							{
-								position[]={6095.9707,5.000001,4958.9814};
+								position[]={6095.9712,5,4958.981};
 							};
 							title="CUSTOM END MISSION";
-							description="There is a zeus module to trigger this custom end mission sequence." \n "" \n "cam_1 is where the camera will be position, cam_focus1 will be the object of focus." \n "" \n "The text and other bits can be edited within the endMission.sqf in Misc";
+							description="There is a zeus module to trigger this custom end mission sequence." \n "" \n "cam_1 is where the camera will be position, cam_focus1 will be the object of focus." \n "" \n "The text can be edited in JM_init.sqf, other things like font/colour/FOV will require a bit of a deeper look into the endMissionSequence.sqf";
 							id=25;
-							atlOffset=9.5367432e-07;
 						};
-						class Item23
+						class Item20
 						{
 							dataType="Object";
 							class PositionInfo
@@ -984,7 +941,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item24
+						class Item21
 						{
 							dataType="Object";
 							class PositionInfo
@@ -999,7 +956,7 @@ class Mission
 							id=27;
 							type="Land_BagBunker_Small_F";
 						};
-						class Item25
+						class Item22
 						{
 							dataType="Marker";
 							position[]={6112.1797,5,4961.0215};
@@ -1011,7 +968,7 @@ class Mission
 							b=0.69999999;
 							id=28;
 						};
-						class Item26
+						class Item23
 						{
 							dataType="Comment";
 							class PositionInfo
@@ -1023,7 +980,7 @@ class Mission
 							id=29;
 							atlOffset=9.5367432e-07;
 						};
-						class Item27
+						class Item24
 						{
 							dataType="Object";
 							class PositionInfo
@@ -1083,7 +1040,7 @@ class Mission
 								nAttributes=3;
 							};
 						};
-						class Item28
+						class Item25
 						{
 							dataType="Comment";
 							class PositionInfo
@@ -1095,7 +1052,7 @@ class Mission
 							id=31;
 							atlOffset=4.7683716e-07;
 						};
-						class Item29
+						class Item26
 						{
 							dataType="Object";
 							class PositionInfo
@@ -1128,23 +1085,23 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item30
+						class Item27
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6125.2275,6.6707454,4982.7446};
+								position[]={6125.2275,5.8577452,4982.7446};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								init="this addAction [ " \n "    ""<img image='\A3\ui_f\data\IGUI\Cfg\simpleTasks\types\move_ca.paa' size='1.2' shadow='0'/> <t color='#ffdb33'>Open Redeployment Menu</t>"", " \n "    { [] call JM_RallyPoint_fnc_showRedeployDialog }, " \n "    [], " \n "    1.5, " \n "    true, " \n "    true, " \n "    """", " \n "    ""_target distance _this < 4"", " \n "    5 " \n "]; " \n "" \n "" \n "if (hasInterface) then { " \n "    missionNamespace setVariable [""FOB_Radio"", this]; " \n " " \n "    addMissionEventHandler [""Draw3D"", { " \n "        private _radio = missionNamespace getVariable [""FOB_Radio"", objNull]; " \n "        if (isNull _radio) exitWith {}; " \n " " \n "        private _playerPos = getPosASL player; " \n "        private _radioPos = getPosASL _radio; " \n "        private _distance = _playerPos distance _radioPos; " \n "        private _maxDistance = 25; " \n " " \n "        if (_distance > _maxDistance) exitWith {}; " \n " " \n "        private _pos = _radioPos; " \n "        _pos set [2, (_pos select 2) - 4]; " \n " " \n "        drawIcon3D [ " \n "            """",  " \n "            [1, 1, 1, 1],  " \n "            _pos,  " \n "            0, 0,  " \n "            0,  " \n "            ""REDEPLOY"",  " \n "            2,  " \n "            0.04,  " \n "            ""PuristaMedium"" " \n "        ]; " \n "    }]; " \n "};";
 							};
 							id=33;
 							type="Land_Computer_01_black_F";
-							atlOffset=0.8130002;
 						};
-						class Item31
+						class Item28
 						{
 							dataType="Object";
 							class PositionInfo
@@ -1178,7 +1135,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item32
+						class Item29
 						{
 							dataType="Object";
 							class PositionInfo
@@ -1212,7 +1169,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item33
+						class Item30
 						{
 							dataType="Object";
 							class PositionInfo
@@ -1246,7 +1203,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item34
+						class Item31
 						{
 							dataType="Marker";
 							position[]={6122.1655,5,4985.2339};
@@ -1258,7 +1215,7 @@ class Mission
 							b=0.69999999;
 							id=37;
 						};
-						class Item35
+						class Item32
 						{
 							dataType="Marker";
 							position[]={6125.5518,5,4985.3652};
@@ -1270,7 +1227,7 @@ class Mission
 							b=0.5;
 							id=38;
 						};
-						class Item36
+						class Item33
 						{
 							dataType="Marker";
 							position[]={6127.937,5,4985.3262};
@@ -1282,7 +1239,7 @@ class Mission
 							b=0.5;
 							id=39;
 						};
-						class Item37
+						class Item34
 						{
 							dataType="Marker";
 							position[]={6125.5244,5,4984.5884};
@@ -1294,7 +1251,7 @@ class Mission
 							b=0.5;
 							id=40;
 						};
-						class Item38
+						class Item35
 						{
 							dataType="Marker";
 							position[]={6127.9507,5,4984.562};
@@ -1306,7 +1263,7 @@ class Mission
 							b=0.5;
 							id=41;
 						};
-						class Item39
+						class Item36
 						{
 							dataType="Comment";
 							class PositionInfo
@@ -1318,7 +1275,7 @@ class Mission
 							id=42;
 							atlOffset=9.5367432e-07;
 						};
-						class Item40
+						class Item37
 						{
 							dataType="Group";
 							side="West";
@@ -1383,7 +1340,7 @@ class Mission
 							};
 							id=43;
 						};
-						class Item41
+						class Item38
 						{
 							dataType="Group";
 							side="West";
@@ -1448,7 +1405,7 @@ class Mission
 							};
 							id=45;
 						};
-						class Item42
+						class Item39
 						{
 							dataType="Group";
 							side="West";
@@ -1513,7 +1470,7 @@ class Mission
 							};
 							id=47;
 						};
-						class Item43
+						class Item40
 						{
 							dataType="Group";
 							side="West";
@@ -1579,7 +1536,7 @@ class Mission
 							};
 							id=49;
 						};
-						class Item44
+						class Item41
 						{
 							dataType="Group";
 							side="West";
@@ -1672,7 +1629,7 @@ class Mission
 							};
 							id=51;
 						};
-						class Item45
+						class Item42
 						{
 							dataType="Group";
 							side="West";
@@ -1765,7 +1722,7 @@ class Mission
 							};
 							id=53;
 						};
-						class Item46
+						class Item43
 						{
 							dataType="Group";
 							side="West";
@@ -1777,7 +1734,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6155.7769,5.0014391,4986.6665};
+										position[]={6155.7769,5.0014391,4986.667};
 										angles[]={0,4.2295265,0};
 									};
 									side="West";
@@ -1785,7 +1742,7 @@ class Mission
 									class Attributes
 									{
 										init="this setVariable [""JM_role"", ""Medic""];";
-										description="Misfit Loadout";
+										description="Misfit Loadout Radio";
 										isPlayable=1;
 										class Inventory
 										{
@@ -1816,6 +1773,7 @@ class Mission
 											map="ItemMap";
 											compass="ItemCompass";
 											watch="ItemWatch";
+											radio="TFAR_anprc152";
 											headgear="H_HelmetSpecB_paint2";
 										};
 									};
@@ -1858,7 +1816,7 @@ class Mission
 							};
 							id=55;
 						};
-						class Item47
+						class Item44
 						{
 							dataType="Group";
 							side="West";
@@ -1951,7 +1909,7 @@ class Mission
 							};
 							id=57;
 						};
-						class Item48
+						class Item45
 						{
 							dataType="Group";
 							side="West";
@@ -2044,9 +2002,27 @@ class Mission
 							};
 							id=59;
 						};
+						class Item46
+						{
+							dataType="Trigger";
+							position[]={6144.0703,5,4943.7622};
+							class Attributes
+							{
+								condition="call { {_x isKindOf ""LandVehicle"" || _x isKindOf ""Air"" || _x isKindOf ""Ship""} count thisList > 0 } " \n "";
+								onActivation="call { _handle = [(thisList select 0)] execVM ""JM_Framework\VehicleService\ServiceVehicle.sqf""; } " \n "";
+								sizeA=5;
+								sizeB=5;
+								sizeC=5;
+								repeatable=1;
+								activationBy="ANYPLAYER";
+								isRectangle=1;
+							};
+							id=77;
+							type="EmptyDetectorArea10x10";
+						};
 					};
 					id=0;
-					atlOffset=2.8610229e-06;
+					atlOffset=9.5367432e-07;
 				};
 				class Item1
 				{
@@ -2366,141 +2342,9 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item12
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6152.0098,5.2680001,4949.2739};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=70;
-					type="RoadCone_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item13
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6151.7988,5.2680001,4938.7954};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=71;
-					type="RoadCone_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item14
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6161.6504,5.2680001,4938.7734};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=72;
-					type="RoadCone_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item15
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6161.7251,5.2680001,4949.1421};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=73;
-					type="RoadCone_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
 			};
 			id=76;
-			atlOffset=0.00040149689;
+			atlOffset=0.0064220428;
 		};
 	};
 };

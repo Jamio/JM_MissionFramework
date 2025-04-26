@@ -98,12 +98,17 @@ if (hasInterface) then {
   }] call CBA_fnc_addEventHandler
 };
 
+
+[] spawn {
+  
 waitUntil {
     !isNil "JM_allowedArsenalItems"
 };
 
 if (JM_arsenalRoleRestrict) then {
     [] call JM_Loadouts_fnc_whitelistArsenalWeapons;
+};
+
 };
 
 systemChat "JM Punish UnknownWep is active."

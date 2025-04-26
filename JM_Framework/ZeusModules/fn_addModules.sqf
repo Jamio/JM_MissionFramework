@@ -254,7 +254,7 @@
         true // Show in Zeus interface
     ] call zen_dialog_fnc_create;
  }, 
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
+ "a3\modules_f_bootcamp\data\portraithint.paa"] call zen_custom_modules_fnc_register;
 
 // +++++++++++++++++++++++++++++++++++++++++++
 // +++++++ RANDOM ANTI AIR FIRE
@@ -265,8 +265,6 @@
  "Random AA Fire",
  {
     params ["_position", "_target"];
-
-    if (!isServer) exitWith {};
 
     if (isNull _target || {vehicle _target != _target}) exitWith {
         systemChat "ERROR: This module must be placed on an AA unit!";
@@ -334,7 +332,7 @@
         _this
     ] call zen_dialog_fnc_create;
  },
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
+ "x\zen\addons\modules\ui\target_ca.paa"] call zen_custom_modules_fnc_register;
 
  // +++++++++++++++++++++++++++++++++++++++++++
 // +++++++ EXPLOSION SPAWNER
@@ -344,8 +342,6 @@
  "Explosion Spawner",
  {
     params ["_position", "_target"];
-
-    if (!isServer) exitWith {};
 
     // Retrieve all ammo class names from CfgAmmo
     private _ammoList = "true" configClasses (configFile >> "CfgAmmo");
@@ -419,7 +415,7 @@
         _this
     ] call zen_dialog_fnc_create;
  },
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
+ "x\zen\addons\modules\ui\explosion_ca.paa"] call zen_custom_modules_fnc_register;
 
 
 // +++++++++++++++++++++++++++++++++++++++++++
@@ -429,12 +425,11 @@
 if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
     systemChat "[Custom Sound Module] CROWS EW not detected - Registering standalone module.";
 
-    ["Jamio",
-     "[Sound] Play Custom Sound",
+    ["[JM] Tools",
+     "Custom Sound",
      {
         params ["_position", "_target"];
         
-        if (!isServer) exitWith {};
 
         // Retrieve all available sounds from mission-defined CfgSounds
         private _sounds = [];
@@ -508,7 +503,7 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
             [_position] 
         ] call zen_dialog_fnc_create;
      },
-     "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
+     "a3\ui_f\data\igui\rscingameui\rscunitinfoairrtdfull\ico_cpt_sound_on_ca.paa"] call zen_custom_modules_fnc_register;
 } else {
     systemChat "[CROWS EW] Detected – Adding mission sounds to CROWS EW...";
 
@@ -585,8 +580,6 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
  {
     params ["_pos", "_target"];
 
-    if (!hasInterface || !isServer) exitWith {};
-
         [
             "Cinematic Border Settings",
             [
@@ -603,7 +596,7 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
             []
         ] call zen_dialog_fnc_create;
  },
- "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
+ "a3\modules_f_bootcamp\data\portraithint.paa"] call zen_custom_modules_fnc_register;
 
 
 // +++++++++++++++++++++++++++++++++++++++++++
@@ -616,8 +609,6 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
 "AWACS Report",
 {
     params ["_position", "_target"];
-
-    if (!isServer) exitWith {};
 
     private _reference = if (getMarkerPos "Bullseye_1" select 0 != 0 || getMarkerPos "Bullseye_1" select 1 != 0) then {
         getMarkerPos "Bullseye_1"
@@ -656,7 +647,7 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
                 "<t size='1.25' color='#00c3ff'>CONTACT:</t> <t size='1.25' color='#ffffff'>%1</t><br/>" +
                 "<t size='1.25' color='#00c3ff'>DISTANCE:</t> <t size='1.25' color='#ffffff'>%2 KM</t><br/>" +
                 "<t size='1.25' color='#00c3ff'>BEARING:</t> <t size='1.25' color='#ffffff'>%3°</t><br/>" +
-                "<t size='1.25' color='#00c3ff'>ANGELS:</t> <t size='1.25' color='#ffffff'>%4</t>%5",
+                "<t size='1.25' color='#00c3ff'>ALTITUDE:</t> <t size='1.25' color='#ffffff'>%4</t>%5",
                 _threatType,
                 _dist,
                 _bearing,
@@ -672,7 +663,7 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
         [_position, _reference]
     ] call zen_dialog_fnc_create;
 },
-"\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
+"a3\data_f_jets\logos\jets_icon_ca.paa"] call zen_custom_modules_fnc_register;
 
 // +++++++++++++++++++++++++++++++++++++++++++
 // +++++++ SPAWN AMMO CRATE
@@ -703,7 +694,7 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
                 _results params ["_p", "_s", "_l", "_g"];
 
                 // Pass values to the ammoCrate.sqf script
-                [_crate, _p, _s, _l, _g] execVM "JM_Framework\Supply\ammoCrate.sqf";
+                [[_crate, _p, _s, _l, _g], "JM_Framework\Supply\ammoCrate.sqf"] remoteExec ["execVM", 0, false];
             },
             {},
             [_crate]
@@ -748,7 +739,7 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
                     "_splints", "_tq", "_painkillers", "_epi", "_morph"
                 ];
 
-                [
+                [[
                     _crate,
                     _dressings,
                     _iv1000,
@@ -759,7 +750,7 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
                     _painkillers,
                     _epi,
                     _morph
-                ] execVM "JM_Framework\Supply\medCrate.sqf";
+                ],  "JM_Framework\Supply\medCrate.sqf"] remoteExec ["execVM", 0, true];
             },
             {},
             [_crate]

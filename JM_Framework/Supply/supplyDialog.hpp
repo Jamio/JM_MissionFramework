@@ -16,7 +16,7 @@ class JM_SupplyDialog {
             y = 0 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
             w = 13 * GUI_GRID_CENTER_W;
             h = 25 * GUI_GRID_CENTER_H;
-            colorBackground[] = {-1,-1,-1,0.85};
+            colorBackground[] = {0.2,0.2,0.2,1};
         };
     };
 
@@ -37,7 +37,7 @@ class JM_SupplyDialog {
 			shadow = 0;
 			font = "PuristaBold";
 			default = true;
-			action = "closeDialog 0; ['ammo', 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 2, false];";
+			action = "closeDialog 0; [['ammo', player], 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 0, false];";
 
         };
         class JM_DialogHeader: RscText
@@ -70,7 +70,7 @@ class JM_SupplyDialog {
             text = "MEDICAL CRATE";
 			shadow = 0;
 			font = "PuristaBold";
-			action = "closeDialog 0; ['medical', 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 2, false];";
+			action = "closeDialog 0; [['medical', player], 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 0, false];";
         };
         class JM_Button4: RscButton
         {
@@ -87,7 +87,7 @@ class JM_SupplyDialog {
             text = "CSW CRATE";
 			shadow = 0;
 			font = "PuristaBold";
-			action = "closeDialog 0; ['csw', 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 2, false];";
+			action = "closeDialog 0; [['csw', player], 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 0, false];";
         };
         class JM_Button5: RscButton
         {
@@ -104,7 +104,7 @@ class JM_SupplyDialog {
             text = "ENGINEER CRATE";
 			shadow = 0;
 			font = "PuristaBold";
-			action = "closeDialog 0; ['repair', 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 2, false];";
+			action = "closeDialog 0; [['repair', player], 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 0, false];";
         };
         class JM_Button6: RscButton
         {
@@ -121,7 +121,7 @@ class JM_SupplyDialog {
             text = "EMPTY CRATE";
 			shadow = 0;
 			font = "PuristaBold";
-			action = "closeDialog 0; ['empty', 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 2, false];";
+			action = "closeDialog 0; [['empty', player], 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 0, false];";
         };
         class JM_Button1: RscButton
         {
@@ -138,7 +138,7 @@ class JM_SupplyDialog {
             text = "CUSTOM CRATE";
 			shadow = 0;
 			font = "PuristaBold";
-			action = "closeDialog 0; ['custom', 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 2, false];";
+			action = "closeDialog 0; [['custom', player], 'JM_Framework\Supply\spawnSupplyCrate.sqf'] remoteExec ['execVM', 0, false];";
         };
     };
 };

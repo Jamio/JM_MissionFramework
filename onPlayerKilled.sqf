@@ -18,6 +18,23 @@ if (JM_Permadeath) then {
         // If player is NOT a Zeus, apply permadeath behavior
         [] spawn {
             sleep 5;
+
+            // Adjust vision modes, limit to first person or follow, limit to player
+
+            [[1,2], [0]] call ace_spectator_fnc_updateCameraModes;
+            [[-2], [-1,0,1]] call ace_spectator_fnc_updateVisionModes;
+
+            private _specTeam = allPlayers select {side _x == side player};
+            private _specZeus = allPlayers select { !isNull getAssignedCuratorLogic _x };
+
+            // Identify all remote-controlled units
+            private _remoteControlledUnits = allUnits select { !isNull remoteControlled _x };
+
+            // Add remote-controlled units to the Zeus blacklist
+            _specZeus = _specZeus + _remoteControlledUnits;
+
+            [_specTeam, _specZeus] call ace_spectator_fnc_updateUnits;
+
             [true, true, true] call ace_spectator_fnc_setSpectator;  // Puts player into spectator mode
         };
     };
