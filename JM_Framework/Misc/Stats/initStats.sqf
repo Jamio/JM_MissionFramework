@@ -19,6 +19,7 @@ publicVariable "JM_Stats";
 addMissionEventHandler ["EntityKilled", {
     params ["_unit", "_killer", "_instigator", "_useEffects"];
 
+    // Track player deaths
     if (isPlayer _unit) then {
         JM_TotalDeaths = JM_TotalDeaths + 1;
         publicVariable "JM_TotalDeaths";
@@ -32,6 +33,7 @@ addMissionEventHandler ["EntityKilled", {
         publicVariable "JM_Stats";
     };
 
+    // Track player kills
     if (!isNull _killer && {isPlayer _killer} && {_killer != _unit}) then {
         JM_TotalKills = JM_TotalKills + 1;
         publicVariable "JM_TotalKills";
@@ -44,12 +46,29 @@ addMissionEventHandler ["EntityKilled", {
         // Longest kill tracking
         private _distance = _killer distance _unit;
         private _currentLongest = _stats getOrDefault ["longestKill", 0];
+
         if (_distance > _currentLongest) then {
             _stats set ["longestKill", _distance];
 
-            private _weaponClass = primaryWeapon _killer;
-            private _weaponName = getText (configFile >> "CfgWeapons" >> _weaponClass >> "displayName");
+            private _weaponName = "";
+
+            if (vehicle _instigator == _instigator) then {
+                // On foot, use primary weapon
+                private _weapon = primaryWeapon _instigator;
+
+                if (_weapon != "") then {
+                    _weaponName = getText (configFile >> "CfgWeapons" >> _weaponClass >> "displayName");
+                } else {
+                    _weaponName = "Unknown Weapon";
+                };
+            } else {
+                // In vehicle, use vehicle name
+                _weaponName = getText (configFile >>  "CfgVehicles" >> typeOf (vehicle _instigator) >> "displayName");
+            };
+
             _stats set ["longestKillWeapon", _weaponName];
+
+    
         };
 
         JM_Stats set [_uid, _stats];

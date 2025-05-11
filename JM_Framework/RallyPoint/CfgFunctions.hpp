@@ -3,6 +3,10 @@ class JM_RallyPoint {
         file = "JM_Framework\RallyPoint";
         
         class showRedeployDialog;
+	class addRallyAction;
+	class updateRallyAssignments;
+	class teleportToSelectedRally;
+	class teleportToSquad;
 
     };
 };

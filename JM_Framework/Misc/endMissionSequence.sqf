@@ -37,7 +37,7 @@ if (!hasInterface) exitWith {};
     private _titles = missionNamespace getVariable ["JM_EndTitles", []];
     {
         titleText [
-            format ["<t valign='middle' align='center' size='3' color='#ffe396' font='PuristaMedium'>%1</t>", _x],
+            format ["<t valign='middle' align='center' size='3' color='#ffffff' font='PuristaSemiBold' shadow='1' shadowOffset='0.05'>%1</t>", _x],
             "PLAIN", -1, true, true
         ];
         sleep 10;

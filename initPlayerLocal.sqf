@@ -11,9 +11,6 @@
 // Grass Cutter script
 #include "JM_Framework\GrassCutter\grassCutter.sqf"
 
-// Rally Point Script - PLT Rally
-#include "JM_Framework\RallyPoint\pltRally.sqf"
-
 // Framework Status - Briefing Entry for debugging
 #include "JM_Framework\Misc\frameworkStatus.sqf"
 
@@ -64,6 +61,30 @@ private _author = getText (missionConfigFile >> "author");
 
 #include "JM_Framework\TFAR\manageTFARRadios.sqf"
 
+// ************************************** AMEND SUPPLY SYSTEM ARRAYS *******************************************************
+
+#include "JM_Framework\Supply\supplyInitPlayer.sqf"
+
+// ************************************** DISABLE ACE ARSENAL FACE *******************************************************
+
+if (!JM_arsenalIdentity) then {
+["ace_arsenal_displayOpened", {
+    params ["_display"];
+
+    [{
+        params ["_display"];
+
+        {
+            private _ctrl = _display displayCtrl _x;
+            _ctrl ctrlEnable false;
+            _ctrl ctrlSetFade 0.6;
+            _ctrl ctrlCommit 0;
+        } forEach [2033, 2035]; // Face and Voice buttons
+
+    }, [_display]] call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
+};
+
 // ************************************** JOIN IN PROGRESS *******************************************************
 
 
@@ -103,7 +124,7 @@ uiSleep 7;
 
         [ 
             "ATTENTION!", 
-            "<t color='#ffffff' font='RobotoCondensed' size='1'>Ping Zeus or use the respawn system when ready.<br/> (Default key: Y)</t>", 
+            "<t color='#ffffff' font='RobotoCondensed' size='1'>Ping Zeus or use the redeploy system when ready.<br/> (Default key: Y)</t>", 
             [1,0.6,0,1],
             true, 
             [ 

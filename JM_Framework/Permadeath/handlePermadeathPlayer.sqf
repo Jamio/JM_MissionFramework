@@ -11,5 +11,6 @@ if (JM_isPermadeathEnabled) then {
     };
 } else {
     // Normal respawn behavior
-    setPlayerRespawnTime 15; // Or whatever your default respawn time is
+    private _defaultRespawnTime = getMissionConfigValue ["respawnDelay", 5];
+    setPlayerRespawnTime _defaultRespawnTime; // Or whatever your default respawn time is
 };

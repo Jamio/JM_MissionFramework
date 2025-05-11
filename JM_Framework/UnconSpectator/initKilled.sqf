@@ -1,6 +1,6 @@
 // onPlayerKilled.sqf
 
-if !(JM_unconSpectator) exitWith {};
+if (JM_unconSpectator) then {[false] call ace_spectator_fnc_setSpectator;};
 
 // Ensure spectator mode is disabled before camera effect starts
 [false] call ace_spectator_fnc_setSpectator;
@@ -10,7 +10,7 @@ if (JM_Permadeath) then {
     setPlayerRespawnTime 99999;
 };
 
-// Camera Sequence
+// Camera seq
 [] spawn {
     sleep 2;
 
@@ -29,7 +29,7 @@ if (JM_Permadeath) then {
     _camera camSetFOV 0.5;
     _camera camCommit 15;
 
-    sleep 15;
+    sleep 5;
 
     // Clean up camera and ensure spectator is enabled if permadeath is on
     _camera cameraEffect ["Terminate", "Back"];

@@ -60,6 +60,132 @@ if (isServer) then {
 }, "\a3\ui_f\data\igui\cfg\actions\take_ca.paa"] call zen_custom_modules_fnc_register;
 
 
+// **********************************************************
+// ************************ PERMADEATH RESPAWN REWORK
+// **********************************************************
+
+
+["[JM] Permadeath", "Permadeath Respawn REWORK", {
+    params ["_target", "_vehicle"];
+
+    private _deadPlayers = allPlayers select {!alive _x};
+
+    if (_deadPlayers isEqualTo []) exitWith {
+        ["No dead players to respawn."] call zen_common_fnc_showMessage;
+    };
+
+    private _names = _deadPlayers apply {name _x};
+
+    ["Respawn Tool", [
+        ["LIST", "Select Dead Players", [_deadPlayers, _names, 0, 10]],
+        ["CHECKBOX", "Respawn ALL dead players?", false],
+        ["CHECKBOX", "Teleport Here?", true]
+    ], {
+        params ["_dialogValues", "_args"];
+        _dialogValues params ["_selection", "_respawnAll", "_teleportHere"];
+        _args params ["_target", "_vehicle"];
+
+        private _deadPlayers = allPlayers select {!alive _x};
+
+        private _players = if (_respawnAll) then {
+            _deadPlayers
+        } else {
+            [_deadPlayers select _selection]
+        };
+
+        _players = _players select { !isNull _x && {!alive _x} };
+
+        if (_players isEqualTo []) exitWith {
+            ["No players selected."] call zen_common_fnc_showMessage;
+        };
+
+        private _destinationData = if (
+            (!isNull _vehicle) &&
+            { _vehicle isKindOf "LandVehicle" || _vehicle isKindOf "Air" || _vehicle isKindOf "Ship" }
+        ) then {
+            ["VEHICLE", netId _vehicle]
+        } else {
+            ["POS", ASLToAGL _target]
+        };
+
+        private _targetClients = _players apply {owner _x};
+
+        [_destinationData, _teleportHere] remoteExec ["JM_Permadeath_fnc_forceRespawn", _targetClients];
+
+        private _playerNames = _players apply { name _x };
+        private _message = format ["Attempted respawn on: %1", _playerNames joinString ", "];
+        [_message] call zen_common_fnc_showMessage;
+
+    }, {}, [_target, _vehicle]] call zen_dialog_fnc_create;
+
+}, "\a3\ui_f\data\igui\cfg\actions\take_ca.paa"] call zen_custom_modules_fnc_register;
+
+
+// **********************************************************
+// ************************ PERMADEATH RESPAWN REWORK
+// **********************************************************
+
+["[JM] Permadeath", "Permadeath Respawn REWORK 2", {
+    params ["_target", "_vehicle"];
+
+    private _deadPlayers = allPlayers select {!alive _x};
+    private _spectators = [] call ace_spectator_fnc_players;
+    { if (!isNull _x) then { _deadPlayers pushBackUnique _x } } forEach _spectators;
+    _deadPlayers = _deadPlayers select { isPlayer _x && {!isNull _x} };
+
+    if (_deadPlayers isEqualTo []) exitWith {
+        ["No dead players to respawn."] call zen_common_fnc_showMessage;
+    };
+
+    private _names = _deadPlayers apply { name _x };
+
+    ["Respawn Tool", [
+        ["LIST", "Select Dead Players", [_deadPlayers, _names, 0, 10]],
+        ["CHECKBOX", "Respawn ALL dead players?", false],
+        ["CHECKBOX", "Teleport Here?", true]
+    ], {
+        params ["_dialogValues", "_args"];
+        _dialogValues params ["_selection", "_respawnAll", "_teleportHere"];
+        _args params ["_target", "_vehicle"];
+
+
+
+        private _deadPlayers = allPlayers select {!alive _x};
+        private _spectators = [] call ace_spectator_fnc_players;
+        { if (!isNull _x) then { _deadPlayers pushBackUnique _x } } forEach _spectators;
+        _deadPlayers = _deadPlayers select { isPlayer _x && {!isNull _x} };
+
+        private _players = if (_respawnAll) then {
+            _deadPlayers
+        } else {
+            [_selection]
+        };
+
+        _players = _players select { !isNull _x && {!alive _x} };
+        if (_players isEqualTo []) exitWith {
+            ["No players selected."] call zen_common_fnc_showMessage;
+        };
+
+        private _destinationData = if (
+            (!isNull _vehicle) &&
+            { _vehicle isKindOf "LandVehicle" || _vehicle isKindOf "Air" || _vehicle isKindOf "Ship" }
+        ) then {
+            ["VEHICLE", netId _vehicle]
+        } else {
+            ["POS", ASLToAGL _target]
+        };
+
+        [_players, _destinationData, _teleportHere] remoteExec ["JM_Permadeath_fnc_handleForceRespawn", 2];
+
+        private _playerNames = _players apply { name _x };
+        private _message = format ["Attempted respawn on: %1", _playerNames joinString ", "];
+        [_message] call zen_common_fnc_showMessage;
+
+    }, {}, [_target, _vehicle]] call zen_dialog_fnc_create;
+
+}, "\a3\ui_f\data\igui\cfg\actions\take_ca.paa"] call zen_custom_modules_fnc_register;
+
+
 
 
 // **********************************************************

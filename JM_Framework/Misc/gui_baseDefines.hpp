@@ -116,6 +116,41 @@ class RscFrame {
     h = 0.1;
 };
 
+class RscListbox
+{
+    access = 0;
+    type = 5; // Listbox type
+    style = 0;
+    w = 0.4;
+    h = 0.4;
+    font = "RobotoCondensed";
+    sizeEx = 0.035;
+    rowHeight = 0.04;
+    colorBackground[] = {0,0,0,0.3};
+    colorSelect[] = {1,1,1,1};
+    colorSelect2[] = {1,1,1,1};
+    colorSelectBackground[] = {0.95,0.95,0.95,0.5};
+    colorSelectBackground2[] = {0.95,0.95,0.95,0.5};
+    colorText[] = {1,1,1,1};
+    colorScrollbar[] = {0.2,0.2,0.2,1};
+    colorDisabled[] = {1,1,1,0.5};
+    color[] = {0.7,0.7,0.7,1};
+    maxHistoryDelay = 1.0;
+    soundSelect[] = {"",0.1,1};
+    soundExpand[] = {"",0.1,1};
+    soundCollapse[] = {"",0.1,1};
+    autoScrollSpeed = -1;
+    autoScrollDelay = 5;
+    autoScrollRewind = 0;
+    arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+    arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+    class ListScrollBar // In older Arma versions: ScrollBar
+    {
+        color[] = {1,1,1,1};
+        autoScrollEnabled = 1;
+    };
+};
+
 class RscMapControl {
     access = 0;
     type = 101;

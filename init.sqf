@@ -18,12 +18,6 @@ execVM "JM_Framework\Earplugs\fnc_initEarplugs.sqf";
 // Safezone
 execVM "JM_Framework\Safezone\grenadeStop.sqf";
 
-// Supply
-[] execVM "JM_Framework\Supply\supply_init.sqf";
-
-// Init for Rally point markers
-[] execVM "JM_Framework\RallyPoint\rpmarkers.sqf";
-
 // Unconscious Spectator
 
 // Vehicle Appearance Manager

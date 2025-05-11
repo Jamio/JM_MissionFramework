@@ -104,15 +104,15 @@
 ["[JM] Tools", 
  "Countdown Timer", 
  {
-    params ["_position", "_target"]; // Module Position & Target Object (Not used here)
+    params ["_position", "_target"]; // module pos and target obj
 
     // Define the input dialog for countdown settings
     [
         "Set Countdown Timer",
         [
-            ["SLIDER", "Countdown Time (seconds)", [1, 300, 30, 0]],  // Min 1 sec, max 300 sec, default 30
-            ["EDIT", "Custom Countdown Message", ["Time Remaining"]], // Default countdown label
-            ["EDIT", "Final Message", ["Countdown Complete!"]] // Default final message
+            ["SLIDER", "Countdown Time (seconds)", [1, 300, 30, 0]],
+            ["EDIT", "Custom Countdown Message", ["Time Remaining"]],
+            ["EDIT", "Final Message", ["Countdown Complete!"]]
         ],
         {
             // Confirmation callback
@@ -121,7 +121,7 @@
             private _message = _results select 1;
             private _finalMessage = _results select 2;
 
-            // Start the countdown loop with global execution
+            // countdown loop global exec
             for "_i" from 0 to _time do {
                 [{
                     params ["_remainingTime", "_message"];
@@ -139,7 +139,7 @@
                 }, [_time - _i, _message], _i] call CBA_fnc_waitAndExecute;
             };
 
-            // Ensure the final message is displayed globally
+            // display final time globally
             [{
                 params ["_finalMessage"];
 
@@ -151,8 +151,8 @@
 
             }, [_finalMessage], _time + 1] call CBA_fnc_waitAndExecute;
         },
-        {}, // Empty cancel callback
-        true // Show in Zeus interface
+        {},
+        true
     ] call zen_dialog_fnc_create;
  }, 
  "a3\modules_f_curator\data\iconskiptime_ca.paa"] call zen_custom_modules_fnc_register;
@@ -164,7 +164,7 @@
 // +++++++ END MISSION
 // +++++++++++++++++++++++++++++++++++++++++++
 
-["[JM] Tools", 
+["[JM] Ending", 
  "Custom End Mission", 
  {
     ["JM_Framework\Misc\endMissionSequence.sqf"] remoteExec ["execVM", 0, true];
@@ -757,6 +757,90 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
         ] call zen_dialog_fnc_create;
     },
     "a3\characters_f\data\ui\icon_medic_ca.paa"
+] call zen_custom_modules_fnc_register;
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++
+// +++++++ EDIT END TITLES
+// +++++++++++++++++++++++++++++++++++++++++++
+
+[
+    "[JM] Ending",
+    "Set End Screen Titles",
+    {
+        params ["_pos", "_logic"];
+
+        // Use current values or fall back to defaults
+        private _defaults = [
+            "The fighting in this mission was intense.",
+            "The Misfits held the line, but at great cost.",
+            "Buccaneer tried to use a squadmate's head to defuse a mine.",
+            "Maybe next time, they’ll do better. Maybe."
+        ];
+
+        private _current = if (!isNil "JM_EndTitles") then { JM_EndTitles } else { _defaults };
+
+        [
+            "Edit End Screen Titles",
+            [
+                ["EDIT:MULTI", "Line 1", [_current param [0, _defaults#0], { _this }, 4]],
+                ["EDIT:MULTI", "Line 2", [_current param [1, _defaults#1], { _this }, 4]],
+                ["EDIT:MULTI", "Line 3", [_current param [2, _defaults#2], { _this }, 4]],
+                ["EDIT:MULTI", "Line 4", [_current param [3, _defaults#3], { _this }, 4]]
+            ],
+            {
+                params ["_results", "_args"];
+                _results params ["_line1", "_line2", "_line3", "_line4"];
+
+                JM_EndTitles = [_line1, _line2, _line3, _line4];
+                publicVariable "JM_EndTitles";
+
+                hint "End Titles Updated";
+            },
+            {},
+            []
+        ] call zen_dialog_fnc_create;
+    },
+    "a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa"
+] call zen_custom_modules_fnc_register;
+
+// +++++++++++++++++++++++++++++++++++++++++++
+// +++++++ EDIT DEBRIEF DIALOG
+// +++++++++++++++++++++++++++++++++++++++++++
+
+[
+    "[JM] Ending",
+    "Set Debrief Text",
+    {
+        params ["_pos", "_logic"];
+
+        // Default text if not defined
+        private _default = "The Misfits enjoyed playing around at the training ground with their friends.<br/><br/>" +
+                           "Everyone had a good time, and went to bed with a newfound warmth in their hearts.<br/><br/>" +
+                           "Well done, everyone.";
+
+        private _current = if (!isNil "JM_CustomDebriefText") then { JM_CustomDebriefText } else { _default };
+
+        [
+            "Edit Custom Debrief Text",
+            [
+                ["EDIT:MULTI", "Debrief Text", [_current, { _this }, 10]]
+            ],
+            {
+                params ["_results", "_args"];
+                _results params ["_text"];
+
+                JM_CustomDebriefText = _text;
+                publicVariable "JM_CustomDebriefText";
+
+                hint parseText "<t size='1.2' color='#33cc33'>Custom debrief text updated!</t>";
+            },
+            {},
+            []
+        ] call zen_dialog_fnc_create;
+    },
+    "a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
 

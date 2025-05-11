@@ -13,6 +13,7 @@ setPlayerRespawnTime 99999; // This ensures that the respawn timer doesn't conti
 if (JM_Permadeath) then {
     if (!isNull getAssignedCuratorLogic player || {player isEqualTo zeus1}) then {
         // If player is a Zeus, use normal respawn behavior
+        private _defaultRespawnTime = getMissionConfigValue ["respawnDelay", 5];
         setPlayerRespawnTime _defaultRespawnTime;
     } else {
         // If player is NOT a Zeus, apply permadeath behavior

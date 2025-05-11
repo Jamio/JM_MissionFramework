@@ -13,7 +13,10 @@ if (hasInterface) then {
         ["Earplugs", JM_Earplugs],
         ["Fortify System", JM_Fortify],
         ["Rally System", JM_Rally],
-        ["Teleport to Squad", JM_tpToSL]
+        ["Teleport to Squad", JM_tpToSL],
+        ["Persistent Loadouts", JM_loadoutPersist],
+        ["Role Restricted Arsenal", JM_arsenalRoleRestrict],
+        ["Stamina Disabled", JM_StaminaOff]
     ];
 
     {
@@ -22,7 +25,7 @@ if (hasInterface) then {
         private _statusColor = if (_isEnabled) then {"#00FF00"} else {"#FF0000"}; // Green for Enabled, Red for Disabled
         private _statusText = if (_isEnabled) then {"Enabled"} else {"Disabled"};
 
-        _text = _text + format ["%1: <font color='%2'>%3</font><br/>", _featureName, _statusColor, _statusText];
+        _text = _text + format ["%1: <font = 'PuristMedium' color='%2'>%3</font><br/>", _featureName, _statusColor, _statusText];
     } forEach _frameworkFeatures;
 
     // Create a new category for the framework

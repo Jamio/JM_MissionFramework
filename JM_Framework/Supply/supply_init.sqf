@@ -1,9 +1,16 @@
 if (isServer) then {
-    call compile preprocessFileLineNumbers "JM_Framework\Supply\resupplyConfig.sqf";
-    publicVariable "JM_PrimMags";
-    publicVariable "JM_SecMags";
-    publicVariable "JM_HGmags";
-    publicVariable "JM_Grenades";
+
+    waitUntil {!isNil "JM_arsenalRoleRestrict"};
+
+    if (JM_arsenalRoleRestrict) then {
+        // Arsenal is in use — safe to initialize fresh and fill with allowed items
+        JM_PrimMags = [];
+        JM_SecMags = [];
+        JM_HGmags  = [];
+        JM_Grenades = [];
+
+        call JM_Supply_fnc_extractArsenalMags;
+    };
 };
 
 

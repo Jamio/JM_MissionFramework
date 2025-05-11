@@ -17,13 +17,13 @@ private _pos = getPos _spawner;
 
 // === Create crate ===
 private _crateClass = switch (_crateType) do {
-    case "ammo":    { "ACE_Box_Ammo" };
-    case "medical": { "ACE_Box_Ammo" };
-    case "repair":  { "ACE_Box_Ammo" };
-    case "csw":     { "ACE_Box_Ammo" };
-    case "custom":  { "ACE_Box_Ammo" };
-    case "empty":   { "ACE_Box_Ammo" };
-    default         { "ACE_Box_Ammo" };
+    case "ammo":    { "Box_NATO_Ammo_F" };
+    case "medical": { "Box_B_UAV_06_medical_F" };
+    case "repair":  { "Box_NATO_Support_F" };
+    case "csw":     { "Box_NATO_WpsSpecial_F" };
+    case "custom":  { "Box_NATO_WpsSpecial_F" };
+    case "empty":   { "Box_NATO_Equip_F" };
+    default         { "Box_NATO_Equip_F" };
 };
 
 private _box = createVehicle [_crateClass, _pos, [], 0, "NONE"];
@@ -35,8 +35,8 @@ clearItemCargoGlobal _box;
 clearBackpackCargoGlobal _box;
 
 // Ignore ACE weight
-_box setVariable ["ace_dragging_ignoreweightdrag", true];
-_box setVariable ["ace_dragging_ignoreweightcarry", true];
+[_box, true, [0, 3, 1], 0, true, true] call ace_dragging_fnc_setCarryable;
+[_box, true, [3, -2, 2], 0, true, true] call ace_dragging_fnc_setDraggable;
 
 // === Crate Content Logic ===
 switch (_crateType) do {
@@ -47,9 +47,9 @@ switch (_crateType) do {
         if (isNil "JM_Grenades") then { JM_Grenades = []; };
 
         { _box addMagazineCargoGlobal [_x, 20]; } forEach JM_PrimMags;
-        { _box addMagazineCargoGlobal [_x, 10]; } forEach JM_SecMags;
+        { _box addMagazineCargoGlobal [_x, 5]; } forEach JM_SecMags;
         { _box addMagazineCargoGlobal [_x, 25]; } forEach JM_HGmags;
-        { _box addMagazineCargoGlobal [_x, 20]; } forEach JM_Grenades;
+        { _box addMagazineCargoGlobal [_x, 10]; } forEach JM_Grenades;
     };
 
     case "medical": {

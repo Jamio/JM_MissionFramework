@@ -3,6 +3,9 @@ class JM_Supply {
         file = "JM_Framework\Supply";
         
         class showSupplyDialog;
+	class extractArsenalMags;
+	class scanPlayerMags;
+	class scanPlayerMagsFromUID;
 
     };
 };

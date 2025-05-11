@@ -9,7 +9,7 @@ disableUserInput true;
 sleep 2;
 player SetPos (getPos _dest);
 call ace_medical_treatment_fnc_fullHeal;
-_rettime = 30;
+_rettime = 10;
 while {_rettime>0} do {
 	_rettime = _rettime - 1;
 	titleText [str(_rettime), "PLAIN DOWN", 1];

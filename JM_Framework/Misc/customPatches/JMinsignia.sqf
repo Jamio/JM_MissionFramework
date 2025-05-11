@@ -1,7 +1,7 @@
 
 class CfgUnitInsignia
 {
-	class rotation
+	class JM_Patch_rotation
 	{
 		displayName = "[MF] Rotation Is Life";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -10,7 +10,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class fiveone
+    class JM_Patch_fiveone
 	{
 		displayName = "[MF] 51292";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -19,7 +19,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class avgbird
+    class JM_Patch_avgbird
 	{
 		displayName = "[MF] Average Bird";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -28,7 +28,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class beatings
+    class JM_Patch_beatings
 	{
 		displayName = "[MF] Morale";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -37,7 +37,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class bk
+    class JM_Patch_bk
 	{
 		displayName = "[MF] BK";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -46,7 +46,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class carenth
+    class JM_Patch_carenth
 	{
 		displayName = "[MF] Car Enthusiast";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -55,7 +55,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class dirt
+    class JM_Patch_dirt
 	{
 		displayName = "[MF] Rub Some Dirt On It";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -64,7 +64,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class family
+    class JM_Patch_family
 	{
 		displayName = "[MF] Family";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -73,7 +73,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class jcom
+    class JM_Patch_jcom
 	{
 		displayName = "[MF] JOINTCOM";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -82,7 +82,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class mariahfan
+    class JM_Patch_mariahfan
 	{
 		displayName = "[MF] No.1 Fan";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -91,7 +91,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class marm
+    class JM_Patch_marm
 	{
 		displayName = "[MF] Marmalade";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -100,7 +100,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class msftdie
+    class JM_Patch_msftdie
 	{
 		displayName = "[MF] Misfits Never Die";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -109,7 +109,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class nomsft
+    class JM_Patch_nomsft
 	{
 		displayName = "[MF] No Misfit Left Behind";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -118,7 +118,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class spud
+    class JM_Patch_spud
 	{
 		displayName = "[MF] Spudgun";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -127,7 +127,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class swmg
+    class JM_Patch_swmg
 	{
 		displayName = "[MF] Shadow Wizard Money Gang";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -136,7 +136,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class swmg2
+    class JM_Patch_swmg2
 	{
 		displayName = "[MF] Shadow Wizard Money Gang 2";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -145,7 +145,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class taskforcemf
+    class JM_Patch_taskforcemf
 	{
 		displayName = "[MF] Task Force Misfit";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -154,7 +154,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class thugshake
+    class JM_Patch_thugshake
 	{
 		displayName = "[MF] Thugshaker";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -163,7 +163,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class uncooked
+    class JM_Patch_uncooked
 	{
 		displayName = "[MF] Uncooked";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -172,7 +172,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-    class mf
+    class JM_Patch_mf
 	{
 		displayName = "[MF] Misfits";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -181,7 +181,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class hotbox
+	class JM_Patch_hotbox
 	{
 		displayName = "[MF] Hotbox Champions";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -190,7 +190,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class misfire
+	class JM_Patch_misfire
 	{
 		displayName = "[MF] Misfire";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -199,7 +199,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class mtg
+	class JM_Patch_mtg
 	{
 		displayName = "[MF] MTG";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -208,7 +208,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class peg
+	class JM_Patch_peg
 	{
 		displayName = "[MF] Lone Survivor";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -217,7 +217,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class prevmed
+	class JM_Patch_prevmed
 	{
 		displayName = "[MF] Preventative Medicine";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -226,7 +226,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class sigil
+	class JM_Patch_sigil
 	{
 		displayName = "[MF] Unknown";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -235,7 +235,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class travolta
+	class JM_Patch_travolta
 	{
 		displayName = "[MF] Certified Wanderer";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -244,7 +244,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class warhed
+	class JM_Patch_warhed
 	{
 		displayName = "[MF] Warheads on Foreheads";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -253,7 +253,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class 762fm
+	class JM_Patch_762fm
 	{
 		displayName = "[MF] 7.62FM";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -262,7 +262,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class banana
+	class JM_Patch_banana
 	{
 		displayName = "[MF] Banana";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -271,7 +271,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class broke
+	class JM_Patch_broke
 	{
 		displayName = "[MF] Broken";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -280,7 +280,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class domo
+	class JM_Patch_domo
 	{
 		displayName = "[MF] Always Watching";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -289,7 +289,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class fine
+	class JM_Patch_fine
 	{
 		displayName = "[MF] This Is Fine";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -298,7 +298,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class foxtod
+	class JM_Patch_foxtod
 	{
 		displayName = "[MF] Foxhole Club";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -307,7 +307,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class hell
+	class JM_Patch_hell
 	{
 		displayName = "[MF] Skal For Helvede";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal
@@ -316,7 +316,7 @@ class CfgUnitInsignia
 		textureVehicle = "";													// Does nothing, reserved for future use
 	};
 
-	class HLY
+	class JM_Patch_HLY
 	{
 		displayName = "[MF] Hellys Heroes Survivors";								// Name displayed in Arsenal
 		author = "Jamio";											// Author displayed in Arsenal

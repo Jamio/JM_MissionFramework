@@ -16,7 +16,7 @@
 
 
 if !(isServer) exitWith {};
-waitUntil { time > 5 };
+waitUntil { time > 5 && (!isNil "JM_PrimMags")};
 
 params ["_crate", "_pCount", "_sCount", "_lCount", "_gCount"];
 

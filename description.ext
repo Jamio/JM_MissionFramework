@@ -10,23 +10,6 @@ class Header
 	maxPlayers = 20;	// maximum number of players the mission supports
 };
 
-class CfgWorlds
-{
-	class Any
-	{
-		author = "Jamio"; // Overrides 'author' above
-		description = "The Misfits rally at the training ground";
-		pictureMap = "JM_Framework\Misc\map1.paa"; // optional
-		pictureShot = "JM_Framework\loading.paa"; // highly recommended
-		loadingTexts[] = 
-		{
-			"Buccaneer once designated an LZ on top of 2 AA guns.",
-			"Remember that one time that Max flew a C-130 into a cliff.",
-			"Jamio has never accidentally dropped a grenade - and certainly not twice."
-		};
-	};
-};
-
 onLoadIntro = "This is a loading message that displays while the mission is loading";
 onLoadMissionTime = 0;
 briefingName = "MSFT Mission Template v1.01";
@@ -76,7 +59,7 @@ class DifficultyOverride
 {
 	tacticalPing = 0; // disables tactical ping in this mission, even if selected difficulty preset has it enabled
 }
-disableChannels[] = {2,3,4 };
+disableChannels[] = {};
 disabledAI = 1;
 enableDebugConsole[] = {1, "76561198026778430"};
 zeusCompositionScriptLevel = 0;
@@ -122,6 +105,7 @@ class CfgMusic
 #include "JM_Framework\Misc\Debriefing\debriefDialog.hpp"
 #include "JM_Framework\RallyPoint\redeployDialog.hpp"
 #include "JM_Framework\Supply\supplyDialog.hpp"
+#include "JM_Framework\Garage\garageDialog.hpp"
 
 
 
@@ -135,6 +119,7 @@ class CfgFunctions
 		#include "JM_Framework\Misc\Debriefing\CfgFunctions.hpp"
 		#include "JM_Framework\RallyPoint\CfgFunctions.hpp"
 		#include "JM_Framework\Supply\cfgFunctions.hpp"
+		#include "JM_Framework\Garage\cfgFunctions.hpp"
 
 class JM_Master
     {
@@ -167,3 +152,5 @@ class Extended_PostInit_EventHandlers {
 #include "JM_Framework\VAM_GUI\VAM_GUI_classes.hpp"
 
 #include "JM_Framework\Misc\customPatches\JMinsignia.sqf"
+
+
