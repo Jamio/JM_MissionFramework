@@ -15,7 +15,7 @@ HOW TO USE:
 
 */
 
-if !(JM_Fortify) exitWith {["JM Fortify not active."] remoteExec ["systemChat", 0, false];};
+if !(JM_Fortify) exitWith {systemChat "[JM FORTIFY] is  not active";};
 
 
 
@@ -164,4 +164,4 @@ _cvo_Fort_preset2 = [
 ] call ace_interact_menu_fnc_addActionToObject;		// Alternative: ace_interact_menu_fnc_addActionToObject
 } forEach [_cvo_Fort_preset1,_cvo_Fort_preset2];
 
-["JM Fortify is active."] remoteExec ["systemChat", 0, false];
+systemChat "[JM FORTIFY] is active";

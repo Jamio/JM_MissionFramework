@@ -2,7 +2,7 @@
 
 sleep 5;
 
-if !(JM_MrkScaling) exitWith {systemChat "Marker Scaling not active."};
+if !(JM_MrkScaling) exitWith {systemChat "[JM MARKERSCALE] is not active";};
 
 0 = 0 spawn {
     // Wait until the map display (ID 12) is available
@@ -41,4 +41,4 @@ if !(JM_MrkScaling) exitWith {systemChat "Marker Scaling not active."};
 
 
 
-systemChat "Marker Scaling active.";
+systemChat "[JM MARKERSCALE] is active";

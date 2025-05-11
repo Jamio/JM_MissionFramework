@@ -1,6 +1,6 @@
 // Adds ACE Grass Cutter to all playersNumber
 
-if !(JM_GrassCutter) exitWith {systemChat "JM Grasscutter is not active."};
+if !(JM_GrassCutter) exitWith {systemChat "[JM GRASSCUTTER] is not active";};
 
 //AceGrassCutter to all players
 _AceGrassCut = ["grass_cut","Cut Grass","",
@@ -11,4 +11,4 @@ _AceGrassCut = ["grass_cut","Cut Grass","",
 
 [player, 1, ["ACE_SelfActions", "ACE_Equipment"], _AceGrassCut] call ace_interact_menu_fnc_addActionToObject;
 
-systemChat "JM Grasscutter is active.";
+systemChat "[JM GRASSCUTTER] is active";

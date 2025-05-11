@@ -95,46 +95,10 @@ uiSleep 7;
 
 [ 
  "YOU JOINED MID-MISSION", 
- "<t color='#ffffff' font='RobotoCondensedBold' size='1'>You joined in-progress, You will be moved to your Squad leader.</t>", 
+ "<t color='#ffffff' font='RobotoCondensedBold' size='1'>You joined in-progress - create your loadout (if necessary), and use the redeploy menu to get back into the fight!</t>", 
  [1,0.6,0,1], 
  true, 
- [ 
-    ["I am ready to go!", {
-
-        _TPpos = [];
-        _plyer = player;
-
-        if ((leader player) == objnull) then {
-            
-            _plyer = selectRandom allPlayers;
-            _TPpos = getPosATL _plyer; 
-         
-        } else {
-
-            _plyer = (leader player);
-            _TPpos = getPosATL _plyer;             
-
-        };
-
-        player setPosATL _TPpos;
-
-    }],
-
-    ["I am not ready to go yet...", {
-
-        [ 
-            "ATTENTION!", 
-            "<t color='#ffffff' font='RobotoCondensed' size='1'>Ping Zeus or use the redeploy system when ready.<br/> (Default key: Y)</t>", 
-            [1,0.6,0,1],
-            true, 
-            [ 
-                ["Got it!", {systemChat "Ping Zeus or use the respawn system when ready."}]
-            ] 
-        ] call JM_fnc_guiMessage;
-
-    }]
- 
- ], 
+ [], 
  0 
 ] call JM_fnc_guiMessage;
 

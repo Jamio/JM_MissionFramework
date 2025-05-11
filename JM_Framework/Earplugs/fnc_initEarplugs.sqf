@@ -31,7 +31,7 @@ waitUntil {!isNull player}; //to prevent MP / JIP issues
 
 NreEarplugsPath = "JM_Framework\Earplugs\";
 
-if !(JM_Earplugs) exitWith {systemChat "Earplugs not active."};
+if !(JM_Earplugs) exitWith {systemChat "[JM EARPLUGS] is not active";};
 
 if (isNil "NreEarplugsActive") then {
 	NreEarplugsActive = 0;
@@ -70,4 +70,6 @@ if ( NreEarplugsActive == 1 ) then {
 	_id = player addAction [("<t color=""#f24141"">Remove Earplugs</t>"),NreEarplugsPath+"fnc_initEarplugs.sqf","",5,false,true,"",""];
 	player setVariable ["NreEarplugsAction", _id];
 };
+
+systemChat "[JM EARPLUGS] is active";
 

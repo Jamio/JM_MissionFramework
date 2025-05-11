@@ -84,4 +84,4 @@ fnc_VAM_UGV_rcws_setup = compileFinal preprocessFileLineNumbers "JM_Framework\VA
 if !(count VAM_condition_check_options isEqualTo 0) then {[] spawn fnc_VAM_condition_check;};
 [] spawn fnc_VAM_action;
 
-systemchat "VAM Initialised";
+systemChat "[JM VEHICLE APPEARANCE] is active";

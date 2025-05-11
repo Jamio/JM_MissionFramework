@@ -14,7 +14,7 @@
   diwako 2018-06-24
 */
 
-if !(JM_punishWep) exitWith {systemChat "JM Punish UnknownWep is not active."};
+if !(JM_punishWep) exitWith {systemChat "[JM UNKNOWNWEP] is not active";};
 
 if !(diwako_unknownwp_enable) exitWith {};
 
@@ -111,4 +111,4 @@ if (JM_arsenalRoleRestrict) then {
 
 };
 
-systemChat "JM Punish UnknownWep is active."
+systemChat "[JM UNKNOWNWEP] is active";

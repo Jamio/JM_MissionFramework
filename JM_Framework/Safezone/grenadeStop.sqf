@@ -13,7 +13,7 @@
    Edit the #defines below.
 */
 
-if !(JM_Safezone) exitWith {["JM Safezones not active."] remoteExec ["systemChat", 0, false];};
+if !(JM_Safezone) exitWith {systemChat "[JM SAFEZONES] is not active";};
 
 if (isDedicated) exitWith {};
 waitUntil {!isNull player};
@@ -26,4 +26,4 @@ player addEventHandler ["Fired", {
    };
 }];
 
-["JM Safezones active."] remoteExec ["systemChat", 0, false];
+systemChat "[JM SAFEZONES] is active";
