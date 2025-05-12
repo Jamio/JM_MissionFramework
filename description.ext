@@ -79,7 +79,6 @@ class CfgSounds
 	};
 
 		#include "JM_Framework\customSounds.hpp"
-		#include "JM_Framework\UnconSpectator\UnconSounds.hpp"
 };
 
 // MUSIC
