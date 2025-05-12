@@ -3,11 +3,9 @@
 
 params ["_unit"];
 
-systemChat format ["[SCAN] Scanning mags for: %1", _unit];
-
 if (!isServer || isNull _unit) exitWith {};
 
-systemChat format ["[SCAN] Scanning mags for: %1", _unit];
+systemChat format ["[JM SUPPLY] Scanning mags for: %1", _unit];
 
 // Ensure global arrays exist
 if (isNil "JM_PrimMags") then { JM_PrimMags = []; };
@@ -24,7 +22,7 @@ private _rawMags = (
     (throwables _unit apply { _x select 0 })
 );
 
-systemChat format ["[SCAN] Raw mags: %1", _rawMags];
+systemChat format ["[JM SUPPLY] Raw mags: %1", _rawMags];
 
 // Manually deduplicate
 private _magsToCheck = [];
@@ -60,4 +58,4 @@ publicVariable "JM_SecMags";
 publicVariable "JM_HGmags";
 publicVariable "JM_Grenades";
 
-systemChat format ["[SCAN] global mag arrays: %1 %2 %3 %4", JM_PrimMags, JM_SecMags, JM_HGmags, JM_Grenades];
+systemChat "[JM SUPPLY] Global supply updated"

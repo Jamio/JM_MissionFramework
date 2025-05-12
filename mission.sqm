@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=154;
+		nextID=155;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=66;
+		nextID=68;
 	};
 	class Camera
 	{
-		pos[]={6155.5615,7.4584732,4992.3916};
-		dir[]={0.84946847,-0.32651991,0.41447324};
-		up[]={0.29345241,0.94519037,0.1431815};
-		aside[]={0.43850774,0,-0.89872748};
+		pos[]={6051.2925,41.432976,4860.0015};
+		dir[]={0.604873,-0.28193781,0.74487156};
+		up[]={0.1777689,0.95942169,0.21891072};
+		aside[]={0.77635384,1.459237e-06,-0.63044304};
 	};
 };
 binarizationWanted=0;
@@ -366,7 +366,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			dataType="Layer";
@@ -380,7 +380,7 @@ class Mission
 					name="[JM] Framework Composition";
 					class Entities
 					{
-						items=38;
+						items=31;
 						class Item0
 						{
 							dataType="Comment";
@@ -542,11 +542,11 @@ class Mission
 							dataType="Comment";
 							class PositionInfo
 							{
-								position[]={6114.5098,5.0000005,4976.0483};
+								position[]={6114.5098,5,4976.0479};
 							};
 							title="RESPAWN";
+							description="The framework utilises a single respawn point in the ""staging area"". This needs to be either respaw_west, _east etc." \n "" \n "That will obviously depend on which faction you are playing as.";
 							id=15;
-							atlOffset=4.7683716e-07;
 						};
 						class Item12
 						{
@@ -743,11 +743,11 @@ class Mission
 							dataType="Comment";
 							class PositionInfo
 							{
-								position[]={6097.0537,5.000001,4971.2954};
+								position[]={6097.0542,5,4971.2949};
 							};
 							title="ZEUS";
+							description="This is the logic for the zeus slot. Any further zeus slots will need to be added to the module before starting.";
 							id=22;
-							atlOffset=9.5367432e-07;
 						};
 						class Item16
 						{
@@ -1018,74 +1018,6 @@ class Mission
 						};
 						class Item25
 						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=1;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={6157.0298,5.0014391,4981.5259};
-										angles[]={0,4.2295265,0};
-									};
-									side="West";
-									flags=7;
-									class Attributes
-									{
-										init="this setVariable [""JM_role"", ""Medic""];";
-										description="Misfit - Medic";
-										isPlayable=1;
-										class Inventory
-										{
-											compass="ItemCompass";
-											watch="ItemWatch";
-											radio="TFAR_anprc152";
-										};
-									};
-									id=56;
-									type="B_Soldier_SL_F";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Male07ENG";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="SCALAR";
-													value=1.03;
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=55;
-						};
-						class Item26
-						{
 							dataType="Trigger";
 							position[]={6144.0703,5,4943.7622};
 							class Attributes
@@ -1102,156 +1034,20 @@ class Mission
 							id=77;
 							type="EmptyDetectorArea10x10";
 						};
-						class Item27
+						class Item26
 						{
 							dataType="Group";
 							side="West";
 							class Entities
 							{
-								items=1;
+								items=8;
 								class Item0
 								{
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6155.9175,5.0014391,4983.0972};
-										angles[]={0,4.2295265,0};
-									};
-									side="West";
-									flags=7;
-									class Attributes
-									{
-										init="this setVariable [""JM_role"", ""Rifleman""];";
-										description="Misfit - Rifleman";
-										isPlayable=1;
-										class Inventory
-										{
-											compass="ItemCompass";
-											watch="ItemWatch";
-											radio="TFAR_anprc152";
-										};
-									};
-									id=116;
-									type="B_Soldier_SL_F";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Male07ENG";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="SCALAR";
-													value=1.03;
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=115;
-						};
-						class Item28
-						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=1;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={6157.709,5.0014391,4983.9834};
-										angles[]={0,4.2295265,0};
-									};
-									side="West";
-									flags=7;
-									class Attributes
-									{
-										init="this setVariable [""JM_role"", ""Rifleman""];";
-										description="Misfit - Rifleman";
-										isPlayable=1;
-										class Inventory
-										{
-											compass="ItemCompass";
-											watch="ItemWatch";
-											radio="TFAR_anprc152";
-										};
-									};
-									id=118;
-									type="B_Soldier_SL_F";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Male07ENG";
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="SCALAR";
-													value=1.03;
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=117;
-						};
-						class Item29
-						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=1;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={6159.6401,5.0014391,4984.9434};
-										angles[]={0,4.2295265,0};
+										position[]={6150.769,5.0014391,4978.0459};
+										angles[]={0,6.2662416,-0};
 									};
 									side="West";
 									flags=7;
@@ -1300,29 +1096,181 @@ class Mission
 										nAttributes=2;
 									};
 								};
-							};
-							class Attributes
-							{
-							};
-							id=119;
-						};
-						class Item30
-						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=1;
-								class Item0
+								class Item1
 								{
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6154.917,5.0014391,4984.6079};
-										angles[]={0,4.2295265,0};
+										position[]={6148.8887,5.0014391,4981.9136};
+										angles[]={0,6.2662416,-0};
 									};
 									side="West";
-									flags=7;
+									flags=5;
+									class Attributes
+									{
+										init="this setVariable [""JM_role"", ""Medic""];";
+										description="Misfit - Medic";
+										isPlayable=1;
+										class Inventory
+										{
+											compass="ItemCompass";
+											watch="ItemWatch";
+											radio="TFAR_anprc152";
+										};
+									};
+									id=56;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6150.792,5.0014391,4982.2012};
+										angles[]={0,6.2662416,-0};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										init="this setVariable [""JM_role"", ""Rifleman""];";
+										description="Misfit - Rifleman";
+										isPlayable=1;
+										class Inventory
+										{
+											compass="ItemCompass";
+											watch="ItemWatch";
+											radio="TFAR_anprc152";
+										};
+									};
+									id=116;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+								class Item3
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6150.7793,5.0014391,4980.2026};
+										angles[]={0,6.2662416,-0};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										init="this setVariable [""JM_role"", ""Rifleman""];";
+										description="Misfit - Rifleman";
+										isPlayable=1;
+										class Inventory
+										{
+											compass="ItemCompass";
+											watch="ItemWatch";
+											radio="TFAR_anprc152";
+										};
+									};
+									id=118;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+								class Item4
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6152.5913,5.0014391,4982.4165};
+										angles[]={0,6.2662416,-0};
+									};
+									side="West";
+									flags=5;
 									class Attributes
 									{
 										init="this setVariable [""JM_role"", ""Machinegunner""];";
@@ -1368,29 +1316,16 @@ class Mission
 										nAttributes=2;
 									};
 								};
-							};
-							class Attributes
-							{
-							};
-							id=121;
-						};
-						class Item31
-						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=1;
-								class Item0
+								class Item5
 								{
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6156.5,5.0014391,4985.5454};
-										angles[]={0,4.2295265,0};
+										position[]={6152.7178,5.0014391,4980.5811};
+										angles[]={0,6.2662416,-0};
 									};
 									side="West";
-									flags=7;
+									flags=5;
 									class Attributes
 									{
 										init="this setVariable [""JM_role"", ""Machinegunner""];";
@@ -1436,29 +1371,16 @@ class Mission
 										nAttributes=2;
 									};
 								};
-							};
-							class Attributes
-							{
-							};
-							id=123;
-						};
-						class Item32
-						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=1;
-								class Item0
+								class Item6
 								{
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6153.7017,5.0014391,4985.978};
-										angles[]={0,4.2295265,0};
+										position[]={6154.3613,5.0014391,4982.8867};
+										angles[]={0,6.2662416,-0};
 									};
 									side="West";
-									flags=7;
+									flags=5;
 									class Attributes
 									{
 										init="this setVariable [""JM_role"", ""Engineer""];";
@@ -1504,29 +1426,16 @@ class Mission
 										nAttributes=2;
 									};
 								};
-							};
-							class Attributes
-							{
-							};
-							id=125;
-						};
-						class Item33
-						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=1;
-								class Item0
+								class Item7
 								{
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6152.7695,5.0014391,4987.0322};
-										angles[]={0,4.2295265,0};
+										position[]={6155.7222,5.0014391,4983.2461};
+										angles[]={0,6.2662416,-0};
 									};
 									side="West";
-									flags=7;
+									flags=5;
 									class Attributes
 									{
 										init="this setVariable [""JM_role"", ""Pilot""];";
@@ -1576,9 +1485,9 @@ class Mission
 							class Attributes
 							{
 							};
-							id=127;
+							id=119;
 						};
-						class Item34
+						class Item27
 						{
 							dataType="Group";
 							side="West";
@@ -1590,8 +1499,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6149.5508,5.0014391,4992.9658};
-										angles[]={0,4.2295265,0};
+										position[]={6158.083,5.0014391,4983.3013};
+										angles[]={0,6.2662416,-0};
 									};
 									side="West";
 									flags=7;
@@ -1646,7 +1555,7 @@ class Mission
 							};
 							id=131;
 						};
-						class Item35
+						class Item28
 						{
 							dataType="Group";
 							side="West";
@@ -1658,8 +1567,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6158.1079,5.0014391,4995.6685};
-										angles[]={0,4.2295265,0};
+										position[]={6158.2334,5.0014391,4979.3159};
+										angles[]={0,6.2662416,-0};
 									};
 									side="West";
 									flags=7;
@@ -1758,7 +1667,7 @@ class Mission
 							};
 							id=142;
 						};
-						class Item36
+						class Item29
 						{
 							dataType="Group";
 							side="West";
@@ -1770,8 +1679,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6159.0024,5.0014391,4994.3037};
-										angles[]={0,4.2295265,0};
+										position[]={6156.6123,5.0014391,4979.1299};
+										angles[]={0,6.2662416,-0};
 									};
 									side="West";
 									flags=7;
@@ -1870,7 +1779,7 @@ class Mission
 							};
 							id=144;
 						};
-						class Item37
+						class Item30
 						{
 							dataType="Group";
 							side="West";
@@ -1882,8 +1791,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6159.5928,5.0014391,4993.0713};
-										angles[]={0,4.2295265,0};
+										position[]={6155.2461,5.0014391,4979.1563};
+										angles[]={0,6.2662416,-0};
 									};
 									side="West";
 									flags=7;
@@ -3156,6 +3065,17 @@ class Mission
 			name="JM_GarageSpawn_Sea";
 			type="Empty";
 			id=105;
+		};
+		class Item28
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={6153.9092,5,4984.4951};
+			};
+			title="ROLES";
+			description="These playable characters are supposed to serve as an example of the setup for roles, to be used in the role-restricted arsenal. View the code in their init's to see the example." \n "" \n "There is also a platoon leader slot here - you can have several platoon leaders, and they are all able to place the platoon rally. The code for the platoon leader is also in the init.";
+			id=154;
 		};
 	};
 };
