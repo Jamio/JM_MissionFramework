@@ -87,7 +87,7 @@ switch (_type) do {
         ["z\ace\addons\flags\data\icons\carry\white_carry_icon.paa", "#e8b015"],
         {
             private _nearby = (player nearEntities ["Man", 15]) select {side _x == side player};
-            if ((count _nearby) <= 3) exitWith { hint "Need at least 2 allies nearby to deploy Platoon Rally"; };
+            if ((count _nearby) <= 3) exitWith { hint "Need at least 3 allies nearby to deploy Platoon Rally"; };
 
             [player] call ace_common_fnc_goKneeling;
             [player, "AinvPknlMstpSnonWnonDnon_medic_1", 1] call ace_common_fnc_doAnimation;

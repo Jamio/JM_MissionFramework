@@ -71,5 +71,3 @@ if ( NreEarplugsActive == 1 ) then {
 	player setVariable ["NreEarplugsAction", _id];
 };
 
-systemChat "[JM EARPLUGS] is active";
-

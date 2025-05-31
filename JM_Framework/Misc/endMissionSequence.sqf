@@ -7,6 +7,8 @@ if (!hasInterface) exitWith {};
     cutText ["", "BLACK OUT", 5, true, false, true];
     sleep 2;
 
+    playMusic "JM_Outro";
+
     // Optional: disable DUI (if using it)
     missionNamespace setVariable ["diwako_dui_main_toggled_off", true];
 
@@ -14,6 +16,7 @@ if (!hasInterface) exitWith {};
     [player] call ace_medical_treatment_fnc_fullHealLocal;
     player allowDamage false;
     player setCaptive true;
+    [player, true] call ACE_captives_fnc_setHandcuffed;
     5 fadeSound 0;
     5 fadeRadio 0;
     5 fadeEnvironment 0;

@@ -1,6 +1,6 @@
 author			= "Jamio";
-onLoadName		= "Template Mission";
-onLoadMission	= "This is the loading screen text.";
+onLoadName		= "Operation Slate";
+onLoadMission	= "The Misfits head to sahrani for their first operation since reactivation.";
 loadScreen		= "JM_Framework\loading.paa";
 
 class Header
@@ -10,11 +10,11 @@ class Header
 	maxPlayers = 20;	// maximum number of players the mission supports
 };
 
-onLoadIntro = "This is a loading message that displays while the mission is loading";
+onLoadIntro = "The Misfits head to sahrani for their first operation since reactivation.";
 onLoadMissionTime = 0;
-briefingName = "MSFT Mission Template v1.01";
+briefingName = "Operation Slate";
 overviewPicture = "JM_Framework\loading.paa";
-overviewText = "This is the overview template";
+overviewText = "Operation Slate";
 
 respawn = 3;
 respawnTemplates[] = {};
@@ -62,21 +62,13 @@ class DifficultyOverride
 disableChannels[] = {};
 disabledAI = 1;
 enableDebugConsole[] = {1, "76561198026778430"};
-zeusCompositionScriptLevel = 0;
+zeusCompositionScriptLevel = 2;
 
 // SOUNDS
 
 class CfgSounds
 {
 	sounds[] = {}; // OFP required it filled, now it can be empty or absent depending on the game version
-
-	class Template1
-	{
-		name = "TemplateSound";						// display name
-		sound[] = { "", 1, 1, 100 };	// file, volume, pitch, maxDistance
-		titles[] = {};			// subtitles
-
-	};
 
 		#include "JM_Framework\customSounds.hpp"
 };
@@ -86,14 +78,6 @@ class CfgSounds
 class CfgMusic
 {
 	tracks[] = {};
-	class MyIntro
-	{
-		// display name
-		name	= "TemplateMusic";
-
-		// filename, volume, pitch
-		sound[]	= { "", db + 0, 1.0 };
-	};
 
 	#include "JM_Framework\customMusic.hpp"
 };

@@ -38,8 +38,10 @@ if (_spawnPos isEqualTo [0,0,0]) exitWith {
     systemChat format ["Garage spawn marker %1 missing!", _spawnMarker];
 };
 
+_spawnDir = markerDir _spawnMarker;
+
 // --- Actually spawn the vehicle ---
-[_className, _spawnPos] remoteExec ["JM_Garage_fnc_serverSpawn", 2];
+[_className, _spawnPos, _spawnDir] remoteExec ["JM_Garage_fnc_serverSpawn", 2];
 
 // --- Decrease the limit ---
 if (_limit > 0) then {

@@ -62,6 +62,35 @@ private _reportText = "<font size='16'>DLC Gear Report</font><br/><br/>";
 
 } forEach _units;
 
+
+// If using role-restricted arsenal, check those items too
+if (JM_arsenalRoleRestrict) then {
+    _reportText = _reportText + "<font size='14'>Restricted Arsenal DLC Items</font><br/><br/>";
+    
+    {
+        _x params ["_role", "_items"];
+        private _roleDLCItems = [];
+
+        {
+            private _dlc = _dlcGearMap getOrDefault [_x, ""];
+            if (_dlc != "") then {
+                _roleDLCItems pushBackUnique [_x, _dlc];
+            };
+        } forEach _items;
+
+        _reportText = _reportText + format ["<font color='#ffff66'>%1 Role:</font><br/>", _role];
+        if ((count _roleDLCItems) > 0) then {
+            {
+                _reportText = _reportText + format ["- %1 <font color='#ffaa00'>(%2)</font><br/>", _x select 0, _x select 1];
+            } forEach _roleDLCItems;
+        } else {
+            _reportText = _reportText + "<font color='#66ff66'>No DLC gear detected.</font><br/>";
+        };
+        _reportText = _reportText + "<br/>";
+
+    } forEach JM_allowedArsenalItems;
+};
+
 // Create Mision framework diary entry
 player createDiarySubject ["Mission Framework", "Mission Framework"];
 

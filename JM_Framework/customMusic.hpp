@@ -1,12 +1,17 @@
-/* Add all additional custom sounds to this file with the following structure:
-
-	class MyIntro
+    class JM_intro  
 	{
 		// display name
-		name	= "TemplateMusic";
+		name	= "Intro";
 
 		// filename, volume, pitch
-		sound[]	= { "", db + 0, 1.0 };
+		sound[]	= { "JM_Framework\custom_sounds\intro.ogg", db + 3, 1.0 };
 	};
 
-*/
+    class JM_outro
+	{
+		// display name
+		name	= "Outro";
+
+		// filename, volume, pitch
+		sound[]	= { "JM_Framework\custom_sounds\outro.ogg", db + 3, 1.0 };
+	};

@@ -110,7 +110,7 @@
     [
         "Set Countdown Timer",
         [
-            ["SLIDER", "Countdown Time (seconds)", [1, 300, 30, 0]],
+            ["SLIDER", "Countdown Time (seconds)", [1, 900, 30, 0]],
             ["EDIT", "Custom Countdown Message", ["Time Remaining"]],
             ["EDIT", "Final Message", ["Countdown Complete!"]]
         ],
@@ -257,7 +257,7 @@
  "a3\modules_f_bootcamp\data\portraithint.paa"] call zen_custom_modules_fnc_register;
 
 // +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ RANDOM ANTI AIR FIRE
+// +++++++ RANDOM ANTI-AIR FIRE
 // +++++++++++++++++++++++++++++++++++++++++++
 
 

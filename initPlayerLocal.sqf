@@ -1,3 +1,4 @@
+cutText ["","BLACK FADED",2];
 
 
 // *********************************************************************************************************
@@ -25,24 +26,6 @@
 
 // Initialise Custom briefing   
 #include "JM_Framework\Misc\briefing.sqf";
-
-// ************************************** MISSION TITLE DISPLAY *******************************************************
-
-waitUntil {time > 15};
-
-private _missionName = getText (missionConfigFile >> "onLoadName");
-private _author = getText (missionConfigFile >> "author");
-
-[parseText format [
-    "<t font='PuristaBold' size='2.6'>%1</t><br /><t font='PuristaBold' size='1.6'>by %2</t>",
-    _missionName,
-    _author
-], 
-[0.5, 0.5, 2, 2], 
-[10, 10], 
-7, 
-0.7, 
-0] spawn BIS_fnc_textTiles;
 
 // ************************************** UNCONSCIOUS SPECTATOR ********************************************************
 
@@ -85,21 +68,51 @@ if (!JM_arsenalIdentity) then {
 }] call CBA_fnc_addEventHandler;
 };
 
-// ************************************** JOIN IN PROGRESS *******************************************************
+// ************************************** RALLY CHECKING EH *******************************************************
 
+if (JM_Rally) then {
+    ["group", {
+        params ["_unit", "_newGroup"];
 
-if (didJIP) exitWith {
-// hint "You joined in-progress, Moving you to your Squad leader";
+        if (isNil {_newGroup getVariable "JM_HasLeaderEH"}) then {
+            _newGroup setVariable ["JM_HasLeaderEH", true];
 
-uiSleep 7;
-
-[ 
- "YOU JOINED MID-MISSION", 
- "<t color='#ffffff' font='RobotoCondensedBold' size='1'>You joined in-progress - create your loadout (if necessary), and use the redeploy menu to get back into the fight!</t>", 
- [1,0.6,0,1], 
- true, 
- [], 
- 0 
-] call JM_fnc_guiMessage;
-
+            _newGroup addEventHandler ["LeaderChanged", {
+                params ["_group", "_newLeader"];
+                [] remoteExec ["JM_RallyPoint_fnc_updateRallyAssignments", 2];
+            }];
+        };
+    }] call CBA_fnc_addPlayerEventHandler;
 };
+
+
+// ************************************** BLACK IN *******************************************************
+
+
+waitUntil {!isNull player} && {(getClientStateNumber == 10)};
+waitUntil{ !isNull findDisplay 46 };
+waitUntil { time > 0 };
+
+sleep 2;
+
+cutText ["", "BLACK IN", 1];
+
+playMusic "JM_Intro";
+
+// ************************************** MISSION TITLE DISPLAY *******************************************************
+
+waitUntil {time > 30};
+
+private _missionName = getText (missionConfigFile >> "onLoadName");
+private _author = getText (missionConfigFile >> "author");
+
+[parseText format [
+    "<t font='PuristaBold' size='2.6'>%1</t><br /><t font='PuristaBold' size='1.6'>by %2</t>",
+    _missionName,
+    _author
+], 
+[0.5, 0.5, 2, 2], 
+[10, 10], 
+7, 
+0.7, 
+0] spawn BIS_fnc_textTiles;
