@@ -99,7 +99,7 @@
 // *********************************************************************************************************
 // *********************************************************************************************************
 
-   // ************************** TIMER ***********************************************************
+// ************************** TIMER ***********************************************************
 
 ["[JM] Tools", 
  "Countdown Timer", 
@@ -842,6 +842,109 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
     },
     "a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa"
 ] call zen_custom_modules_fnc_register;
+
+
+// +++++++++++++++++++++++++++++++++++++++++++
+// +++++++ RALLY POINT CHANGES
+// +++++++++++++++++++++++++++++++++++++++++++
+
+    ["JM Rally", "Assign Leader Roles", {
+      params ["_pos", "_unit"];
+
+      if (isNull _unit) exitWith {[objNull, "Error: Please pick a valid unit"] call BIS_fnc_showCuratorFeedbackMessage};
+
+
+      // Initial checkbox states from the units current vars
+      private _initSL = _unit getVariable ["JM_isSquadLead",   false];
+      private _initPL = _unit getVariable ["JM_isPlatoonLead", false];
+
+      [
+        format ["Assign / Unassign Roles: %1", name _unit],
+
+        [
+
+        ["TOOLBOX:ENABLED", "Squad Leader", _initSL],  // BOOL default value
+        ["TOOLBOX:ENABLED", "Platoon Leader", _initPL],
+        ["CHECKBOX", "Remove Rally & Marker", true]
+
+        ],
+        // onConfirm
+        {
+          params ["_results", "_args"];
+          _args params ["_unit"];
+          _results params ["_newSL", "_newPL", "_doCleanup"];
+
+          private _oldSL = _unit getVariable ["JM_isSquadLead",   false];
+          private _oldPL = _unit getVariable ["JM_isPlatoonLead", false];
+
+          // Set slot variables (public)
+          _unit setVariable ["JM_isSquadLead",   _newSL, true];
+          _unit setVariable ["JM_isPlatoonLead", _newPL, true];
+
+          // Optional cleanup when turning roles OFF
+          if (_doCleanup) then {
+            if (_oldSL && !_newSL) then {
+              private _r = _unit getVariable ["JM_RallyObject", objNull];
+              if (!isNull _r) then { deleteVehicle _r; };
+              private _m = _unit getVariable ["JM_RallyMarker",""];
+              if (_m != "") then { deleteMarker _m; };
+              _unit setVariable ["JM_RallyObject", nil, true];
+              _unit setVariable ["JM_RallyMarker", nil, true];
+              // remove SL action from the client UI (idempotent)
+              [_unit,1,["ACE_SelfActions","DeploySquadRally"]]
+                remoteExecCall ["ace_interact_menu_fnc_removeActionFromObject", owner _unit];
+            };
+            if (_oldPL && !_newPL) then {
+              private _plt = missionNamespace getVariable ["JM_PltRallyObject", objNull];
+              if (!isNull _plt) then { deleteVehicle _plt; };
+              private _pm = missionNamespace getVariable ["JM_PltRallyMarker",""];
+              if (_pm != "") then { deleteMarker _pm; };
+              missionNamespace setVariable ["JM_PltRallyObject", nil, true];
+              missionNamespace setVariable ["JM_PltRallyMarker", nil, true];
+              // remove PL action from the client UI
+              [_unit,1,["ACE_SelfActions","DeployPlatoonRally"]]
+                remoteExecCall ["ace_interact_menu_fnc_removeActionFromObject", owner _unit];
+            };
+          };
+
+          // Reapply ACE actions on that client
+          if (isPlayer _unit) then {
+            [] remoteExecCall ["JM_RallyPoint_fnc_addLocalRallyActions", owner _unit];
+          };
+
+            // Broadcast changes to everyone
+            private _msgs = [];
+
+            if (!_oldSL && _newSL) then {
+                _msgs pushBack format ["%1 has been promoted to Squad Leader.", name _unit];
+            };
+            if (_oldSL && !_newSL) then {
+                _msgs pushBack format ["%1 has been demoted from Squad Leader.", name _unit];
+            };
+            if (!_oldPL && _newPL) then {
+                _msgs pushBack format ["%1 has been promoted to Platoon Leader.", name _unit];
+            };
+            if (_oldPL && !_newPL) then {
+                _msgs pushBack format ["%1 has been demoted from Platoon Leader.", name _unit];
+            };
+
+            {
+                [_x] remoteExecCall ["systemChat", 0];
+            } forEach _msgs;
+
+            // If nothing changed, give the Zeus a local heads-up
+            if (_msgs isEqualTo []) then {
+                systemChat format ["[JM] No role changes for %1.", name _unit];
+            };
+            
+        },
+        // onCancel
+        {},
+        // args passed to onConfirm
+        [_unit]
+      ] call zen_dialog_fnc_create;
+
+    }] call zen_custom_modules_fnc_register;
 
 
 

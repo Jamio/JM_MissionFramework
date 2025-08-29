@@ -1,20 +1,20 @@
 author			= "Jamio";
-onLoadName		= "Operation Slate";
-onLoadMission	= "The Misfits head to sahrani for their first operation since reactivation.";
+onLoadName		= "Operation TESTMISSION";
+onLoadMission	= "<t font='PuristaMedium' size='1.2' align='center' color='#888888'>This is a TEST MISSION using JM Framework V2.10</t>";
 loadScreen		= "JM_Framework\loading.paa";
 
 class Header
 {
 	gameType = "Coop";	// Game type
 	minPlayers =  1;	// minimum number of players the mission supports
-	maxPlayers = 20;	// maximum number of players the mission supports
+	maxPlayers = 30;	// maximum number of players the mission supports
 };
 
-onLoadIntro = "The Misfits head to sahrani for their first operation since reactivation.";
+onLoadIntro = "The Misfits deploy into a test mission.";
 onLoadMissionTime = 0;
-briefingName = "Operation Slate";
+briefingName = "Operation TESTMISSION";
 overviewPicture = "JM_Framework\loading.paa";
-overviewText = "Operation Slate";
+overviewText = "Operation TESTMISSION";
 
 respawn = 3;
 respawnTemplates[] = {};
@@ -103,6 +103,7 @@ class CfgFunctions
 		#include "JM_Framework\RallyPoint\CfgFunctions.hpp"
 		#include "JM_Framework\Supply\cfgFunctions.hpp"
 		#include "JM_Framework\Garage\cfgFunctions.hpp"
+		#include "JM_Framework\Misc\Perf\cfgFunctions.hpp"
 
 class JM_Master
     {

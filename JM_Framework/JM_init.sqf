@@ -4,25 +4,27 @@ JM_unconSpectator = true; // ACE Unconscious Spectator
 JM_Permadeath = false; // Permadeath enabled/disabled
 JM_GrassCutter = true; // Player Grasscutter
 JM_Safezone = false; // Safezones
-JM_punishWep = false; // Punish Enemy Weapons
+JM_punishWep = true; // Punish Enemy Weapons
 JM_MrkScaling = true; // Limit Marker Scaling
 JM_Earplugs = true; // Player Earplugs
 JM_Fortify = false; // Custom ACE Fortify
 JM_Rally = true; // Rally Points
-JM_tpToSL = false; // Teleport to Squad
-JM_loadoutPersist = false; // Save loadouts on death
+JM_tpToSL = true; // Teleport to Squad
+JM_loadoutPersist = true; // Save loadouts on death
 JM_arsenalRoleRestrict = true; // Restrict arsenal items based on role
-JM_arsenalIdentity = false; // Show voice or face tabs in ACE arsenal
+JM_arsenalIdentity = true; // Show voice or face tabs in ACE arsenal
 JM_StaminaOff = true; // Disable stamina?
 JM_optimiseAI = true; // AI Caching
 
 /* ************************************** CUSTOMISABLE BITS BELOW ********************************************************** */
 
-// SUPPLY SPAWNER
+// AI OPTIMISATION/CACHING
+JM_AICacheRadius = 200; // Wake when player is in this radius
+JM_AICacheSides = [east, independent]; // sides to cache
 
 // FORTIFY
-JM_engineerVehicleClass = constructionCrate1; // variable name of the object that is used for construction
-JM_refillObject = refillCrate1; // variable name for the object used to refill the construction object
+JM_engineerVehicleClass = ""; // variable name of the object that is used for construction
+JM_refillObject = ""; // variable name for the object used to refill the construction object
 JM_maxBudget = 1000; // maximum fortify budget
 JM_refillBudget = 100;
 
@@ -45,58 +47,24 @@ JM_allowedArsenalItems = [
 
     // GEAR FOR EVERYONE - UNIFORMS/VESTS/BACKPACKS/WEAPONS/AMMO
     ["BasicGear", [
-        "Aegis_H_Helmet_FASTMT_blk_F", "Aegis_H_Helmet_FASTMT_Cover_blk_F", "Aegis_H_Helmet_FASTMT_Headset_blk_F", "JM_V_CarrierRigKBT_01_compact_*_black_F", "Rev_U_I_CDB_CombatUniform_F", "Rev_U_I_CDB_CombatUniform_shortsleeve_F",
-        "U_B_CTRG_Soldier_Black_F", "U_B_CTRG_Soldier_3_Black_F", "U_B_CTRG_Soldier_2_Black_F", "B_AssaultPack_blk", "arifle_XMS_lxWS", "30Rnd_556x45_Stanag_red", "hgun_G17_black_F", "17Rnd_9x21_Mag", "ACE_NVG_Wide_Black_WP",
-        "muzzle_snds_M", "Aegis_acc_pointer_DM", "optic_r1_high_lxWS", "Aegis_arifle_M4A1_short_F"
+        "Hair_Beard1_Brown_NG"
  
     ]],
 
     // ITEMS FOR EVERYONE - MAP/COMPASS/RADIO/GPS/BASIC MEDS/CIGARETTES
     ["BasicItems", [
-         "ItemMap", "ItemCompass", "ACE_Altimeter", "TFAR_anprc152", "Rangefinder", "ItemGPS", "cigs_lucky_strike_cigpack", "cigs_lighter",
-         "ACE_fieldDressing", "ACE_morphine", "ACE_epinephrine", "ACE_painkillers", "ACE_splint", "ACE_tourniquet", "G_Balaclava_light_blk_F", "G_Balaclava_light_G_blk_F", "PLA_Balaclava_Alt_Black", "PLA_Balaclava_Alt_1_Black", "CUP_G_ESS_BLK_Dark", "G_Balaclava_blk",
-         "G_Balaclava_blk_lxWS", "ACE_Chemlight_HiGreen", "ACE_Chemlight_HiRed", "Aegis_SignalFlare_Green", "HandGrenade", "SmokeShell", "ACE_Flashlight_XL50", "ACE_CableTie", "B_IR_Grenade", "ACE_IR_Strobe_Item", "Chemlight_red", "Chemlight_green",
-         "ACE_microDAGR"
+         "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "cigs_lucky_strike_cigpack", "cigs_lighter",
+         "ACE_fieldDressing", "ACE_morphine", "ACE_epinephrine", "ACE_painkillers", "ACE_splint", "ACE_tourniquet", "ACE_bloodIV", "ACE_bloodIV_250", "ACE_bloodIV_500",
+         "HandGrenade_Guer", "SmokeShell",
+         "ACE_CableTie"
  
     ]],
-    
-    ["Medic", [
-        "B_Kitbag_blk", "Aegis_G_Armband_Medic_alt_F", "ACE_personalAidKit", "ACE_bloodIV", "ACE_bloodIV_250", "ACE_bloodIV_500", "ACE_morphine", "ACE_epinephrine",
-        "ACE_painkillers", "ACE_splint", "ACE_tourniquet"
-    ]],
-    
-    ["Machinegunner", [
-        "MMG_01_black_F", "bipod_01_F_blk", "optic_LRCO_blk_F", "150Rnd_93x64_Mag_Red", "Aegis_acc_pointer_DM", "Aegis_MMG_FNMAG_240_F", "Aegis_200Rnd_762x51_MAG_Red_F", "JM_V_CarrierRigKBT_01_tactical_*_black_F", "B_AssaultPackSpec_blk"
-    ]],
 
-    ["Marksman", [
-        "JM_V_CarrierRigKBT_01_Combat_*_black_F", "srifle_EBR_blk_lxWS", "20Rnd_762x51_Mag_blk_lxWS", "srifle_GM6_F", "optic_DMS", "Laserdesignator_04", "Aegis_acc_pointer_DM", "H_Cap_headphones_blk", "H_Booniehat_blk", "optic_Nightstalker", "5Rnd_127x108_Mag", "B_AssaultPackSpec_blk",
-        "bipod_01_F_blk"
-    ]],
-
-    ["Grenadier", [
-        "JM_V_CarrierRigKBT_01_tactical_*_black_F", "B_AssaultPackSpec_blk", "arifle_XMS_GL_lxWS", "1Rnd_HE_Grenade_shell", "1Rnd_Smoke_Grenade_shell", "1Rnd_RC40_shell_RF", "UGL_FlareWhite_F", "UGL_FlareRed_F", "UGL_FlareGreen_F", "UGL_FlareCIR_F", "ACE_40mm_Flare_red", "ACE_40mm_Flare_green", "1Rnd_RC40_shell_RF"
-    ]],
-
-    ["Squad Leader", [
-        "arifle_XMS_M_lxWS", "FRXA_tf_rt1523g_Black", "B_RadioBag_01_black_F", "JM_V_CarrierRigKBT_01_command_*_black_F", "Laserdesignator_04", "Aegis_optic_ACOG"
-    ]],
-
-    ["UAV Operator", [
-        "JM_V_CarrierRigKBT_01_Combat_*_black_F", "B_UavTerminal", "ACE_UAVBattery", "Aegis_B_patrolBackpack_blk_F", "Laserdesignator_04"
-    ]],
-
-    ["Light AT", [
-        "JM_V_CarrierRigKBT_01_tactical_*_black_F", "launch_PSRL1_black_RF", "PSRL1_AT_RF", "PSRL1_FRAG_RF", "B_Carryall_blk"
-    ]],
-
-    ["Operator", [
-        "muzzle_snds_M", "optic_r1_high_lxWS", "Aegis_muzzle_snds_9MM_enhanced_black" 
-    ]],
-
-    ["Breacher", [
-        "arifle_XMS_Shot_lxWS", "muzzle_snds_M", "optic_r1_high_lxWS", "Aegis_muzzle_snds_9MM_enhanced_black", "6Rnd_12Gauge_Pellets", "sgun_Mp153_black_F", "4Rnd_12Gauge_Pellets", "JM_V_CarrierRigKBT_01_CQB_*_black_F", "ACE_M84", "ItemMotionSensor_lxWS"
+    ["Officer", [
+        "hgun_esd_01_F", "muzzle_antenna_03_f", "G_Balaclava_TI_blk_F"
     ]]
+
+    
 ];
 
 // MOTOR POOL SETUP
@@ -125,37 +93,36 @@ JM_safeMsg = "FIRING IS PROHIBITED IN THIS AREA"; // The message that shows when
 
 JM_BriefingContent = [
     ["I. Organisation", [
-        ["ORBAT", "Task Force Misfit - Black Ops Platoon<br/><br/>Command/Support Squad - Spectre<br/>Assault Squad - Talon-1<br/>Assault Squad - Talon-2"]
+        ["ORBAT", "OPERATION AZURE SHIELD - UNA PEACKEEPING/AID REGIMENT"]
     ]],
 
     ["II. Situation", [
         ["SUMMARY", ""],
-        ["AREA OF OPERATIONS", "Terrain: Temperate foothills. Semi-tropical coastline.<br/><br/>Current Weather: Overcast.<br/><br/>Forecast: No change for at least the next few days."],
-		["WEATHER", "Overcast. Small chance of light rain. No change expected."],
-		["ENEMY FORCES", "Division strength, well-armed trained militia. Light armour, recon vehicles. Limited air assets. Low probability of minefields and fortifications except temporary positions."],
-        ["FRIENDLY FORCES", "No friendly units are in the vicinity."],
-        ["CIVILIANS", "High probability of civilians in urban areas."],
-        ["RULES OF ENGAGEMENT", "Fire at will. Clear to engage uniformed and armed personnel. Avoid destruction of civilian property if possible."]
+        ["AREA OF OPERATIONS", "Terrain: Arid flatlands and river valleys.<br/><br/>Current Weather: Clear.<br/><br/>Forecast: No change for at least the next few days."],
+		["WEATHER", "Clear. Light morning fog."],
+		["ENEMY FORCES", "Sporadic insurgent militias and armed tribal groups. Low strength, relying on surprise and chaos."],
+        ["CIVILIANS", "Green Zone 1 and 2 are inhabited, under the control of the UN. Red Zone is inhabited, but low population. Surrounding villages are also populated with civilians."],
+        ["RULES OF ENGAGEMENT", "Cleared to engage threats that present an active threat to UN personnel or civilians. Lethal force should be used with extreme caution. Avoid destruction of civilian property and infrastructure."]
     ]],
 
 	["III. Mission", [
-        ["MISSION INTENT", "The Misfits are tasked with locating and rescuing three researchers being held hostage by Golden Sands Militia forces."],
-		["OBJECTIVES", "OBJECTIVE 1: Perform a HALO drop into the DZ <br/><br/>OBJECTIVE 2: Locate and secure the three hostages<br/><br/>OBJECTIVE 3: Move to the designated exfil site and extract hostages"]
+        ["MISSION INTENT", "To provide stability and assistance to the civilians of Sa'hatra, assisting the humanitarian mission and dealing with active threats to peace."],
+		["OBJECTIVES", "OBJECTIVE 1: Conduct foot patrols of Green Zone 2 on a regular basis.<br/><br/>OBJECTIVE 2: Man the Red Zone checkpoint at all times unless instructed otherwise.<br/><br/>OBJECTIVE 3: Respond to, and deal with, active callouts across Sa'hatra.<br/><br/>OBJECTIVE 4: Maintain the peace, and assist the civilians of Green Zone 2 in any way possible."]
     ]],
 
 	["IV. Execution", [
-        ["STRATEGY OUTLINE", "You will be deployed onto the south-western hills of the city of Paraiso. From there you are expected to progress towards the town, and begin your search for the hostages.<br/><br/>Once located, you are expected to secure the hostages, neutralising any threats in your way.<br/><br/>On completion of your primary objective, you will proceed to the designated exfil site at Ambergris and await extraction."],
-		["SUPPORT", "An MQ-9A Reaper drone will become available for tasking part-way through the operation. Air Support is not available."]
+        ["STRATEGY OUTLINE", "You will be deploy from a staging area East of Green Zone 2.<br/><br/>You are to establish your base of operations at the existing UNA Headquarters in the centre of Green Zone 2.<br/><br/>Once you are fully operational, you are to designate your forces to the many tasks that are required of you across the Green Zone and beyond.<br/><br/>The District Commander will be responsible for the logistics and organisation of UN forces deployed across Green Zone 2 for the duration of the operation."],
+		["SUPPORT", "Resupplies will be made available upon request, but are not expected to be needed."]
     ]],
 
     ["V. Support and Logistics", [
-        ["TRANSPORTATION", "Insertion and Extraction will be performed by a V-44 Blackfish, callsign CONDOR."],
-        ["RESUPPLIES", "Resupplies unavailable due to the presence of enemy AA emplacements and lack of airspace control."],
-		["REINSERTION", "Dead players will respawn at the staging area and can travel to a rally."]
+        ["TRANSPORTATION", "Several vehicles are available at the staging area for use at your discretion."],
+        ["RESUPPLIES", "Resupplies are available at the staging area. Further resupplies can also be delivered upon request to command."],
+		["REINSERTION", "Dead players will respawn at the staging area and can redploy onto an existing squad member. Rally teleporting is not avaiable for this mission."]
     ]],
 
 	["VI. Communication", [
-        ["RADIO DISTRIBUTION", "All infantry units are equipped with a 152 for short-range communication. PL and SLs are equipped with a 117F for long-range communication."],
+        ["RADIO DISTRIBUTION", "All infantry units are equipped with a 152 for short-range communication. The District Commander, and all officers have a LR for command, and all vehicle seats have a LR."],
 		["FREQUENCIES", "Command Channel = LR CH 1<br/><br/>Squad Channels = SR CH 1/2/3/4/5"]
     ]]
 ];
@@ -164,20 +131,21 @@ JM_BriefingContent = [
 
 // CUSTOM END TITLES FOR CUTSCENE
 JM_EndTitles = [
-    "The Misfits successfully located and secured two out of the three hostages.",
-    "Unfortunately, the third researcher was not able to be rescued.",
-    "Prior to the assault, it appears the final researcher had been moved to an undisclosed location.",
-    "For now, the Misfits can relax after their first combat action since reactivation..."
+    "The City of Sa'hatra was once destined to be Iraq's finest modern city, but the war of 2038 took a heavy toll.",
+    "UN Peackeepers operating in Sa'hatra tried their best to provide aid and security to the people of the Green Zone.",
+    "But a huge insurgent assault using manpower, drones and chemical weapons destroyed all hope of a successful humanitarian effort.",
+    "Hundreds of UNA peacekeepers died in the chemical attacks that swept through the streets and into the surrounding fields.",
+    "The chemical compound used in this attack, or its perpetrators, would remain hidden for the time being..."
 ];
 
 
 
 // CUSTOM DEBRIEF text
 
-JM_CustomDebriefText = "The Misfits assaulted the city of Paraiso after learning the location of the JOINTCOM researchers.<br/><br/>
-The researchers were being held hostage by a rogue PMC/Militia known as Golden Sands. What exactly Golden Sands were doing with the researchers is unclear, except that this stop in Sahrani was temporary.<br/><br/>
-Unfortunately, the Lead Researcher - Ivan Thirsk - was moved by Golden Sands to an undisclosed location shortly before the Misfits began their operation. Because of this, the Misfits were unable to locate his whereabouts and secure him.<br/><br/>
-However, Task Force Misfit has proven itself effective on their first outing since reactivation...";
+JM_CustomDebriefText = "The UNA attempted to stabilise the situation in wartorn Sa'hatra.<br/><br/>
+However, despite their best efforts, a terrorist attack of daunting scale brought UN forces to their knees.<br/><br/>
+The insurgents who conducted the attack used a combination of drones, chemical weapons and ground forces to strike at the heart of Operation Azure Shield.<br/><br/>
+The UN operation lies in tatters, and the city of Sa'hatra is once again a lawless land...";
 
 
 
