@@ -38,6 +38,9 @@ clearBackpackCargoGlobal _box;
 [_box, true, [0, 3, 1], 0, true, true] call ace_dragging_fnc_setCarryable;
 [_box, true, [3, -2, 2], 0, true, true] call ace_dragging_fnc_setDraggable;
 
+_box setVariable ["ace_dragging_ignoreweightdrag", true];
+_box setVariable ["ace_dragging_ignoreweightcarry", true];
+
 // === Crate Content Logic ===
 switch (_crateType) do {
     case "ammo": {
@@ -66,6 +69,7 @@ switch (_crateType) do {
     case "repair": {
         _box addItemCargoGlobal ["ACE_Track", 5];
         _box addItemCargoGlobal ["ACE_Wheel", 6];
+        ["ACE_Track", _box] call ace_cargo_fnc_loadItem;
     };
 
     case "csw": {
@@ -77,9 +81,7 @@ switch (_crateType) do {
     };
 
     case "custom": {
-        _box addItemCargoGlobal ["ACE_Clacker", 1];
-        _box addItemCargoGlobal ["DemoCharge_Remote_Mag", 3];
-        _box addItemCargoGlobal ["ACE_DefusalKit", 2];
+
     };
 
     case "empty": {

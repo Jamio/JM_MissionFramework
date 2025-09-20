@@ -4,9 +4,9 @@ class JM_RallyPoint {
         
         class showRedeployDialog;
 	class addRallyAction;
-	class updateRallyAssignments;
 	class teleportToSelectedRally;
 	class teleportToSquad;
+	class addLocalRallyActions;
 
     };
 };

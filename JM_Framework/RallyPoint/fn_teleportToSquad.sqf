@@ -15,8 +15,10 @@ if (_index < 0) exitWith {
 private _targetNetId = _list lbData _index;
 private _target = objectFromNetId _targetNetId;
 
-if (isNull _target || {!alive _target}) exitWith {
-    hint "Invalid or dead teleport target.";
+_isAwake = [_target] call ace_common_fnc_isAwake;
+
+if (isNull _target || {!alive _target} || !_isAwake ) exitWith {
+    hint "The player you are teleporting to is unavailable.";
 };
 
 private _pos = getPosATL _target;

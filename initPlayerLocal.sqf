@@ -1,9 +1,13 @@
 cutText ["","BLACK FADED",2];
 
 
+
+
 // *********************************************************************************************************
 // ************************************* MISSION FRAMEWORK - DO NOT TOUCH **********************************
 // *********************************************************************************************************
+
+[] call JM_Perf_fnc_buildCleanupCache;
 
 
 // Marker Scaling Script
@@ -70,19 +74,22 @@ if (!JM_arsenalIdentity) then {
 
 // ************************************** RALLY CHECKING EH *******************************************************
 
-if (JM_Rally) then {
-    ["group", {
-        params ["_unit", "_newGroup"];
+[] spawn {
+  waitUntil { !isNil "JM_Rally" };
+  if (!JM_Rally) exitWith {};
 
-        if (isNil {_newGroup getVariable "JM_HasLeaderEH"}) then {
-            _newGroup setVariable ["JM_HasLeaderEH", true];
+  // First apply on join
+  [] call JM_RallyPoint_fnc_addLocalRallyActions;
 
-            _newGroup addEventHandler ["LeaderChanged", {
-                params ["_group", "_newLeader"];
-                [] remoteExec ["JM_RallyPoint_fnc_updateRallyAssignments", 2];
-            }];
-        };
-    }] call CBA_fnc_addPlayerEventHandler;
+  // Keep in sync after respawn
+  ["respawn", {
+    params ["_new","_old"];
+    {
+      if (_old getVariable [_x,false]) then { _new setVariable [_x,true,true]; };
+    } forEach ["JM_isSquadLead","JM_isPlatoonLead"];
+
+    0 spawn { uiSleep 0.1; [] call JM_RallyPoint_fnc_addLocalRallyActions; };
+  }] call CBA_fnc_addPlayerEventHandler;
 };
 
 
