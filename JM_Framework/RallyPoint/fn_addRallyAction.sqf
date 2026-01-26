@@ -38,9 +38,9 @@ private _action = [
         params ["_args","_elapsed","_total","_err"];
         _args params ["_ply","_kind"];
 
-        // >>> KEEP YOUR EXISTING WORLD LOGIC HERE <<<
-        // If you prefer, you can remoteExec to a server function; otherwise do your previous createVehicle/marker code.
-        // Example (minimal, from your original squad path with tiny cleanups):
+        // >>> KEEP EXISTING WORLD LOGIC HERE <<<
+        // can remoteExec to a server function; otherwise do previous createVehicle/marker code.
+        // from original squad path with tiny cleanups:
 
         if (_kind isEqualTo "squad") then {
           // Clean old
