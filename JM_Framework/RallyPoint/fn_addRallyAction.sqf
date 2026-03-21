@@ -63,7 +63,7 @@ private _action = [
           private _existing = missionNamespace getVariable ["JM_allSquadRallies", []];
           missionNamespace setVariable ["JM_allSquadRallies", _existing + [_entry], true];
 
-          // Marker (keep your style; recommend global setters for consistency)
+          // Marker (keep style but keep global const)
           private _m = createMarker [format ["RALLY_%1", name _ply], getPos _bag];
           _m setMarkerType "mil_triangle";
           _m setMarkerSize [0.7, 0.7];
@@ -73,7 +73,7 @@ private _action = [
 
           hint "Rally Point Deployed";
         } else {
-          // Platoon path (your original logic)
+          // Platoon path (original logic)
           private _platoonRally = missionNamespace getVariable ["JM_PltRallyObject", objNull];
           private _markerName   = missionNamespace getVariable ["JM_PltRallyMarker", ""];
 
