@@ -12,7 +12,7 @@ params ["_destinationData", "_teleportHere"];
 
 
 
-private _debug = true;  // Set this same as your module for testing
+private _debug = true;  // Set to same as module
 
 [_destinationData, _teleportHere, _debug] spawn {
     params ["_destinationData", "_teleportHere", "_debug"];
