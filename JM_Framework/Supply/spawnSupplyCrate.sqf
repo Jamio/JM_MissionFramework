@@ -13,12 +13,12 @@ if (_spawner isEqualTo []) exitWith {
 };
 
 _spawner = _spawner select 0;
-private _pos = getPos _spawner;
+private _pos = getPosASL _spawner;
 
 // === Create crate ===
 private _crateClass = switch (_crateType) do {
     case "ammo":    { "Box_NATO_Ammo_F" };
-    case "medical": { "Box_B_UAV_06_medical_F" };
+    case "medical": { "ACE_medicalSupplyCrate" };
     case "repair":  { "Box_NATO_Support_F" };
     case "csw":     { "Box_NATO_WpsSpecial_F" };
     case "custom":  { "Box_NATO_WpsSpecial_F" };
@@ -27,6 +27,13 @@ private _crateClass = switch (_crateType) do {
 };
 
 private _box = createVehicle [_crateClass, _pos, [], 0, "NONE"];
+
+_box setPosASL [
+    _pos # 0,
+    _pos # 1,
+    (_pos # 2) + 2
+];
+
 
 // === Clear and configure ===
 clearWeaponCargoGlobal _box;
@@ -40,6 +47,7 @@ clearBackpackCargoGlobal _box;
 
 _box setVariable ["ace_dragging_ignoreweightdrag", true];
 _box setVariable ["ace_dragging_ignoreweightcarry", true];
+[_box, 1] call ace_cargo_fnc_setSize;
 
 // === Crate Content Logic ===
 switch (_crateType) do {
@@ -57,13 +65,16 @@ switch (_crateType) do {
 
     case "medical": {
         _box addItemCargoGlobal ["ACE_fieldDressing", 50];
-        _box addItemCargoGlobal ["ACE_elasticBandage", 40];
-        _box addItemCargoGlobal ["ACE_packingBandage", 40];
-        _box addItemCargoGlobal ["ACE_salineIV_500", 10];
+        _box addItemCargoGlobal ["ACE_bloodIV_500", 15];
+        _box addItemCargoGlobal ["ACE_bloodIV", 15];
+        _box addItemCargoGlobal ["ACE_bloodIV_250", 15];
         _box addItemCargoGlobal ["ACE_epinephrine", 20];
         _box addItemCargoGlobal ["ACE_morphine", 20];
         _box addItemCargoGlobal ["ACE_tourniquet", 20];
         _box addItemCargoGlobal ["ACE_splint", 15];
+        _box addItemCargoGlobal ["ACE_personalAidKit", 1];
+        _box addItemCargoGlobal ["ACE_bodyBag", 5];
+        _box addItemCargoGlobal ["ACE_painkillers", 10];
     };
 
     case "repair": {
@@ -85,7 +96,7 @@ switch (_crateType) do {
     };
 
     case "empty": {
-        // do nothing, it's empty!
+        // do nothing, its empty!
     };
 };
 

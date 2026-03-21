@@ -523,7 +523,7 @@ class hospital {
 import RscEdit;
 import RscButtonMenuCancel;
 import RscButtonMenuOK;
-
+import RscCombo;
 
 
 

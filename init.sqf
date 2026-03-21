@@ -24,3 +24,12 @@ execVM "JM_Framework\Safezone\grenadeStop.sqf";
 
 // check for DLC gear
 [] execVM "JM_Framework\Misc\DLCParser\dlcGearChecker.sqf";
+
+
+// initialise CBRN system if enabled
+[] spawn {
+  waitUntil { !isNil "JM_CBRN_enabled" };
+  if (!JM_CBRN_enabled) exitWith {};
+
+	[] call cbrn_fnc_initFramework;
+};

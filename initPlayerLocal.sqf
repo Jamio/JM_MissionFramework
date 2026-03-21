@@ -92,6 +92,67 @@ if (!JM_arsenalIdentity) then {
   }] call CBA_fnc_addPlayerEventHandler;
 };
 
+// ************************************** TICKET-BASED RESPAWNING *******************************************************
+
+if (JM_TicketsMedevac) then {
+    [] call JM_TicketsMedevac_fnc_initClient;
+};
+
+// ************************************** JTAC SYSTEM *******************************************************
+
+[] spawn {
+    waitUntil { !isNil "JM_JTAC" };
+    if (!JM_JTAC) exitWith {};
+
+    [] call JM_JTAC_fnc_init;
+    [] call JM_JTAC_fnc_refreshLocalActions;
+
+    ["respawn", {
+        params ["_new", "_old"];
+
+        if (_old getVariable ["JM_isJTAC", false] || { _old getVariable ["isJTAC", false] }) then {
+            _new setVariable ["JM_isJTAC", true, true];
+        };
+
+        _new setVariable ["JM_JTAC_actionAdded", false];
+
+        0 spawn {
+            uiSleep 0.1;
+            [] call JM_JTAC_fnc_refreshLocalActions;
+        };
+    }] call CBA_fnc_addPlayerEventHandler;
+};
+
+
+// ************************************ 3D LABELS FOR BOXES AND STUFF *****************************************************
+
+if (hasInterface) then {
+    addMissionEventHandler ["Draw3D", {
+        {
+            private _box = _x;
+            if (isNull _box) then { continue };
+            if (_box distance player > 25) then { continue };
+            if ([_box, "VIEW", player] checkVisibility [eyePos _box, eyePos player] < 0.3) then { continue };
+
+            private _pos = ASLToAGL (getPosASL _box vectorAdd [0,0,2]);
+
+            drawIcon3D [
+                "",
+                [1,1,1,1],
+                _pos,
+                0.2,
+                0.2,
+                45,
+                _box getVariable ["JM_drawLabel_text", "Interaction"],
+                2,
+                0.04,
+                "PuristaSemiBold"
+            ];
+        } forEach JM_draw3D_boxes;
+    }];
+};
+
+
 
 // ************************************** BLACK IN *******************************************************
 
@@ -123,3 +184,10 @@ private _author = getText (missionConfigFile >> "author");
 7, 
 0.7, 
 0] spawn BIS_fnc_textTiles;
+
+
+
+
+// ************************************** INIT SCREENSHOT HUD TOGGLE *******************************************************
+
+[] call JM_hideui_fnc_addAceHudAction;

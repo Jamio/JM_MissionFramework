@@ -92,20 +92,20 @@ addMissionEventHandler ["Draw3D", {
         if (
             alive _x &&
             _x getVariable ["ace_isunconscious", false] &&
-            (player distance _x) < 15
+            (player distance _x) < 10
         ) then {
             // Position above head
-            private _pos = _x modelToWorldVisual [0,0,1];
+            private _pos = _x modelToWorldVisual [0,0,0.7];
 
             drawIcon3D [
-                "a3\ui_f\data\igui\cfg\revive\overlayiconsgroup\u75_ca.paa",  // Icon image
+                "x\zen\addons\context_actions\ui\medical_cross_ca.paa",  // Icon image
                 [1, 0, 0, 0.8], // Color RGBA (red)
                 _pos,
-                1, 1, 0,    // SizeX, SizeY, Angle
-                format ["%1 - UNCONSCIOUS", name _x],
+                0.8, 0.8, 0,    // SizeX, SizeY, Angle
+                format ["%1", name _x],
                 0,
                 0.025,
-                "PuristaMedium"
+                "PuristaSemiBold"
             ];
         };
     } forEach allPlayers;

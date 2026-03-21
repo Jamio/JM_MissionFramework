@@ -9,6 +9,10 @@ class JM_ZeusModules {
         class blindRemove;
 	class cutawayMessage;
 	class cinemaBorder;
+	class flyover;
+	class getFlyoverOffsets;
+	class getAirVehicleList;
+	class flyoverUniversal;
 
     };
 };

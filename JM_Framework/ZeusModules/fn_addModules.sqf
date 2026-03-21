@@ -5,9 +5,10 @@
 
 // ["Custom Modules", "Cool Hint", {hint str _this}] call zen_custom_modules_fnc_register
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ FLING - RAGDOLL AND SCREAM
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// FLING
+// This module allows you to fling units around, fun for fucking with players
+// ----------------------------------------------------------------------------------------------------------------------------------
 
 ["[JM] Fun", 
  "Fling", 
@@ -26,9 +27,10 @@
  }, 
  "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ BLIND UNIT - TAKE AND GIVE SIGHT
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// BLIND UNIT + UNBLIND UNIT
+// Two modules that work together to blind and unblind units, fun for creating interesting situations for players
+// ----------------------------------------------------------------------------------------------------------------------------------
 
 ["[JM] Fun", 
  "[Sight] Remove Sight", 
@@ -69,9 +71,10 @@
  "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
 
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ DESTROY ON LOOK
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// DESTROY ON LOOK
+// This module gives the player the ability to destroy units just by looking at them. THIS CANNOT BE REMOVED SO PLEASE USE WITH CAUTION.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 
  ["[JM] Fun", 
@@ -92,14 +95,15 @@
  "\a3\modules_f\data\portraitmodule_ca.paa"] call zen_custom_modules_fnc_register;
 
 
-// *********************************************************************************************************
-// *********************************************************************************************************
-// ************************* TOOLS MODULES ************************************************************
-// *********************************************************************************************************
-// *********************************************************************************************************
-// *********************************************************************************************************
+// ==================================================================================================================================
+// TOOLS MODULES
+// These modules are designed to be tools for use by the zeus to make interesting scenarios with ease
+// ==================================================================================================================================
 
-// ************************** TIMER ***********************************************************
+// ----------------------------------------------------------------------------------------------------------------------------------
+// COUNTDOWN TIMER
+// This module gives an on-screen timer to players. Useful for breaks and/or objective countdowns. Customisable via dialog.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 ["[JM] Tools", 
  "Countdown Timer", 
@@ -160,9 +164,10 @@
 
 
 
- // +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ END MISSION
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// CUSTOM END MISSION
+// This module initiates the custom end mission script built into the framework
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 ["[JM] Ending", 
  "Custom End Mission", 
@@ -172,9 +177,10 @@
  "a3\modules_f_curator\data\iconpostprocess_ca.paa"] call zen_custom_modules_fnc_register;
 
 
- // +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ TOGGLEABLE RALLY AND TELEPORT
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// RALLY POINT SETTINGS
+// This module allows editing of the frameworks rally point settings to make rally-teleporting or squad-teleporting possible or not.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 ["[JM] Tools", 
  "Rally Point Settings", 
@@ -218,9 +224,10 @@
  "a3\ui_f_curator\data\rsccommon\rscattributerespawnvehicle\guer_ca.paa"] call zen_custom_modules_fnc_register;
 
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ BLACK SCREEN + MESSAGE FOR ALL PLAYERS
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// CUTAWAY MESSAGE
+// This module fades the screen to black and displays a message to players. Useful to adjusting things in the background or teleporting players without disorientation. Customisable via dialog.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 
 ["[JM] Tools", 
@@ -256,9 +263,10 @@
  }, 
  "a3\modules_f_bootcamp\data\portraithint.paa"] call zen_custom_modules_fnc_register;
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ RANDOM ANTI-AIR FIRE
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// RANDOM AA FIRE
+// This module will make turret AA units fire randomly into the sky, fun for creating ambiance or making things more interesting for players in the area.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 
 ["[JM] Tools",
@@ -334,9 +342,10 @@
  },
  "x\zen\addons\modules\ui\target_ca.paa"] call zen_custom_modules_fnc_register;
 
- // +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ EXPLOSION SPAWNER
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// EXPLOSION SPAWNER
+// This module will spawn a cfgAmmo projectile, allowing you to drop custom bombs for cool explosions.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 ["[JM] Tools",
  "Explosion Spawner",
@@ -418,9 +427,10 @@
  "x\zen\addons\modules\ui\explosion_ca.paa"] call zen_custom_modules_fnc_register;
 
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ CUSTOM SOUND PLAYER
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// CUSTOM SOUND PLAYER
+// This module allows zeus to play sounds, including ones defined in the mission description.ext, with custom volume and distance settings. Can be used for ambiance or fun.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
     systemChat "[Custom Sound Module] CROWS EW not detected - Registering standalone module.";
@@ -570,9 +580,10 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
 
 
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ CINEMATIC BORDERS CUTAWAY
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// CUTAWAY CINEMATIC BORDER
+// This module displays a "chapter" style text with cinematic borders.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 
 ["[JM] Tools",
@@ -599,9 +610,10 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
  "a3\modules_f_bootcamp\data\portraithint.paa"] call zen_custom_modules_fnc_register;
 
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ AWACS CALL
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// AWACS REPORT
+// This module gives players a customisable AWACS report based on the position of the module and a reference point (defaulting to Bullseye or respawn marker). Useful for creating dynamic intel reports for air players.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -665,9 +677,10 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
 },
 "a3\data_f_jets\logos\jets_icon_ca.paa"] call zen_custom_modules_fnc_register;
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ SPAWN AMMO CRATE
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// SPAWN AMMO CRATE
+// This module turns a container into an ammo crate based on player loadouts.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 [
     "[JM] Supply",
@@ -703,9 +716,10 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
     "a3\weapons_f\ammoboxes\data\ui\icomap_ammo_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ SPAWN MEDICAL CRATE
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// SPAWN MEDICAL CRATE
+// This module gturns a container into a medical crate, complete with items.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 [
     "[JM] Supply",
@@ -761,9 +775,10 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
 
 
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ EDIT END TITLES
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// EDIT END TITLES
+// This module allows editing of the custom end screen titles used in the custom end mission setup.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 [
     "[JM] Ending",
@@ -805,9 +820,10 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
     "a3\ui_f\data\igui\cfg\simpletasks\types\documents_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ EDIT DEBRIEF DIALOG
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// EDIT DEBRIEF DIALOG
+// This module gives the player the ability to destroy units just by looking at them. THIS CANNOT BE REMOVED SO PLEASE USE WITH CAUTION.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 [
     "[JM] Ending",
@@ -844,11 +860,12 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
 ] call zen_custom_modules_fnc_register;
 
 
-// +++++++++++++++++++++++++++++++++++++++++++
-// +++++++ RALLY POINT CHANGES
-// +++++++++++++++++++++++++++++++++++++++++++
+// ----------------------------------------------------------------------------------------------------------------------------------
+// ASSIGN LEADER ROLES
+// Allows zeus to assign or remove squad leader and platoon leader roles at will.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
-    ["JM Rally", "Assign Leader Roles", {
+    ["[JM] Tools", "Assign Leader Roles", {
       params ["_pos", "_unit"];
 
       if (isNull _unit) exitWith {[objNull, "Error: Please pick a valid unit"] call BIS_fnc_showCuratorFeedbackMessage};
@@ -947,8 +964,362 @@ if !(isClass (configFile >> "CfgPatches" >> "crowsEW_main")) then {
     }] call zen_custom_modules_fnc_register;
 
 
+// ----------------------------------------------------------------------------------------------------------------------------------
+// ADD MEDEVAC TICKETS
+// This module allows zeus to manually add tickets to the team pool.
+// -----------------------------------------------------------------------------------------------------------------------------------
 
 
+    [
+    "[JM] Tools",                                  // Category
+    "Add Medevac Tickets",                         // Module name
+    {
+        params ["_posASL", "_attachedObject"];
+
+        private _currentPool = missionNamespace getVariable ["JM_tickets_pool", 0];
+
+        [
+            format ["Add Medevac Tickets (Current Pool: %1)", _currentPool],
+            [
+                [
+                    "SLIDER",
+                    [
+                        "Tickets to Add",
+                        format ["Current pool: %1\nChoose how many tickets to add.", _currentPool]
+                    ],
+                    [
+                        0,      // min
+                        100,    // max
+                        10,     // default
+                        0       // 0 decimal places
+                    ]
+                ]
+            ],
+            {
+                params ["_dialogValues", "_args"];
+                _dialogValues params ["_delta"];
+
+                _delta = round _delta;
+                if (_delta <= 0) exitWith {};
+
+                [_delta] remoteExecCall ["JM_TicketsMedevac_fnc_addTickets", 2];
+            },
+            {},
+            []
+        ] call zen_dialog_fnc_create;
+    },
+    "\a3\ui_f\data\igui\cfg\simpletasks\types\heal_ca.paa"
+] call zen_custom_modules_fnc_register;
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+// ASSIGN JTAC ROLE
+// This module allows the zeus to assign or remove the JTAC role at will.
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+[
+    "[JM] Tools",
+    "Assign JTAC Role",
+    {
+        params ["_pos", "_object"];
+
+        if (isNull _object) exitWith {
+            hint "No unit selected.";
+        };
+
+        if !(_object isKindOf "CAManBase") exitWith {
+            hint "Target must be a humanoid you idiot.";
+        };
+
+        private _current = _object getVariable ["JM_isJTAC", false];
+
+        [
+            "Set JTAC Status",
+            [
+                [
+                    "CHECKBOX",
+                    ["JTAC Enabled", "Grant or remove JTAC capability from this unit."],
+                    _current,
+                    true
+                ]
+            ],
+            {
+                params ["_dialogResult", "_args"];
+                _dialogResult params ["_enabled"];
+                _args params ["_unit"];
+
+                _unit setVariable ["JM_isJTAC", _enabled, true];
+
+                if (isPlayer _unit) then {
+                    [] remoteExec ["JM_JTAC_fnc_refreshLocalActions", _unit];
+                };
+            },
+            {},
+            [_object]
+        ] call zen_dialog_fnc_create;
+    }
+] call zen_custom_modules_fnc_register;
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+// FLYOVER V2
+// This module spawns a flyover, with customised parameters, but should work for all vehicles. Its quite cool if I say so myself.
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+[
+    "[JM] Tools",
+    "Spawn Aircraft Flyover (Universal)",
+    {
+        params ["_pos", "_object"];
+
+        private _vehicleValues = [];
+        private _vehiclePrettyNames = [];
+
+        {
+            private _cfg = _x;
+            private _className = configName _cfg;
+
+            if (getNumber (_cfg >> "scope") < 2) then { continue };
+            if !(_className isKindOf ["Air", configFile >> "CfgVehicles"]) then { continue };
+
+            private _displayName = getText (_cfg >> "displayName");
+            if (_displayName isEqualTo "") then { continue };
+
+            private _faction = getText (_cfg >> "faction");
+            private _editorSubcategory = getText (_cfg >> "editorSubcategory");
+
+            private _picture = getText (_cfg >> "editorPreview");
+            if (_picture isEqualTo "") then {
+                _picture = getText (_cfg >> "picture");
+            };
+
+            private _tooltip = format [
+                "%1\nClass: %2\nFaction: %3\nSubcategory: %4",
+                _displayName,
+                _className,
+                _faction,
+                _editorSubcategory
+            ];
+
+            _vehicleValues pushBack _className;
+            _vehiclePrettyNames pushBack [_displayName, _tooltip, _picture];
+        } forEach ("true" configClasses (configFile >> "CfgVehicles"));
+
+        if (_vehicleValues isEqualTo []) exitWith {
+            ["Flyover Module", "No air vehicles found in CfgVehicles."] call zen_common_fnc_showMessage;
+        };
+
+        private _combined = [];
+        {
+            _combined pushBack [
+                _vehiclePrettyNames # _forEachIndex,
+                _vehicleValues # _forEachIndex
+            ];
+        } forEach _vehicleValues;
+
+        _combined sort true;
+
+        _vehiclePrettyNames = [];
+        _vehicleValues = [];
+
+        {
+            _x params ["_pretty", "_value"];
+            _vehiclePrettyNames pushBack _pretty;
+            _vehicleValues pushBack _value;
+        } forEach _combined;
+
+        [
+            "Aircraft Flyover (Universal)",
+            [
+                [
+                    "LIST",
+                    ["Aircraft", "Select an aircraft class from all Air vehicles"],
+                    [_vehicleValues, _vehiclePrettyNames, 0, 16]
+                ],
+                [
+                    "SLIDER",
+                    ["Plane count", "Number of aircraft to spawn"],
+                    [1, 25, 7, 0]
+                ],
+                [
+                    "SLIDER",
+                    ["Heading", "Direction (N=0, E=90, S=180, W=270)"],
+                    [0, 359, 90, 0]
+                ],
+                [
+                    "SLIDER",
+                    ["Speed (m/s)", "Forward speed"],
+                    [20, 600, 56, 0]
+                ],
+                [
+                    "SLIDER",
+                    ["Altitude", "Formation altitude"],
+                    [25, 3000, 350, 0]
+                ],
+                [
+                    "SLIDER",
+                    ["Spacing", "Base spacing / formation radius"],
+                    [20, 200, 60, 0]
+                ],
+                [
+                    "SLIDER",
+                    ["Spawn distance", "Distance before the flyover point"],
+                    [500, 15000, 4000, 0]
+                ],
+                [
+                    "SLIDER",
+                    ["Despawn distance", "Distance after the flyover point"],
+                    [500, 15000, 4000, 0]
+                ],
+                [
+                    "COMBO",
+                    ["Formation", "Preset formation type"],
+                    [
+                        ["wedge", "line", "column", "scatter"],
+                        [
+                            ["Wedge", "Classic V formation"],
+                            ["Line", "Line abreast"],
+                            ["Column", "Single file"],
+                            ["Scatter", "Loose circular cluster"]
+                        ],
+                        0
+                    ]
+                ],
+                [
+                    "SLIDER",
+                    ["Random X offset", "Left / right natural variation"],
+                    [0, 100, 0, 0]
+                ],
+                [
+                    "SLIDER",
+                    ["Random Y offset", "Front / back natural variation"],
+                    [0, 100, 0, 0]
+                ],
+                [
+                    "SLIDER",
+                    ["Random Z offset", "Vertical height natural variation"],
+                    [0, 100, 0, 0]
+                ],
+                [
+                    "SIDES",
+                    ["Side", "Crew/group side for the spawned aircraft"],
+                    independent
+                ],
+                [
+                    "SLIDER",
+                    ["Critical damage threshold", "Damage level at which aircraft stop scripted control and break formation"],
+                    [0.1, 1, 0.8, 2]
+                ]
+            ],
+            {
+                params ["_values", "_args"];
+                _args params ["_pos"];
+
+                _values params [
+                    "_planeClass",
+                    "_count",
+                    "_heading",
+                    "_speedMS",
+                    "_altitude",
+                    "_spacing",
+                    "_spawnDistance",
+                    "_despawnDistance",
+                    "_formation",
+                    "_randX",
+                    "_randY",
+                    "_randZ",
+                    "_side",
+                    "_releaseDamage"
+                ];
+
+                [
+                    _pos,
+                    _planeClass,
+                    _count,
+                    _heading,
+                    _speedMS,
+                    _altitude,
+                    _spacing,
+                    _spawnDistance,
+                    _despawnDistance,
+                    _formation,
+                    _randX,
+                    _randY,
+                    _randZ,
+                    _side,
+                    _releaseDamage
+                ] remoteExecCall ["JM_ZeusModules_fnc_flyoverUniversal", 2];
+            },
+            {},
+            [_pos]
+        ] call zen_dialog_fnc_create;
+    }
+] call zen_custom_modules_fnc_register;
+
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+// CBRN ZONE CONTROL
+// This module allows zeus to toggle on/off cbrn zone activity at will.
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+[
+    "[JM] Tools",
+    "CBRN Zone Control",
+    {
+        params ["_pos", "_object"];
+
+        private _zoneMap = missionNamespace getVariable ["JM_CBRN_zoneMap", createHashMap];
+        private _zoneIds = keys _zoneMap;
+
+        if (_zoneIds isEqualTo []) exitWith {
+            ["JM CBRN: No registered zones found."] call zen_common_fnc_showMessage;
+        };
+
+        _zoneIds sort true;
+
+        private _content = [];
+
+        {
+            private _zoneId = _x;
+            private _zone = _zoneMap get _zoneId;
+
+            if (isNull _zone) then { continue };
+
+            private _isActive = _zone getVariable ["cbrn_active", true];
+
+            _content pushBack [
+                "CHECKBOX",
+                [
+                    _zoneId,
+                    format ["Toggle CBRN zone '%1'. Checked = active, unchecked = inactive.", _zoneId]
+                ],
+                _isActive
+            ];
+        } forEach _zoneIds;
+
+        [
+            "CBRN Zone Control",
+            _content,
+            {
+                params ["_dialogValues", "_args"];
+                _args params ["_zoneIds"];
+
+                {
+                    private _zoneId = _x;
+                    private _newState = _dialogValues param [_forEachIndex, true];
+
+                    [_zoneId, _newState] remoteExecCall ["JM_CBRN_fnc_setZoneActive", 2];
+                } forEach _zoneIds;
+
+                [
+                    format ["JM CBRN: Updated %1 zone(s).", count _zoneIds]
+                ] call zen_common_fnc_showMessage;
+            },
+            {},
+            [_zoneIds]
+        ] call zen_dialog_fnc_create;
+    }
+] call zen_custom_modules_fnc_register;
 
 
 
