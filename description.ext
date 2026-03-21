@@ -1,6 +1,6 @@
 author			= "Jamio";
 onLoadName		= "Operation TESTMISSION";
-onLoadMission	= "<t font='PuristaMedium' size='1.2' align='center' color='#888888'>This is a TEST MISSION using JM Framework V2.10</t>";
+onLoadMission	= "<t font='PuristaMedium' size='1.2' align='center' color='#888888'>This is a TEST MISSION using JM Framework V2.30</t>";
 loadScreen		= "JM_Framework\loading.paa";
 
 class Header
@@ -71,6 +71,7 @@ class CfgSounds
 	sounds[] = {}; // OFP required it filled, now it can be empty or absent depending on the game version
 
 		#include "JM_Framework\customSounds.hpp"
+		#include "JM_Framework\cbrn\sounds\sounds.hpp"
 };
 
 // MUSIC
@@ -89,6 +90,7 @@ class CfgMusic
 #include "JM_Framework\RallyPoint\redeployDialog.hpp"
 #include "JM_Framework\Supply\supplyDialog.hpp"
 #include "JM_Framework\Garage\garageDialog.hpp"
+#include "JM_Framework\JTAC\JTACdialog.hpp"
 
 
 
@@ -104,6 +106,11 @@ class CfgFunctions
 		#include "JM_Framework\Supply\cfgFunctions.hpp"
 		#include "JM_Framework\Garage\cfgFunctions.hpp"
 		#include "JM_Framework\Misc\Perf\cfgFunctions.hpp"
+		#include "JM_Framework\TicketsMedevac\cfgFunctions.hpp"
+		#include "JM_Framework\JTAC\cfgFunctions.hpp"
+		#include "JM_Framework\jebus\cfgFunctions.hpp"
+		#include "JM_Framework\cbrn\funcs.hpp"
+		#include "JM_Framework\hideui\functions\cfgFunctions.hpp"
 
 class JM_Master
     {
@@ -128,7 +135,9 @@ class Extended_PostInit_EventHandlers {
     	#include "JM_Framework\UnknownWep\Extended_PostInit_EventHandlers.hpp"
 };
 
-
+class RscTitles {
+    #include "JM_Framework\cbrn\rsctitles.hpp"
+};
 
 
 #include "JM_Framework\VAM_GUI\defines.hpp"
